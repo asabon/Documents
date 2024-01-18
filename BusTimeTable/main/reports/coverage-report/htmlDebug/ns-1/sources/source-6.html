@@ -1,0 +1,408 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>app Coverage Report > TimeTableKt</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope: app<span class="separator">|</span>    <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">net.asabon.bustimetable</a>
+</div>
+
+<h1>Coverage Summary for Class: TimeTableKt (net.asabon.bustimetable)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+<th class="coverageStat 
+">
+  Instruction, %
+</th>
+</tr>
+<tr>
+  <td class="name">TimeTableKt</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (4/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    38.1%
+  </span>
+  <span class="absValue">
+    (16/42)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    32%
+  </span>
+  <span class="absValue">
+    (24/75)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    29.5%
+  </span>
+  <span class="absValue">
+    (114/387)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">TimeTableKt$readTimeTableJson$$inlined$readValue$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    57.1%
+  </span>
+  <span class="absValue">
+    (4/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    38.1%
+  </span>
+  <span class="absValue">
+    (16/42)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    32%
+  </span>
+  <span class="absValue">
+    (24/75)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    29.5%
+  </span>
+  <span class="absValue">
+    (114/387)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package net.asabon.bustimetable
+&nbsp;
+&nbsp;import android.content.res.AssetManager
+&nbsp;import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+&nbsp;import com.fasterxml.jackson.module.kotlin.readValue
+&nbsp;import java.util.Calendar
+&nbsp;
+&nbsp;class TimeTable(assetManager: AssetManager?) {
+&nbsp;    /**
+&nbsp;     * 時刻表テーブル
+&nbsp;     */
+&nbsp;    private var mTimeTables: MutableList&lt;BusTimeTableData&gt;? = createTimeTables(assetManager)
+&nbsp;
+&nbsp;    /**
+&nbsp;     * jsonファイルから時刻表リストを生成する
+&nbsp;     */
+&nbsp;    private fun createTimeTables(assetManager: AssetManager?): MutableList&lt;BusTimeTableData&gt; {
+&nbsp;        val list = mutableListOf&lt;BusTimeTableData&gt;()
+&nbsp;        val jsonFiles: Array&lt;String&gt;
+&nbsp;        if (assetManager == null) {
+&nbsp;            /* サンプルデータ */
+&nbsp;        } else {
+&nbsp;            /* assetManager から読み出す */
+&nbsp;            jsonFiles = assetManager.list(&quot;kanachu&quot;)!!
+&nbsp;            for (jsonFile in jsonFiles) {
+&nbsp;                list.add(readTimeTableJson(assetManager, &quot;kanachu/$jsonFile&quot;))
+&nbsp;            }
+&nbsp;        }
+&nbsp;        return list
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * 起動時の方向インデックスを返す
+&nbsp;     *
+&nbsp;     * 起動時の時刻を取得し方向を判定する。
+&nbsp;     *  家→駅 : 6:00 - 12:00 の場合
+&nbsp;     *  駅→家 : それ以外
+&nbsp;     *  とする。
+&nbsp;     */
+&nbsp;    fun getDefaultDirection(): Int {
+&nbsp;        val calendar: Calendar = Calendar.getInstance()
+&nbsp;        return when (calendar.get(Calendar.HOUR_OF_DAY)) {
+&nbsp;            in 6..12 -&gt; 0
+&nbsp;            else -&gt; 1
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * 起動時のタブインデックスを返す
+&nbsp;     *
+&nbsp;     * 起動時の日付を取得し「平日」「土曜」「休日」を判定する。
+&nbsp;     * 現時点では休日判定は入っておらず、日曜 = 休日とする。
+&nbsp;     */
+&nbsp;    fun getDefaultDateType(): Int {
+&nbsp;        var result = 0
+&nbsp;        val calendar: Calendar = Calendar.getInstance()
+&nbsp;        when (calendar.get(Calendar.DAY_OF_WEEK)) {
+&nbsp;            Calendar.MONDAY,
+&nbsp;            Calendar.TUESDAY,
+&nbsp;            Calendar.WEDNESDAY,
+&nbsp;            Calendar.THURSDAY,
+&nbsp;            Calendar.FRIDAY -&gt; {
+&nbsp;                result = 0
+&nbsp;            }
+&nbsp;            Calendar.SATURDAY -&gt; {
+&nbsp;                result = 1
+&nbsp;            }
+&nbsp;            Calendar.SUNDAY -&gt; {
+&nbsp;                result = 2
+&nbsp;            }
+&nbsp;        }
+&nbsp;        return result
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getTimeTableItems3(direction: Int, dateType: Int): MutableList&lt;TimeTableItem&gt; {
+&nbsp;        val from = mutableListOf&lt;String&gt;()
+&nbsp;        val to = mutableListOf&lt;String&gt;()
+&nbsp;        if (direction == 0) {
+&nbsp;            from.add(&quot;町田総合高校前&quot;)
+&nbsp;            to.add(&quot;町田バスセンター&quot;)
+&nbsp;        } else {
+&nbsp;            from.add(&quot;町田バスセンター&quot;)
+&nbsp;            to.add(&quot;町田総合高校前&quot;)
+&nbsp;        }
+&nbsp;        return getTimeTableItems2(from, to, dateType)
+&nbsp;    }
+&nbsp;
+&nbsp;    private fun getTimeTableItems2(from: List&lt;String&gt;, to: List&lt;String&gt;, dateType: Int): MutableList&lt;TimeTableItem&gt; {
+&nbsp;        var list: MutableList&lt;TimeTableItem&gt; = mutableListOf()
+&nbsp;        val busTimeTableList = mutableListOf&lt;BusTimeTableData&gt;()
+&nbsp;        for (timeTable in mTimeTables!!) {
+&nbsp;            if (isContain(timeTable.name, from) &amp;&amp; (isContains(timeTable.destinations, to))) {
+&nbsp;                busTimeTableList.add(timeTable)
+&nbsp;            }
+&nbsp;        }
+&nbsp;        /* マージする */
+&nbsp;        for (busTimeTable in busTimeTableList) {
+&nbsp;            list = mergeList(list, createItemList(busTimeTable, dateType))
+&nbsp;        }
+&nbsp;        if (list.size == 0) {
+&nbsp;            list.add(TimeTableItem(from = &quot;No data&quot;, position = &quot;&quot;, system = &quot;-&quot;, to = &quot;&quot;, hour = &quot;00&quot;, minute = &quot;00&quot;))
+&nbsp;        }
+&nbsp;        return list
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;/**
+&nbsp; * &quot;HH:MM&quot; から &quot;HH&quot; を取り出して返す
+&nbsp; */
+&nbsp;fun getHour(input: String): String {
+<b class="fc">&nbsp;    val regex = Regex(&quot;(.*):(.*)&quot;)</b>
+<b class="fc">&nbsp;    val matchResult: MatchResult? = regex.matchEntire(input)</b>
+<b class="pc">&nbsp;    if (matchResult != null) {</b>
+<b class="pc">&nbsp;        return matchResult.groups[1]?.value ?: &quot;--&quot;</b>
+&nbsp;    }
+<b class="nc">&nbsp;    return &quot;--&quot;</b>
+&nbsp;}
+&nbsp;
+&nbsp;/**
+&nbsp; * &quot;HH:MM&quot; から &quot;MM&quot; を取り出して返す
+&nbsp; */
+&nbsp;fun getMinute(input: String): String {
+<b class="fc">&nbsp;    val regex = Regex(&quot;(.*):(.*)&quot;)</b>
+<b class="fc">&nbsp;    val matchResult: MatchResult? = regex.matchEntire(input)</b>
+<b class="pc">&nbsp;    if (matchResult != null) {</b>
+<b class="pc">&nbsp;        return matchResult.groups[2]?.value ?: &quot;--&quot;</b>
+&nbsp;    }
+<b class="nc">&nbsp;    return &quot;--&quot;</b>
+&nbsp;}
+&nbsp;
+&nbsp;/**
+&nbsp; * 表示用のリストを作成する
+&nbsp; */
+&nbsp;fun createItemList(busTimeTableData: BusTimeTableData, dateType: Int): List&lt;TimeTableItem&gt; {
+<b class="nc">&nbsp;    val list = mutableListOf&lt;TimeTableItem&gt;()</b>
+<b class="nc">&nbsp;    when (dateType) {</b>
+<b class="nc">&nbsp;        0 -&gt; for (item in busTimeTableData.weekday) {</b>
+<b class="nc">&nbsp;            list.add(</b>
+<b class="nc">&nbsp;                TimeTableItem(</b>
+<b class="nc">&nbsp;                    busTimeTableData.name,</b>
+<b class="nc">&nbsp;                    busTimeTableData.position,</b>
+<b class="nc">&nbsp;                    busTimeTableData.system,</b>
+<b class="nc">&nbsp;                    busTimeTableData.destinations[0],</b>
+<b class="nc">&nbsp;                    getHour(item),</b>
+<b class="nc">&nbsp;                    getMinute(item)</b>
+&nbsp;                )
+&nbsp;            )
+&nbsp;        }
+<b class="nc">&nbsp;        1 -&gt; for (item in busTimeTableData.saturday) {</b>
+<b class="nc">&nbsp;            list.add(</b>
+<b class="nc">&nbsp;                TimeTableItem(</b>
+<b class="nc">&nbsp;                    busTimeTableData.name,</b>
+<b class="nc">&nbsp;                    busTimeTableData.position,</b>
+<b class="nc">&nbsp;                    busTimeTableData.system,</b>
+<b class="nc">&nbsp;                    busTimeTableData.destinations[0],</b>
+<b class="nc">&nbsp;                    getHour(item),</b>
+<b class="nc">&nbsp;                    getMinute(item)</b>
+&nbsp;                )
+&nbsp;            )
+&nbsp;        }
+<b class="nc">&nbsp;        2 -&gt; for (item in busTimeTableData.holiday) {</b>
+<b class="nc">&nbsp;            list.add(</b>
+<b class="nc">&nbsp;                TimeTableItem(</b>
+<b class="nc">&nbsp;                    busTimeTableData.name,</b>
+<b class="nc">&nbsp;                    busTimeTableData.position,</b>
+<b class="nc">&nbsp;                    busTimeTableData.system,</b>
+<b class="nc">&nbsp;                    busTimeTableData.destinations[0],</b>
+<b class="nc">&nbsp;                    getHour(item),</b>
+<b class="nc">&nbsp;                    getMinute(item)</b>
+&nbsp;                )
+&nbsp;            )
+&nbsp;        }
+&nbsp;    }
+<b class="nc">&nbsp;    return list</b>
+&nbsp;}
+&nbsp;
+&nbsp;/**
+&nbsp; * 第一引数(base)と、第二引数(target)のうち、targetの方が小さいかどうかを判定する
+&nbsp; */
+&nbsp;fun isSmall(base: TimeTableItem, target: TimeTableItem): Boolean {
+<b class="fc">&nbsp;    return try {</b>
+<b class="fc">&nbsp;        if (target.hour.toInt() &lt; base.hour.toInt()) {</b>
+<b class="fc">&nbsp;            true</b>
+<b class="fc">&nbsp;        } else if (target.hour.toInt() &gt; base.hour.toInt()) {</b>
+<b class="fc">&nbsp;            false</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            target.minute.toInt() &lt; base.minute.toInt()</b>
+&nbsp;        }
+<b class="nc">&nbsp;    } catch (e: Exception) {</b>
+<b class="nc">&nbsp;        print(e)</b>
+<b class="nc">&nbsp;        true</b>
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;/**
+&nbsp; * 二つのリストをマージする
+&nbsp; */
+&nbsp;fun mergeList(base: List&lt;TimeTableItem&gt;, target: List&lt;TimeTableItem&gt;): MutableList&lt;TimeTableItem&gt; {
+<b class="fc">&nbsp;    val list: MutableList&lt;TimeTableItem&gt; = mutableListOf()</b>
+<b class="fc">&nbsp;    val baseMax = base.size</b>
+<b class="fc">&nbsp;    var baseCurrent = 0</b>
+<b class="fc">&nbsp;    val targetMax = target.size</b>
+<b class="fc">&nbsp;    var targetCurrent = 0</b>
+<b class="pc">&nbsp;    while ((baseCurrent &lt; baseMax) || (targetCurrent &lt; targetMax)) {</b>
+<b class="pc">&nbsp;        if (baseCurrent &gt;= baseMax) {</b>
+<b class="fc">&nbsp;            list.add(target[targetCurrent])</b>
+<b class="fc">&nbsp;            targetCurrent++</b>
+<b class="nc">&nbsp;        } else if (targetCurrent &gt;= targetMax) {</b>
+<b class="nc">&nbsp;            list.add(base[baseCurrent])</b>
+<b class="nc">&nbsp;            baseCurrent++</b>
+<b class="nc">&nbsp;        } else if (isSmall(base[baseCurrent], target[targetCurrent])) {</b>
+<b class="nc">&nbsp;            list.add(target[targetCurrent])</b>
+<b class="nc">&nbsp;            targetCurrent++</b>
+&nbsp;        } else {
+<b class="nc">&nbsp;            list.add(base[baseCurrent])</b>
+<b class="nc">&nbsp;            baseCurrent++</b>
+&nbsp;        }
+&nbsp;    }
+<b class="fc">&nbsp;    return list</b>
+&nbsp;}
+&nbsp;
+&nbsp;data class TimeTableItem(val from: String, val position: String, val system: String, val to: String, val hour: String, val minute: String)
+&nbsp;
+&nbsp;data class BusTimeTableData(
+&nbsp;    val date: String,
+&nbsp;    val name: String,
+&nbsp;    val position: String,
+&nbsp;    val system: String,
+&nbsp;    val destinations: List&lt;String&gt;,
+&nbsp;    val weekday: List&lt;String&gt;,
+&nbsp;    val saturday: List&lt;String&gt;,
+&nbsp;    val holiday: List&lt;String&gt;
+&nbsp;)
+&nbsp;
+&nbsp;fun readTimeTableJson(assetManager: AssetManager, fileName: String): BusTimeTableData {
+<b class="nc">&nbsp;    return try {</b>
+<b class="nc">&nbsp;        val inputStream = assetManager.open(fileName)</b>
+<b class="nc">&nbsp;        val jsonString = inputStream.bufferedReader().use { it.readText() }</b>
+<b class="nc">&nbsp;        val mapper = jacksonObjectMapper()</b>
+<b class="nc">&nbsp;        mapper.readValue(jsonString)</b>
+<b class="nc">&nbsp;    } catch(e: Exception) {</b>
+<b class="nc">&nbsp;        println(e)</b>
+<b class="nc">&nbsp;        BusTimeTableData(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;) )</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-01-18 18:21</div>
+</div>
+</body>
+</html>
