@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-  <title>app Coverage Report > TimeTableItem</title>
+  <title>app Coverage Report > TimeTable</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,7 +22,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     <a href="../index.html">net.asabon.bustimetable</a>
 </div>
 
-<h1>Coverage Summary for Class: TimeTableItem (net.asabon.bustimetable)</h1>
+<h1>Coverage Summary for Class: TimeTable (net.asabon.bustimetable)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -49,38 +49,45 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 </th>
 </tr>
 <tr>
-  <td class="name">TimeTableItem</td>
+  <td class="name">TimeTable</td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    0%
   </span>
   <span class="absValue">
-    (1/1)
+    (0/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    0%
   </span>
   <span class="absValue">
-    (1/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    100%
-  </span>
-  <span class="absValue">
-    (1/1)
+    (0/6)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    100%
+    0%
   </span>
   <span class="absValue">
-    (32/32)
+    (0/44)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/44)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/274)
   </span>
 </td>
 </tr>
@@ -97,30 +104,32 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;import android.content.res.AssetManager
 &nbsp;import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 &nbsp;import com.fasterxml.jackson.module.kotlin.readValue
+&nbsp;import java.time.ZoneId
+&nbsp;import java.time.ZonedDateTime
 &nbsp;import java.util.Calendar
 &nbsp;
-&nbsp;class TimeTable(assetManager: AssetManager?) {
+<b class="nc">&nbsp;class TimeTable(assetManager: AssetManager?) {</b>
 &nbsp;    /**
 &nbsp;     * 時刻表テーブル
 &nbsp;     */
-&nbsp;    private var mTimeTables: MutableList&lt;BusTimeTableData&gt;? = createTimeTables(assetManager)
+<b class="nc">&nbsp;    private var mTimeTables: MutableList&lt;BusTimeTableData&gt;? = createTimeTables(assetManager)</b>
 &nbsp;
 &nbsp;    /**
 &nbsp;     * jsonファイルから時刻表リストを生成する
 &nbsp;     */
 &nbsp;    private fun createTimeTables(assetManager: AssetManager?): MutableList&lt;BusTimeTableData&gt; {
-&nbsp;        val list = mutableListOf&lt;BusTimeTableData&gt;()
+<b class="nc">&nbsp;        val list = mutableListOf&lt;BusTimeTableData&gt;()</b>
 &nbsp;        val jsonFiles: Array&lt;String&gt;
-&nbsp;        if (assetManager == null) {
+<b class="nc">&nbsp;        if (assetManager == null) {</b>
 &nbsp;            /* サンプルデータ */
 &nbsp;        } else {
 &nbsp;            /* assetManager から読み出す */
-&nbsp;            jsonFiles = assetManager.list(&quot;kanachu&quot;)!!
-&nbsp;            for (jsonFile in jsonFiles) {
-&nbsp;                list.add(readTimeTableJson(assetManager, &quot;kanachu/$jsonFile&quot;))
+<b class="nc">&nbsp;            jsonFiles = assetManager.list(&quot;kanachu&quot;)!!</b>
+<b class="nc">&nbsp;            for (jsonFile in jsonFiles) {</b>
+<b class="nc">&nbsp;                list.add(readTimeTableJson(assetManager, &quot;kanachu/$jsonFile&quot;))</b>
 &nbsp;            }
 &nbsp;        }
-&nbsp;        return list
+<b class="nc">&nbsp;        return list</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    /**
@@ -132,10 +141,10 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;     *  とする。
 &nbsp;     */
 &nbsp;    fun getDefaultDirection(): Int {
-&nbsp;        val calendar: Calendar = Calendar.getInstance()
-&nbsp;        return when (calendar.get(Calendar.HOUR_OF_DAY)) {
-&nbsp;            in 6..12 -&gt; 0
-&nbsp;            else -&gt; 1
+<b class="nc">&nbsp;        val calendar: Calendar = Calendar.getInstance()</b>
+<b class="nc">&nbsp;        return when (calendar.get(Calendar.HOUR_OF_DAY)) {</b>
+<b class="nc">&nbsp;            in 6..12 -&gt; 0</b>
+<b class="nc">&nbsp;            else -&gt; 1</b>
 &nbsp;        }
 &nbsp;    }
 &nbsp;
@@ -146,56 +155,71 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;     * 現時点では休日判定は入っておらず、日曜 = 休日とする。
 &nbsp;     */
 &nbsp;    fun getDefaultDateType(): Int {
-&nbsp;        var result = 0
-&nbsp;        val calendar: Calendar = Calendar.getInstance()
-&nbsp;        when (calendar.get(Calendar.DAY_OF_WEEK)) {
-&nbsp;            Calendar.MONDAY,
-&nbsp;            Calendar.TUESDAY,
-&nbsp;            Calendar.WEDNESDAY,
-&nbsp;            Calendar.THURSDAY,
-&nbsp;            Calendar.FRIDAY -&gt; {
-&nbsp;                result = 0
+<b class="nc">&nbsp;        var result = 0</b>
+<b class="nc">&nbsp;        val calendar: Calendar = Calendar.getInstance()</b>
+<b class="nc">&nbsp;        when (calendar.get(Calendar.DAY_OF_WEEK)) {</b>
+<b class="nc">&nbsp;            Calendar.MONDAY,</b>
+<b class="nc">&nbsp;            Calendar.TUESDAY,</b>
+<b class="nc">&nbsp;            Calendar.WEDNESDAY,</b>
+<b class="nc">&nbsp;            Calendar.THURSDAY,</b>
+<b class="nc">&nbsp;            Calendar.FRIDAY -&gt; {</b>
+<b class="nc">&nbsp;                result = 0</b>
 &nbsp;            }
-&nbsp;            Calendar.SATURDAY -&gt; {
-&nbsp;                result = 1
+<b class="nc">&nbsp;            Calendar.SATURDAY -&gt; {</b>
+<b class="nc">&nbsp;                result = 1</b>
 &nbsp;            }
-&nbsp;            Calendar.SUNDAY -&gt; {
-&nbsp;                result = 2
+<b class="nc">&nbsp;            Calendar.SUNDAY -&gt; {</b>
+<b class="nc">&nbsp;                result = 2</b>
 &nbsp;            }
 &nbsp;        }
-&nbsp;        return result
+<b class="nc">&nbsp;        return result</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    fun getTimeTableItems3(direction: Int, dateType: Int): MutableList&lt;TimeTableItem&gt; {
-&nbsp;        val from = mutableListOf&lt;String&gt;()
-&nbsp;        val to = mutableListOf&lt;String&gt;()
-&nbsp;        if (direction == 0) {
-&nbsp;            from.add(&quot;町田総合高校前&quot;)
-&nbsp;            to.add(&quot;町田バスセンター&quot;)
+<b class="nc">&nbsp;        val from = mutableListOf&lt;String&gt;()</b>
+<b class="nc">&nbsp;        val to = mutableListOf&lt;String&gt;()</b>
+<b class="nc">&nbsp;        if (direction == 0) {</b>
+<b class="nc">&nbsp;            from.add(&quot;町田総合高校前&quot;)</b>
+<b class="nc">&nbsp;            to.add(&quot;町田バスセンター&quot;)</b>
 &nbsp;        } else {
-&nbsp;            from.add(&quot;町田バスセンター&quot;)
-&nbsp;            to.add(&quot;町田総合高校前&quot;)
+<b class="nc">&nbsp;            from.add(&quot;町田バスセンター&quot;)</b>
+<b class="nc">&nbsp;            to.add(&quot;町田総合高校前&quot;)</b>
 &nbsp;        }
-&nbsp;        return getTimeTableItems2(from, to, dateType)
+<b class="nc">&nbsp;        return getTimeTableItems2(from, to, dateType)</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    private fun getTimeTableItems2(from: List&lt;String&gt;, to: List&lt;String&gt;, dateType: Int): MutableList&lt;TimeTableItem&gt; {
-&nbsp;        var list: MutableList&lt;TimeTableItem&gt; = mutableListOf()
-&nbsp;        val busTimeTableList = mutableListOf&lt;BusTimeTableData&gt;()
-&nbsp;        for (timeTable in mTimeTables!!) {
-&nbsp;            if (isContain(timeTable.name, from) &amp;&amp; (isContains(timeTable.destinations, to))) {
-&nbsp;                busTimeTableList.add(timeTable)
+<b class="nc">&nbsp;        var list: MutableList&lt;TimeTableItem&gt; = mutableListOf()</b>
+<b class="nc">&nbsp;        val busTimeTableList = mutableListOf&lt;BusTimeTableData&gt;()</b>
+<b class="nc">&nbsp;        for (timeTable in mTimeTables!!) {</b>
+<b class="nc">&nbsp;            if (isContain(timeTable.name, from) &amp;&amp; (isContains(timeTable.destinations, to))) {</b>
+<b class="nc">&nbsp;                busTimeTableList.add(timeTable)</b>
 &nbsp;            }
 &nbsp;        }
 &nbsp;        /* マージする */
-&nbsp;        for (busTimeTable in busTimeTableList) {
-&nbsp;            list = mergeList(list, createItemList(busTimeTable, dateType))
+<b class="nc">&nbsp;        for (busTimeTable in busTimeTableList) {</b>
+<b class="nc">&nbsp;            list = mergeList(list, createItemList(busTimeTable, dateType))</b>
 &nbsp;        }
-&nbsp;        if (list.size == 0) {
-&nbsp;            list.add(TimeTableItem(from = &quot;No data&quot;, position = &quot;&quot;, system = &quot;-&quot;, to = &quot;&quot;, hour = &quot;00&quot;, minute = &quot;00&quot;))
+<b class="nc">&nbsp;        if (list.size == 0) {</b>
+<b class="nc">&nbsp;            list.add(TimeTableItem(from = &quot;No data&quot;, position = &quot;&quot;, system = &quot;-&quot;, to = &quot;&quot;, hour = &quot;00&quot;, minute = &quot;00&quot;))</b>
 &nbsp;        }
-&nbsp;        return list
+<b class="nc">&nbsp;        return list</b>
 &nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;/**
+&nbsp; * 与えられたリストの中で、現在時刻に最も近いのが何番目かを返す。
+&nbsp; */
+&nbsp;fun getIndex(list: List&lt;TimeTableItem&gt;): Int {
+&nbsp;    val hour = ZonedDateTime.now(ZoneId.of(&quot;Asia/Tokyo&quot;)).hour
+&nbsp;    var i = 0
+&nbsp;    for (item in list) {
+&nbsp;        if (item.hour.toInt() &gt;= hour) {
+&nbsp;            break
+&nbsp;        }
+&nbsp;        i++
+&nbsp;    }
+&nbsp;    return i
 &nbsp;}
 &nbsp;
 &nbsp;/**
@@ -313,7 +337,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    return list
 &nbsp;}
 &nbsp;
-<b class="fc">&nbsp;data class TimeTableItem(val from: String, val position: String, val system: String, val to: String, val hour: String, val minute: String)</b>
+&nbsp;data class TimeTableItem(val from: String, val position: String, val system: String, val to: String, val hour: String, val minute: String)
 &nbsp;
 &nbsp;data class BusTimeTableData(
 &nbsp;    val date: String,
@@ -360,7 +384,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-18 18:21</div>
+    <div style="float:right;">generated on 2024-01-18 23:33</div>
 </div>
 </body>
 </html>

@@ -97,6 +97,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;import android.content.res.AssetManager
 &nbsp;import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 &nbsp;import com.fasterxml.jackson.module.kotlin.readValue
+&nbsp;import java.time.ZoneId
+&nbsp;import java.time.ZonedDateTime
 &nbsp;import java.util.Calendar
 &nbsp;
 &nbsp;class TimeTable(assetManager: AssetManager?) {
@@ -196,6 +198,21 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        }
 &nbsp;        return list
 &nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;/**
+&nbsp; * 与えられたリストの中で、現在時刻に最も近いのが何番目かを返す。
+&nbsp; */
+&nbsp;fun getIndex(list: List&lt;TimeTableItem&gt;): Int {
+&nbsp;    val hour = ZonedDateTime.now(ZoneId.of(&quot;Asia/Tokyo&quot;)).hour
+&nbsp;    var i = 0
+&nbsp;    for (item in list) {
+&nbsp;        if (item.hour.toInt() &gt;= hour) {
+&nbsp;            break
+&nbsp;        }
+&nbsp;        i++
+&nbsp;    }
+&nbsp;    return i
 &nbsp;}
 &nbsp;
 &nbsp;/**
@@ -360,7 +377,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-18 18:21</div>
+    <div style="float:right;">generated on 2024-01-18 23:33</div>
 </div>
 </body>
 </html>
