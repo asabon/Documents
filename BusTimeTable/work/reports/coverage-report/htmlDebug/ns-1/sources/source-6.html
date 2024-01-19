@@ -109,6 +109,29 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    private val context = context
 &nbsp;    private var spotInfos = mutableListOf&lt;SpotInfo&gt;()
 &nbsp;
+&nbsp;    fun initialize() {
+&nbsp;        spotInfos.clear()
+&nbsp;        spotInfos.add(
+&nbsp;            SpotInfo(
+&nbsp;                &quot;家&quot;,
+&nbsp;                mutableListOf(
+&nbsp;                    &quot;町田総合高校前&quot;,
+&nbsp;                    &quot;木曽南団地&quot;,
+&nbsp;                    &quot;上宿&quot;,
+&nbsp;                    &quot;境川団地&quot;
+&nbsp;                )
+&nbsp;            )
+&nbsp;        )
+&nbsp;        spotInfos.add(
+&nbsp;            SpotInfo(
+&nbsp;                &quot;駅&quot;,
+&nbsp;                mutableListOf(
+&nbsp;                    &quot;町田バスセンター&quot;
+&nbsp;                )
+&nbsp;            )
+&nbsp;        )
+&nbsp;    }
+&nbsp;
 &nbsp;    /**
 &nbsp;     * 保存されているスポットリストを取得する
 &nbsp;     */
@@ -118,6 +141,15 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;            spots.add(spotInfo.name)
 &nbsp;        }
 &nbsp;        return spots
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getBusStopList(spotName: String): List&lt;String&gt; {
+&nbsp;        for (spot in spotInfos) {
+&nbsp;            if (spot.name == spotName) {
+&nbsp;                return spot.busStops
+&nbsp;            }
+&nbsp;        }
+&nbsp;        return listOf(&quot;&quot;)
 &nbsp;    }
 &nbsp;
 &nbsp;    /**
@@ -236,7 +268,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-19 09:32</div>
+    <div style="float:right;">generated on 2024-01-19 12:58</div>
 </div>
 </body>
 </html>

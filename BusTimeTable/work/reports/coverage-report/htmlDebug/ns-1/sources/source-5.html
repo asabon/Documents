@@ -76,7 +76,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/1178)
+    (0/1179)
   </span>
 </td>
 </tr>
@@ -1056,7 +1056,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/2004)
+    (0/2005)
   </span>
 </td>
 </tr>
@@ -1124,9 +1124,10 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        super.onCreate(savedInstanceState)
 &nbsp;        MobileAds.initialize(this) {}
 &nbsp;        val assetManager = resources.assets
-&nbsp;        val timeTable = TimeTable(assetManager)
 &nbsp;        val config = Config(this)
+&nbsp;        val timeTable = TimeTable(assetManager, config)
 &nbsp;        config.load()
+&nbsp;        config.initialize()
 &nbsp;        setContent {
 &nbsp;            BusTimeTableTheme {
 &nbsp;                // A surface container using the &#39;background&#39; color from the theme
@@ -1384,8 +1385,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;@Preview(showBackground = true)
 &nbsp;@Composable
 <b class="nc">&nbsp;fun MainScreenPreview() {</b>
-<b class="nc">&nbsp;    val timeTable = TimeTable(null)</b>
 <b class="nc">&nbsp;    val config = Config(null)</b>
+<b class="nc">&nbsp;    val timeTable = TimeTable(null, config)</b>
 <b class="nc">&nbsp;    BusTimeTableTheme {</b>
 <b class="nc">&nbsp;        MyApplication(timeTable, config)</b>
 &nbsp;    }
@@ -1413,7 +1414,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-19 09:32</div>
+    <div style="float:right;">generated on 2024-01-19 12:58</div>
 </div>
 </body>
 </html>

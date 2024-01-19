@@ -87,7 +87,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/354)
+    (0/367)
   </span>
 </td>
 </tr>
@@ -108,7 +108,12 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;import java.time.ZonedDateTime
 &nbsp;import java.util.Calendar
 &nbsp;
-<b class="nc">&nbsp;class TimeTable(assetManager: AssetManager?) {</b>
+<b class="nc">&nbsp;class TimeTable(assetManager: AssetManager?, config: Config) {</b>
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Config クラスのインスタンス
+&nbsp;     */
+<b class="nc">&nbsp;    private val mConfig = config</b>
 &nbsp;    /**
 &nbsp;     * 時刻表テーブル
 &nbsp;     */
@@ -186,14 +191,15 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    }
 &nbsp;
 &nbsp;    fun getTimeTableItems3(direction: Int, dateType: Int): MutableList&lt;TimeTableItem&gt; {
-<b class="nc">&nbsp;        val from = mutableListOf&lt;String&gt;()</b>
-<b class="nc">&nbsp;        val to = mutableListOf&lt;String&gt;()</b>
+&nbsp;        val from: List&lt;String&gt;
+&nbsp;        val to: List&lt;String&gt;
+<b class="nc">&nbsp;        val spots = mConfig.getSpotList()</b>
 <b class="nc">&nbsp;        if (direction == 0) {</b>
-<b class="nc">&nbsp;            from.add(&quot;町田総合高校前&quot;)</b>
-<b class="nc">&nbsp;            to.add(&quot;町田バスセンター&quot;)</b>
+<b class="nc">&nbsp;            from = mConfig.getBusStopList(spots[0])</b>
+<b class="nc">&nbsp;            to = mConfig.getBusStopList(spots[1])</b>
 &nbsp;        } else {
-<b class="nc">&nbsp;            from.add(&quot;町田バスセンター&quot;)</b>
-<b class="nc">&nbsp;            to.add(&quot;町田総合高校前&quot;)</b>
+<b class="nc">&nbsp;            from = mConfig.getBusStopList(spots[1])</b>
+<b class="nc">&nbsp;            to = mConfig.getBusStopList(spots[0])</b>
 &nbsp;        }
 <b class="nc">&nbsp;        return getTimeTableItems2(from, to, dateType)</b>
 &nbsp;    }
@@ -395,7 +401,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-19 09:32</div>
+    <div style="float:right;">generated on 2024-01-19 12:58</div>
 </div>
 </body>
 </html>

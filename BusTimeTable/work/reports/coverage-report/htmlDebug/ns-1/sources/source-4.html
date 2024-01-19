@@ -61,7 +61,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/8)
+    (0/9)
   </span>
 </td>
 <td class="coverageStat">
@@ -69,7 +69,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/41)
+    (0/44)
   </span>
 </td>
 </tr>
@@ -201,7 +201,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/16)
+    (0/17)
   </span>
 </td>
 <td class="coverageStat">
@@ -209,7 +209,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/161)
+    (0/164)
   </span>
 </td>
 </tr>
@@ -277,9 +277,10 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;        super.onCreate(savedInstanceState)</b>
 <b class="nc">&nbsp;        MobileAds.initialize(this) {}</b>
 <b class="nc">&nbsp;        val assetManager = resources.assets</b>
-<b class="nc">&nbsp;        val timeTable = TimeTable(assetManager)</b>
 <b class="nc">&nbsp;        val config = Config(this)</b>
+<b class="nc">&nbsp;        val timeTable = TimeTable(assetManager, config)</b>
 <b class="nc">&nbsp;        config.load()</b>
+<b class="nc">&nbsp;        config.initialize()</b>
 <b class="nc">&nbsp;        setContent {</b>
 <b class="nc">&nbsp;            BusTimeTableTheme {</b>
 &nbsp;                // A surface container using the &#39;background&#39; color from the theme
@@ -537,8 +538,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;@Preview(showBackground = true)
 &nbsp;@Composable
 &nbsp;fun MainScreenPreview() {
-&nbsp;    val timeTable = TimeTable(null)
 &nbsp;    val config = Config(null)
+&nbsp;    val timeTable = TimeTable(null, config)
 &nbsp;    BusTimeTableTheme {
 &nbsp;        MyApplication(timeTable, config)
 &nbsp;    }
@@ -566,7 +567,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-19 09:32</div>
+    <div style="float:right;">generated on 2024-01-19 12:58</div>
 </div>
 </body>
 </html>
