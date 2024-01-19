@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-  <title>app Coverage Report > ComposableSingletons</title>
+  <title>app Coverage Report > UtilityKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,12 +22,15 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     <a href="../index.html">net.asabon.bustimetable</a>
 </div>
 
-<h1>Coverage Summary for Class: ComposableSingletons (net.asabon.bustimetable)</h1>
+<h1>Coverage Summary for Class: UtilityKt (net.asabon.bustimetable)</h1>
 
 <table class="coverageStats">
-
 <tr>
   <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -45,145 +48,84 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
   Instruction, %
 </th>
 </tr>
-  <tr>
-    <td class="name">ComposableSingletons$MainActivityKt</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/2)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/12)
-  </span>
-</td>
-  </tr>
-  <tr>
-    <td class="name">ComposableSingletons$MainActivityKt$lambda-1$1</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/8)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/44)
-  </span>
-</td>
-  </tr>
-  <tr>
-    <td class="name">ComposableSingletons$MainActivityKt$lambda-2$1</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/8)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/44)
-  </span>
-</td>
-  </tr>
 <tr>
-  <td class="name"><strong>Total</strong></td>
+  <td class="name">UtilityKt</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/3)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/16)
+    (2/2)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/4)
+    (8/8)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/100)
+    (8/8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (36/36)
   </span>
 </td>
 </tr>
+
 </table>
 
 <br/>
 <br/>
 
-  <code class="sourceCode">Source code is not available<br /></code>
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package net.asabon.bustimetable
+&nbsp;
+&nbsp;/**
+&nbsp; * 第一引数の文字列が、第二引数の文字列リストに含まれているかを確認する
+&nbsp; * */
+&nbsp;fun isContain(target: String, list: List&lt;String&gt;): Boolean {
+<b class="fc">&nbsp;    for (item in list) {</b>
+<b class="fc">&nbsp;        if (target == item) {</b>
+<b class="fc">&nbsp;            return true</b>
+&nbsp;        }
+&nbsp;    }
+<b class="fc">&nbsp;    return false</b>
+&nbsp;}
+&nbsp;
+&nbsp;/**
+&nbsp; * 第一引数の文字列リストの中のどれか一つ以上が第二引数の文字列リストに含まれているかを確認する
+&nbsp; */
+&nbsp;fun isContains(targets: List&lt;String&gt;, list: List&lt;String&gt;): Boolean {
+<b class="fc">&nbsp;    for (target in targets) {</b>
+<b class="fc">&nbsp;        if (isContain(target, list)) {</b>
+<b class="fc">&nbsp;            return true</b>
+&nbsp;        }
+&nbsp;    }
+<b class="fc">&nbsp;    return false</b>
+&nbsp;}
+</code>
+</pre>
 </div>
 
 <script type="text/javascript">
