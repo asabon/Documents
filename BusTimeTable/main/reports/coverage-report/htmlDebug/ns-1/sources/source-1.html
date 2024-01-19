@@ -101,7 +101,12 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;import java.time.ZonedDateTime
 &nbsp;import java.util.Calendar
 &nbsp;
-&nbsp;class TimeTable(assetManager: AssetManager?) {
+&nbsp;class TimeTable(assetManager: AssetManager?, config: Config) {
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Config クラスのインスタンス
+&nbsp;     */
+&nbsp;    private val mConfig = config
 &nbsp;    /**
 &nbsp;     * 時刻表テーブル
 &nbsp;     */
@@ -115,6 +120,16 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        val jsonFiles: Array&lt;String&gt;
 &nbsp;        if (assetManager == null) {
 &nbsp;            /* サンプルデータ */
+&nbsp;            list.add(BusTimeTableData(
+&nbsp;                &quot;from&quot;,
+&nbsp;                &quot;position&quot;,
+&nbsp;                &quot;sys&quot;,
+&nbsp;                &quot;to&quot;,
+&nbsp;                listOf(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;),
+&nbsp;                listOf(&quot;08:10&quot;, &quot;08:15&quot;),
+&nbsp;                listOf(&quot;08:10&quot;, &quot;08:15&quot;),
+&nbsp;                listOf(&quot;08:10&quot;, &quot;08:15&quot;)
+&nbsp;            ))
 &nbsp;        } else {
 &nbsp;            /* assetManager から読み出す */
 &nbsp;            jsonFiles = assetManager.list(&quot;kanachu&quot;)!!
@@ -169,14 +184,15 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    }
 &nbsp;
 &nbsp;    fun getTimeTableItems3(direction: Int, dateType: Int): MutableList&lt;TimeTableItem&gt; {
-&nbsp;        val from = mutableListOf&lt;String&gt;()
-&nbsp;        val to = mutableListOf&lt;String&gt;()
+&nbsp;        val from: List&lt;String&gt;
+&nbsp;        val to: List&lt;String&gt;
+&nbsp;        val spots = mConfig.getSpotList()
 &nbsp;        if (direction == 0) {
-&nbsp;            from.add(&quot;町田総合高校前&quot;)
-&nbsp;            to.add(&quot;町田バスセンター&quot;)
+&nbsp;            from = mConfig.getBusStopList(spots[0])
+&nbsp;            to = mConfig.getBusStopList(spots[1])
 &nbsp;        } else {
-&nbsp;            from.add(&quot;町田バスセンター&quot;)
-&nbsp;            to.add(&quot;町田総合高校前&quot;)
+&nbsp;            from = mConfig.getBusStopList(spots[1])
+&nbsp;            to = mConfig.getBusStopList(spots[0])
 &nbsp;        }
 &nbsp;        return getTimeTableItems2(from, to, dateType)
 &nbsp;    }
@@ -205,9 +221,10 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp; */
 &nbsp;fun getIndex(list: List&lt;TimeTableItem&gt;): Int {
 &nbsp;    val hour = ZonedDateTime.now(ZoneId.of(&quot;Asia/Tokyo&quot;)).hour
+&nbsp;    val minute = ZonedDateTime.now(ZoneId.of(&quot;Asia/Tokyo&quot;)).minute
 &nbsp;    var i = 0
 &nbsp;    for (item in list) {
-&nbsp;        if (item.hour.toInt() &gt;= hour) {
+&nbsp;        if (((item.hour.toInt() == hour) &amp;&amp; (item.minute.toInt() &gt;= minute)) || (item.hour.toInt() &gt;= hour)) {
 &nbsp;            break
 &nbsp;        }
 &nbsp;        i++
@@ -377,7 +394,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-18 23:33</div>
+    <div style="float:right;">generated on 2024-01-19 13:05</div>
 </div>
 </body>
 </html>
