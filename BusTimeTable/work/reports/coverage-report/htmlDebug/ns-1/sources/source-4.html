@@ -68,7 +68,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/71)
+    (0/59)
   </span>
 </td>
 <td class="coverageStat">
@@ -76,24 +76,12 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/471)
+    (0/381)
   </span>
 </td>
 </tr>
   <tr>
     <td class="name">Config$load$$inlined$readValue$1</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/1)
-  </span>
-</td>
-    <td class="coverageStat"/>
-  </tr>
-  <tr>
-    <td class="name">Config$load$$inlined$readValue$2</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -111,7 +99,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/19)
+    (0/18)
   </span>
 </td>
 <td class="coverageStat">
@@ -127,7 +115,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/71)
+    (0/59)
   </span>
 </td>
 <td class="coverageStat">
@@ -135,7 +123,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/471)
+    (0/381)
   </span>
 </td>
 </tr>
@@ -156,7 +144,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;data class Setting(
 &nbsp;    var spotA: String,
 &nbsp;    var spotB: String,
-&nbsp;    var direction: Int
+&nbsp;    var direction: Int,
+&nbsp;    var spotInfoList: MutableList&lt;SpotInfo&gt;
 &nbsp;)
 &nbsp;
 &nbsp;data class SpotInfo(
@@ -164,11 +153,20 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    val busStops: MutableList&lt;String&gt;
 &nbsp;)
 &nbsp;
-<b class="nc">&nbsp;class Config(context: Context?) {</b>
+<b class="nc">&nbsp;class Config(private val context: Context?) {</b>
 &nbsp;
-<b class="nc">&nbsp;    private val context = context</b>
-<b class="nc">&nbsp;    private var spotInfos = mutableListOf&lt;SpotInfo&gt;()</b>
-<b class="nc">&nbsp;    private var setting = Setting(&quot;家&quot;, &quot;駅&quot;, 0)</b>
+<b class="nc">&nbsp;    private var setting = initializeSetting()</b>
+&nbsp;
+&nbsp;    private fun initializeSetting(): Setting {
+<b class="nc">&nbsp;        return Setting(</b>
+<b class="nc">&nbsp;            spotA = &quot;家&quot;,</b>
+<b class="nc">&nbsp;            spotB = &quot;駅&quot;,</b>
+<b class="nc">&nbsp;            direction = 0,</b>
+<b class="nc">&nbsp;            spotInfoList = mutableListOf(</b>
+<b class="nc">&nbsp;                SpotInfo(name = &quot;家&quot;, busStops = mutableListOf(&quot;町田総合高校前&quot;, &quot;木曽南団地&quot;, &quot;上宿&quot;, &quot;境川団地&quot;)),</b>
+<b class="nc">&nbsp;                SpotInfo(name = &quot;駅&quot;, busStops = mutableListOf(&quot;町田バスセンター&quot;))</b>
+&nbsp;            ))
+&nbsp;    }
 &nbsp;
 &nbsp;    fun setDirection(direction: Int) {
 <b class="nc">&nbsp;        setting.direction = direction</b>
@@ -194,43 +192,45 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;        return setting.spotB</b>
 &nbsp;    }
 &nbsp;
+&nbsp;    /*
 &nbsp;    fun initialize() {
-<b class="nc">&nbsp;        spotInfos.clear()</b>
-<b class="nc">&nbsp;        setting = Setting(&quot;家&quot;, &quot;駅&quot;, 0)</b>
-<b class="nc">&nbsp;        spotInfos.add(</b>
-<b class="nc">&nbsp;            SpotInfo(</b>
-<b class="nc">&nbsp;                &quot;家&quot;,</b>
-<b class="nc">&nbsp;                mutableListOf(</b>
-<b class="nc">&nbsp;                    &quot;町田総合高校前&quot;,</b>
-<b class="nc">&nbsp;                    &quot;木曽南団地&quot;,</b>
-<b class="nc">&nbsp;                    &quot;上宿&quot;,</b>
-<b class="nc">&nbsp;                    &quot;境川団地&quot;</b>
+&nbsp;        setting.spotInfoList.clear()
+&nbsp;        setting = Setting(&quot;家&quot;, &quot;駅&quot;, 0)
+&nbsp;        spotInfos.add(
+&nbsp;            SpotInfo(
+&nbsp;                &quot;家&quot;,
+&nbsp;                mutableListOf(
+&nbsp;                    &quot;町田総合高校前&quot;,
+&nbsp;                    &quot;木曽南団地&quot;,
+&nbsp;                    &quot;上宿&quot;,
+&nbsp;                    &quot;境川団地&quot;
 &nbsp;                )
 &nbsp;            )
 &nbsp;        )
-<b class="nc">&nbsp;        spotInfos.add(</b>
-<b class="nc">&nbsp;            SpotInfo(</b>
-<b class="nc">&nbsp;                &quot;駅&quot;,</b>
-<b class="nc">&nbsp;                mutableListOf(</b>
-<b class="nc">&nbsp;                    &quot;町田バスセンター&quot;</b>
+&nbsp;        spotInfos.add(
+&nbsp;            SpotInfo(
+&nbsp;                &quot;駅&quot;,
+&nbsp;                mutableListOf(
+&nbsp;                    &quot;町田バスセンター&quot;
 &nbsp;                )
 &nbsp;            )
 &nbsp;        )
 &nbsp;    }
+&nbsp;     */
 &nbsp;
 &nbsp;    /**
 &nbsp;     * 保存されているスポットリストを取得する
 &nbsp;     */
 &nbsp;    fun getSpotList(): List&lt;String&gt; {
 <b class="nc">&nbsp;        val spots = mutableListOf&lt;String&gt;()</b>
-<b class="nc">&nbsp;        for (spotInfo in spotInfos) {</b>
+<b class="nc">&nbsp;        for (spotInfo in setting.spotInfoList) {</b>
 <b class="nc">&nbsp;            spots.add(spotInfo.name)</b>
 &nbsp;        }
 <b class="nc">&nbsp;        return spots</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    fun getBusStopList(spotName: String): List&lt;String&gt; {
-<b class="nc">&nbsp;        for (spot in spotInfos) {</b>
+<b class="nc">&nbsp;        for (spot in setting.spotInfoList) {</b>
 <b class="nc">&nbsp;            if (spot.name == spotName) {</b>
 <b class="nc">&nbsp;                return spot.busStops</b>
 &nbsp;            }
@@ -242,22 +242,22 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;     * スポットを新規登録する
 &nbsp;     */
 &nbsp;    fun addSpot(spot: String) {
-<b class="nc">&nbsp;        for (spotInfo in spotInfos) {</b>
+<b class="nc">&nbsp;        for (spotInfo in setting.spotInfoList) {</b>
 <b class="nc">&nbsp;            if (spot == spotInfo.name) {</b>
 &nbsp;                /* 重複 */
 &nbsp;                return
 &nbsp;            }
 &nbsp;        }
-<b class="nc">&nbsp;        spotInfos.add(SpotInfo(spot, mutableListOf&lt;String&gt;()))</b>
+<b class="nc">&nbsp;        setting.spotInfoList.add(SpotInfo(spot, mutableListOf&lt;String&gt;()))</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    /**
 &nbsp;     * スポットを削除する
 &nbsp;     */
 &nbsp;    fun removeSpot(spot: String) {
-<b class="nc">&nbsp;        for (spotInfo in spotInfos) {</b>
+<b class="nc">&nbsp;        for (spotInfo in setting.spotInfoList) {</b>
 <b class="nc">&nbsp;            if (spot == spotInfo.name) {</b>
-<b class="nc">&nbsp;                spotInfos.remove(spotInfo)</b>
+<b class="nc">&nbsp;                setting.spotInfoList.remove(spotInfo)</b>
 &nbsp;                return
 &nbsp;            }
 &nbsp;        }
@@ -267,7 +267,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;     * スポットにバス停を登録する
 &nbsp;     */
 &nbsp;    fun addBusStop(spot: String, busStop: String) {
-<b class="nc">&nbsp;        for (spotInfo in spotInfos) {</b>
+<b class="nc">&nbsp;        for (spotInfo in setting.spotInfoList) {</b>
 <b class="nc">&nbsp;            if (spot == spotInfo.name) {</b>
 <b class="nc">&nbsp;                spotInfo.busStops.add(busStop)</b>
 &nbsp;                return
@@ -279,7 +279,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;     * スポットからバス停を削除する
 &nbsp;     */
 &nbsp;    fun removeBusStop(spot: String, busStop: String) {
-<b class="nc">&nbsp;        for (spotInfo in spotInfos) {</b>
+<b class="nc">&nbsp;        for (spotInfo in setting.spotInfoList) {</b>
 <b class="nc">&nbsp;            if (spot == spotInfo.name) {</b>
 <b class="nc">&nbsp;                spotInfo.busStops.remove(busStop)</b>
 &nbsp;                return
@@ -290,12 +290,11 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    /**
 &nbsp;     * 内部ストレージに保存した設定をすべて消去する
 &nbsp;     */
-&nbsp;    fun clear() {
-<b class="nc">&nbsp;        spotInfos.clear()</b>
+&nbsp;    private fun clear() {
+<b class="nc">&nbsp;        setting.spotInfoList.clear()</b>
 <b class="nc">&nbsp;        if (context != null) {</b>
 <b class="nc">&nbsp;            try {</b>
 <b class="nc">&nbsp;                File(context.filesDir, &quot;Setting.json&quot;).delete()</b>
-<b class="nc">&nbsp;                File(context.filesDir, &quot;spotInfos.json&quot;).delete()</b>
 <b class="nc">&nbsp;            } catch (e: Exception) {</b>
 <b class="nc">&nbsp;                print(e)</b>
 &nbsp;            }
@@ -309,7 +308,6 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;        if (context != null) {</b>
 <b class="nc">&nbsp;            try {</b>
 <b class="nc">&nbsp;                val mapper = jacksonObjectMapper()</b>
-<b class="nc">&nbsp;                mapper.writeValue(File(context.filesDir, &quot;spotInfos.json&quot;), spotInfos)</b>
 <b class="nc">&nbsp;                mapper.writeValue(File(context.filesDir, &quot;Setting.json&quot;), setting)</b>
 <b class="nc">&nbsp;            } catch (e: Exception) {</b>
 <b class="nc">&nbsp;                print(e)</b>
@@ -323,16 +321,17 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    fun load() {
 <b class="nc">&nbsp;        if (context != null) {</b>
 <b class="nc">&nbsp;            try {</b>
-<b class="nc">&nbsp;                var file = File(context.filesDir, &quot;spotInfos.json&quot;)</b>
-<b class="nc">&nbsp;                var jsonString = file.bufferedReader().use { it.readText() }</b>
-<b class="nc">&nbsp;                var mapper = jacksonObjectMapper()</b>
-<b class="nc">&nbsp;                spotInfos = mapper.readValue&lt;List&lt;SpotInfo&gt;&gt;(jsonString).toMutableList()</b>
-&nbsp;
-<b class="nc">&nbsp;                file = File(context.filesDir, &quot;Setting.json&quot;)</b>
-<b class="nc">&nbsp;                jsonString = file.bufferedReader().use { it.readText() }</b>
-<b class="nc">&nbsp;                mapper = jacksonObjectMapper()</b>
-<b class="nc">&nbsp;                setting = mapper.readValue(jsonString)</b>
+<b class="nc">&nbsp;                val file = File(context.filesDir, &quot;Setting.json&quot;)</b>
+<b class="nc">&nbsp;                if (file.exists()) {</b>
+<b class="nc">&nbsp;                    val jsonString = file.bufferedReader().use { it.readText() }</b>
+<b class="nc">&nbsp;                    val mapper = jacksonObjectMapper()</b>
+<b class="nc">&nbsp;                    setting = mapper.readValue(jsonString)</b>
+&nbsp;                } else {
+<b class="nc">&nbsp;                    setting = initializeSetting()</b>
+<b class="nc">&nbsp;                    save()</b>
+&nbsp;                }
 <b class="nc">&nbsp;            } catch(e: Exception) {</b>
+<b class="nc">&nbsp;                clear()</b>
 <b class="nc">&nbsp;                println(e)</b>
 &nbsp;            }
 &nbsp;        }
@@ -361,7 +360,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-21 04:18</div>
+    <div style="float:right;">generated on 2024-01-21 07:56</div>
 </div>
 </body>
 </html>

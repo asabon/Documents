@@ -76,7 +76,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/47)
+    (0/45)
   </span>
 </td>
 </tr>
@@ -111,7 +111,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/50)
+    (0/48)
   </span>
 </td>
   </tr>
@@ -248,7 +248,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/167)
+    (0/163)
   </span>
 </td>
 </tr>
@@ -283,7 +283,6 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        val config = Config(this)
 &nbsp;        val timeTable = TimeTable(assetManager, config)
 &nbsp;        config.load()
-&nbsp;        config.initialize()
 &nbsp;        setContent {
 &nbsp;            BusTimeTableTheme {
 &nbsp;                // A surface container using the &#39;background&#39; color from the theme
@@ -291,7 +290,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;                    modifier = Modifier.fillMaxSize(),
 &nbsp;                    color = MaterialTheme.colorScheme.background
 &nbsp;                ) {
-&nbsp;                    MyApplication(timeTable, config)
+&nbsp;                    MyApplication(timeTable)
 &nbsp;                }
 &nbsp;            }
 &nbsp;        }
@@ -299,7 +298,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;}
 &nbsp;
 &nbsp;@Composable
-<b class="nc">&nbsp;fun MyApplication(timeTable: TimeTable, config: Config) {</b>
+<b class="nc">&nbsp;fun MyApplication(timeTable: TimeTable) {</b>
 <b class="nc">&nbsp;    BusTimeTableTheme {</b>
 <b class="nc">&nbsp;        val navController = rememberNavController()</b>
 <b class="nc">&nbsp;        NavHost(navController = navController, startDestination = &quot;main&quot;) {</b>
@@ -307,7 +306,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                MainScreen(navController, timeTable)</b>
 &nbsp;            }
 <b class="nc">&nbsp;            composable(&quot;config&quot;) {</b>
-<b class="nc">&nbsp;                ConfigScreen(navController, config)</b>
+<b class="nc">&nbsp;                ConfigScreen(navController, timeTable)</b>
 &nbsp;            }
 <b class="nc">&nbsp;        }</b>
 &nbsp;    }
@@ -335,7 +334,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-21 04:18</div>
+    <div style="float:right;">generated on 2024-01-21 07:56</div>
 </div>
 </body>
 </html>
