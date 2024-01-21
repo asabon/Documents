@@ -122,7 +122,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;            direction = 0,
 &nbsp;            spotInfoList = mutableListOf(
 &nbsp;                SpotInfo(name = &quot;家&quot;, busStops = mutableListOf(&quot;町田総合高校前&quot;, &quot;木曽南団地&quot;, &quot;上宿&quot;, &quot;境川団地&quot;)),
-&nbsp;                SpotInfo(name = &quot;駅&quot;, busStops = mutableListOf(&quot;町田バスセンター&quot;))
+&nbsp;                SpotInfo(name = &quot;駅&quot;, busStops = mutableListOf(&quot;町田バスセンター&quot;)),
+&nbsp;                SpotInfo(name = &quot;学校&quot;, busStops = mutableListOf()),
+&nbsp;                SpotInfo(name = &quot;会社&quot;, busStops = mutableListOf())
 &nbsp;            ))
 &nbsp;    }
 &nbsp;
@@ -173,19 +175,20 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    /**
 &nbsp;     * スポットを新規登録する
 &nbsp;     */
+&nbsp;    /* いったん無効化しておく
 &nbsp;    fun addSpot(spot: String) {
 &nbsp;        for (spotInfo in setting.spotInfoList) {
 &nbsp;            if (spot == spotInfo.name) {
-&nbsp;                /* 重複 */
 &nbsp;                return
 &nbsp;            }
 &nbsp;        }
 &nbsp;        setting.spotInfoList.add(SpotInfo(spot, mutableListOf&lt;String&gt;()))
-&nbsp;    }
+&nbsp;    } */
 &nbsp;
 &nbsp;    /**
 &nbsp;     * スポットを削除する
 &nbsp;     */
+&nbsp;    /* いったん無効化しておく
 &nbsp;    fun removeSpot(spot: String) {
 &nbsp;        for (spotInfo in setting.spotInfoList) {
 &nbsp;            if (spot == spotInfo.name) {
@@ -193,7 +196,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;                return
 &nbsp;            }
 &nbsp;        }
-&nbsp;    }
+&nbsp;    } */
 &nbsp;
 &nbsp;    /**
 &nbsp;     * スポットにバス停を登録する
@@ -201,7 +204,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    fun addBusStop(spot: String, busStop: String) {
 &nbsp;        for (spotInfo in setting.spotInfoList) {
 &nbsp;            if (spot == spotInfo.name) {
-&nbsp;                spotInfo.busStops.add(busStop)
+&nbsp;                if (!spotInfo.busStops.contains(busStop)) {
+&nbsp;                    spotInfo.busStops.add(busStop)
+&nbsp;                }
 &nbsp;                return
 &nbsp;            }
 &nbsp;        }
@@ -222,7 +227,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    /**
 &nbsp;     * 内部ストレージに保存した設定をすべて消去する
 &nbsp;     */
-&nbsp;    private fun clear() {
+&nbsp;    fun clear() {
 &nbsp;        setting.spotInfoList.clear()
 &nbsp;        if (context != null) {
 &nbsp;            try {
@@ -292,7 +297,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-21 08:37</div>
+    <div style="float:right;">generated on 2024-01-21 09:31</div>
 </div>
 </body>
 </html>

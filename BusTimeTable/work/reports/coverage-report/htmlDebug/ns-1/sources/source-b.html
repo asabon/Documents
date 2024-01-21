@@ -133,6 +133,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    }
 &nbsp;
 &nbsp;    fun initialize() {
+&nbsp;        // デバッグ時に強制的に保存データを削除する際は
+&nbsp;        // ↓を有効にする
+&nbsp;        //mConfig.clear()
 <b class="nc">&nbsp;        mConfig.load()</b>
 <b class="nc">&nbsp;        mTimeTables = createTimeTables(assetManager = assetManager)</b>
 <b class="nc">&nbsp;        for (tt in mTimeTables!!) {</b>
@@ -424,7 +427,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-21 08:37</div>
+    <div style="float:right;">generated on 2024-01-21 09:31</div>
 </div>
 </body>
 </html>
