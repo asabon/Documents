@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-  <title>app Coverage Report > BusTimeTableData</title>
+  <title>app Coverage Report > TimeTableKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,15 +22,12 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     <a href="../index.html">net.asabon.bustimetable</a>
 </div>
 
-<h1>Coverage Summary for Class: BusTimeTableData (net.asabon.bustimetable)</h1>
+<h1>Coverage Summary for Class: TimeTableKt (net.asabon.bustimetable)</h1>
 
 <table class="coverageStats">
+
 <tr>
   <th class="name">Class</th>
-<th class="coverageStat 
-">
-  Class, %
-</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -49,15 +46,42 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 </th>
 </tr>
 <tr>
-  <td class="name">BusTimeTableData</td>
+  <td class="name">TimeTableKt</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    57.1%
   </span>
   <span class="absValue">
-    (0/1)
+    (4/7)
   </span>
 </td>
+<td class="coverageStat">
+  <span class="percent">
+    32%
+  </span>
+  <span class="absValue">
+    (16/50)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    28.9%
+  </span>
+  <span class="absValue">
+    (24/83)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    26.5%
+  </span>
+  <span class="absValue">
+    (114/431)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">TimeTableKt$readTimeTableJson$$inlined$readValue$1</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -67,24 +91,42 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
   </span>
 </td>
     <td class="coverageStat"/>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    50%
   </span>
   <span class="absValue">
-    (0/9)
+    (4/8)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    32%
   </span>
   <span class="absValue">
-    (0/42)
+    (16/50)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    28.9%
+  </span>
+  <span class="absValue">
+    (24/83)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    26.5%
+  </span>
+  <span class="absValue">
+    (114/431)
   </span>
 </td>
 </tr>
-
 </table>
 
 <br/>
@@ -224,103 +266,103 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp; * 与えられたリストの中で、現在時刻に最も近いのが何番目かを返す。
 &nbsp; */
 &nbsp;fun getIndex(list: List&lt;TimeTableItem&gt;): Int {
-&nbsp;    val hour = ZonedDateTime.now(ZoneId.of(&quot;Asia/Tokyo&quot;)).hour
-&nbsp;    val minute = ZonedDateTime.now(ZoneId.of(&quot;Asia/Tokyo&quot;)).minute
-&nbsp;    var i = 0
-&nbsp;    for (item in list) {
-&nbsp;        if (((item.hour.toInt() == hour) &amp;&amp; (item.minute.toInt() &gt;= minute)) || (item.hour.toInt() &gt;= hour)) {
-&nbsp;            break
+<b class="nc">&nbsp;    val hour = ZonedDateTime.now(ZoneId.of(&quot;Asia/Tokyo&quot;)).hour</b>
+<b class="nc">&nbsp;    val minute = ZonedDateTime.now(ZoneId.of(&quot;Asia/Tokyo&quot;)).minute</b>
+<b class="nc">&nbsp;    var i = 0</b>
+<b class="nc">&nbsp;    for (item in list) {</b>
+<b class="nc">&nbsp;        if (((item.hour.toInt() == hour) &amp;&amp; (item.minute.toInt() &gt;= minute)) || (item.hour.toInt() &gt;= hour)) {</b>
+<b class="nc">&nbsp;            break</b>
 &nbsp;        }
-&nbsp;        i++
+<b class="nc">&nbsp;        i++</b>
 &nbsp;    }
-&nbsp;    return i
+<b class="nc">&nbsp;    return i</b>
 &nbsp;}
 &nbsp;
 &nbsp;/**
 &nbsp; * &quot;HH:MM&quot; から &quot;HH&quot; を取り出して返す
 &nbsp; */
 &nbsp;fun getHour(input: String): String {
-&nbsp;    val regex = Regex(&quot;(.*):(.*)&quot;)
-&nbsp;    val matchResult: MatchResult? = regex.matchEntire(input)
-&nbsp;    if (matchResult != null) {
-&nbsp;        return matchResult.groups[1]?.value ?: &quot;--&quot;
+<b class="fc">&nbsp;    val regex = Regex(&quot;(.*):(.*)&quot;)</b>
+<b class="fc">&nbsp;    val matchResult: MatchResult? = regex.matchEntire(input)</b>
+<b class="pc">&nbsp;    if (matchResult != null) {</b>
+<b class="pc">&nbsp;        return matchResult.groups[1]?.value ?: &quot;--&quot;</b>
 &nbsp;    }
-&nbsp;    return &quot;--&quot;
+<b class="nc">&nbsp;    return &quot;--&quot;</b>
 &nbsp;}
 &nbsp;
 &nbsp;/**
 &nbsp; * &quot;HH:MM&quot; から &quot;MM&quot; を取り出して返す
 &nbsp; */
 &nbsp;fun getMinute(input: String): String {
-&nbsp;    val regex = Regex(&quot;(.*):(.*)&quot;)
-&nbsp;    val matchResult: MatchResult? = regex.matchEntire(input)
-&nbsp;    if (matchResult != null) {
-&nbsp;        return matchResult.groups[2]?.value ?: &quot;--&quot;
+<b class="fc">&nbsp;    val regex = Regex(&quot;(.*):(.*)&quot;)</b>
+<b class="fc">&nbsp;    val matchResult: MatchResult? = regex.matchEntire(input)</b>
+<b class="pc">&nbsp;    if (matchResult != null) {</b>
+<b class="pc">&nbsp;        return matchResult.groups[2]?.value ?: &quot;--&quot;</b>
 &nbsp;    }
-&nbsp;    return &quot;--&quot;
+<b class="nc">&nbsp;    return &quot;--&quot;</b>
 &nbsp;}
 &nbsp;
 &nbsp;/**
 &nbsp; * 表示用のリストを作成する
 &nbsp; */
 &nbsp;fun createItemList(busTimeTableData: BusTimeTableData, dateType: Int): List&lt;TimeTableItem&gt; {
-&nbsp;    val list = mutableListOf&lt;TimeTableItem&gt;()
-&nbsp;    when (dateType) {
-&nbsp;        0 -&gt; for (item in busTimeTableData.weekday) {
-&nbsp;            list.add(
-&nbsp;                TimeTableItem(
-&nbsp;                    busTimeTableData.name,
-&nbsp;                    busTimeTableData.position,
-&nbsp;                    busTimeTableData.system,
-&nbsp;                    busTimeTableData.destinations[0],
-&nbsp;                    getHour(item),
-&nbsp;                    getMinute(item)
+<b class="nc">&nbsp;    val list = mutableListOf&lt;TimeTableItem&gt;()</b>
+<b class="nc">&nbsp;    when (dateType) {</b>
+<b class="nc">&nbsp;        0 -&gt; for (item in busTimeTableData.weekday) {</b>
+<b class="nc">&nbsp;            list.add(</b>
+<b class="nc">&nbsp;                TimeTableItem(</b>
+<b class="nc">&nbsp;                    busTimeTableData.name,</b>
+<b class="nc">&nbsp;                    busTimeTableData.position,</b>
+<b class="nc">&nbsp;                    busTimeTableData.system,</b>
+<b class="nc">&nbsp;                    busTimeTableData.destinations[0],</b>
+<b class="nc">&nbsp;                    getHour(item),</b>
+<b class="nc">&nbsp;                    getMinute(item)</b>
 &nbsp;                )
 &nbsp;            )
 &nbsp;        }
-&nbsp;        1 -&gt; for (item in busTimeTableData.saturday) {
-&nbsp;            list.add(
-&nbsp;                TimeTableItem(
-&nbsp;                    busTimeTableData.name,
-&nbsp;                    busTimeTableData.position,
-&nbsp;                    busTimeTableData.system,
-&nbsp;                    busTimeTableData.destinations[0],
-&nbsp;                    getHour(item),
-&nbsp;                    getMinute(item)
+<b class="nc">&nbsp;        1 -&gt; for (item in busTimeTableData.saturday) {</b>
+<b class="nc">&nbsp;            list.add(</b>
+<b class="nc">&nbsp;                TimeTableItem(</b>
+<b class="nc">&nbsp;                    busTimeTableData.name,</b>
+<b class="nc">&nbsp;                    busTimeTableData.position,</b>
+<b class="nc">&nbsp;                    busTimeTableData.system,</b>
+<b class="nc">&nbsp;                    busTimeTableData.destinations[0],</b>
+<b class="nc">&nbsp;                    getHour(item),</b>
+<b class="nc">&nbsp;                    getMinute(item)</b>
 &nbsp;                )
 &nbsp;            )
 &nbsp;        }
-&nbsp;        2 -&gt; for (item in busTimeTableData.holiday) {
-&nbsp;            list.add(
-&nbsp;                TimeTableItem(
-&nbsp;                    busTimeTableData.name,
-&nbsp;                    busTimeTableData.position,
-&nbsp;                    busTimeTableData.system,
-&nbsp;                    busTimeTableData.destinations[0],
-&nbsp;                    getHour(item),
-&nbsp;                    getMinute(item)
+<b class="nc">&nbsp;        2 -&gt; for (item in busTimeTableData.holiday) {</b>
+<b class="nc">&nbsp;            list.add(</b>
+<b class="nc">&nbsp;                TimeTableItem(</b>
+<b class="nc">&nbsp;                    busTimeTableData.name,</b>
+<b class="nc">&nbsp;                    busTimeTableData.position,</b>
+<b class="nc">&nbsp;                    busTimeTableData.system,</b>
+<b class="nc">&nbsp;                    busTimeTableData.destinations[0],</b>
+<b class="nc">&nbsp;                    getHour(item),</b>
+<b class="nc">&nbsp;                    getMinute(item)</b>
 &nbsp;                )
 &nbsp;            )
 &nbsp;        }
 &nbsp;    }
-&nbsp;    return list
+<b class="nc">&nbsp;    return list</b>
 &nbsp;}
 &nbsp;
 &nbsp;/**
 &nbsp; * 第一引数(base)と、第二引数(target)のうち、targetの方が小さいかどうかを判定する
 &nbsp; */
 &nbsp;fun isSmall(base: TimeTableItem, target: TimeTableItem): Boolean {
-&nbsp;    return try {
-&nbsp;        if (target.hour.toInt() &lt; base.hour.toInt()) {
-&nbsp;            true
-&nbsp;        } else if (target.hour.toInt() &gt; base.hour.toInt()) {
-&nbsp;            false
+<b class="fc">&nbsp;    return try {</b>
+<b class="fc">&nbsp;        if (target.hour.toInt() &lt; base.hour.toInt()) {</b>
+<b class="fc">&nbsp;            true</b>
+<b class="fc">&nbsp;        } else if (target.hour.toInt() &gt; base.hour.toInt()) {</b>
+<b class="fc">&nbsp;            false</b>
 &nbsp;        } else {
-&nbsp;            target.minute.toInt() &lt; base.minute.toInt()
+<b class="fc">&nbsp;            target.minute.toInt() &lt; base.minute.toInt()</b>
 &nbsp;        }
-&nbsp;    } catch (e: Exception) {
-&nbsp;        print(e)
-&nbsp;        true
+<b class="nc">&nbsp;    } catch (e: Exception) {</b>
+<b class="nc">&nbsp;        print(e)</b>
+<b class="nc">&nbsp;        true</b>
 &nbsp;    }
 &nbsp;}
 &nbsp;
@@ -328,51 +370,51 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp; * 二つのリストをマージする
 &nbsp; */
 &nbsp;fun mergeList(base: List&lt;TimeTableItem&gt;, target: List&lt;TimeTableItem&gt;): MutableList&lt;TimeTableItem&gt; {
-&nbsp;    val list: MutableList&lt;TimeTableItem&gt; = mutableListOf()
-&nbsp;    val baseMax = base.size
-&nbsp;    var baseCurrent = 0
-&nbsp;    val targetMax = target.size
-&nbsp;    var targetCurrent = 0
-&nbsp;    while ((baseCurrent &lt; baseMax) || (targetCurrent &lt; targetMax)) {
-&nbsp;        if (baseCurrent &gt;= baseMax) {
-&nbsp;            list.add(target[targetCurrent])
-&nbsp;            targetCurrent++
-&nbsp;        } else if (targetCurrent &gt;= targetMax) {
-&nbsp;            list.add(base[baseCurrent])
-&nbsp;            baseCurrent++
-&nbsp;        } else if (isSmall(base[baseCurrent], target[targetCurrent])) {
-&nbsp;            list.add(target[targetCurrent])
-&nbsp;            targetCurrent++
+<b class="fc">&nbsp;    val list: MutableList&lt;TimeTableItem&gt; = mutableListOf()</b>
+<b class="fc">&nbsp;    val baseMax = base.size</b>
+<b class="fc">&nbsp;    var baseCurrent = 0</b>
+<b class="fc">&nbsp;    val targetMax = target.size</b>
+<b class="fc">&nbsp;    var targetCurrent = 0</b>
+<b class="pc">&nbsp;    while ((baseCurrent &lt; baseMax) || (targetCurrent &lt; targetMax)) {</b>
+<b class="pc">&nbsp;        if (baseCurrent &gt;= baseMax) {</b>
+<b class="fc">&nbsp;            list.add(target[targetCurrent])</b>
+<b class="fc">&nbsp;            targetCurrent++</b>
+<b class="nc">&nbsp;        } else if (targetCurrent &gt;= targetMax) {</b>
+<b class="nc">&nbsp;            list.add(base[baseCurrent])</b>
+<b class="nc">&nbsp;            baseCurrent++</b>
+<b class="nc">&nbsp;        } else if (isSmall(base[baseCurrent], target[targetCurrent])) {</b>
+<b class="nc">&nbsp;            list.add(target[targetCurrent])</b>
+<b class="nc">&nbsp;            targetCurrent++</b>
 &nbsp;        } else {
-&nbsp;            list.add(base[baseCurrent])
-&nbsp;            baseCurrent++
+<b class="nc">&nbsp;            list.add(base[baseCurrent])</b>
+<b class="nc">&nbsp;            baseCurrent++</b>
 &nbsp;        }
 &nbsp;    }
-&nbsp;    return list
+<b class="fc">&nbsp;    return list</b>
 &nbsp;}
 &nbsp;
 &nbsp;data class TimeTableItem(val from: String, val position: String, val system: String, val to: String, val hour: String, val minute: String)
 &nbsp;
-<b class="nc">&nbsp;data class BusTimeTableData(</b>
-<b class="nc">&nbsp;    val date: String,</b>
-<b class="nc">&nbsp;    val name: String,</b>
-<b class="nc">&nbsp;    val position: String,</b>
-<b class="nc">&nbsp;    val system: String,</b>
-<b class="nc">&nbsp;    val destinations: List&lt;String&gt;,</b>
-<b class="nc">&nbsp;    val weekday: List&lt;String&gt;,</b>
-<b class="nc">&nbsp;    val saturday: List&lt;String&gt;,</b>
-<b class="nc">&nbsp;    val holiday: List&lt;String&gt;</b>
+&nbsp;data class BusTimeTableData(
+&nbsp;    val date: String,
+&nbsp;    val name: String,
+&nbsp;    val position: String,
+&nbsp;    val system: String,
+&nbsp;    val destinations: List&lt;String&gt;,
+&nbsp;    val weekday: List&lt;String&gt;,
+&nbsp;    val saturday: List&lt;String&gt;,
+&nbsp;    val holiday: List&lt;String&gt;
 &nbsp;)
 &nbsp;
 &nbsp;fun readTimeTableJson(assetManager: AssetManager, fileName: String): BusTimeTableData {
-&nbsp;    return try {
-&nbsp;        val inputStream = assetManager.open(fileName)
-&nbsp;        val jsonString = inputStream.bufferedReader().use { it.readText() }
-&nbsp;        val mapper = jacksonObjectMapper()
-&nbsp;        mapper.readValue(jsonString)
-&nbsp;    } catch(e: Exception) {
-&nbsp;        println(e)
-&nbsp;        BusTimeTableData(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;) )
+<b class="nc">&nbsp;    return try {</b>
+<b class="nc">&nbsp;        val inputStream = assetManager.open(fileName)</b>
+<b class="nc">&nbsp;        val jsonString = inputStream.bufferedReader().use { it.readText() }</b>
+<b class="nc">&nbsp;        val mapper = jacksonObjectMapper()</b>
+<b class="nc">&nbsp;        mapper.readValue(jsonString)</b>
+<b class="nc">&nbsp;    } catch(e: Exception) {</b>
+<b class="nc">&nbsp;        println(e)</b>
+<b class="nc">&nbsp;        BusTimeTableData(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;) )</b>
 &nbsp;    }
 &nbsp;}
 </code>
