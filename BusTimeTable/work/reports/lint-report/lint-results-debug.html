@@ -177,16 +177,16 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 8 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 2 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sun Jan 21 09:32:00 UTC 2024 by AGP (8.1.3)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sun Jan 21 09:41:35 UTC 2024 by AGP (8.1.3)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
-      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (8)</a>
+      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (2)</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -202,7 +202,7 @@ document.getElementById(id).style.display = 'none';
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
-<td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#UnusedResources">UnusedResources</a>: Unused resources</td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (79)</a>
 </td></tr>
@@ -225,75 +225,21 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:7</span>: <span class="message">The resource <code>R.string.home2station</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno">  4 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"saturday"</span>>土曜<span class="tag">&lt;/string></span>
-<span class="lineno">  5 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"holiday"</span>>休日<span class="tag">&lt;/string></span>
-<span class="lineno">  6 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"back"</span>>戻る<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno">  7 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"home2station"</span></span>>家 → 駅<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  8 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"station2home"</span>>家 ← 駅<span class="tag">&lt;/string></span>
-<span class="lineno">  9 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"selectSpot"</span>>スポット選択<span class="tag">&lt;/string></span>
-<span class="lineno"> 10 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"editSpot"</span>>スポット編集<span class="tag">&lt;/string></span></pre>
-
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:8</span>: <span class="message">The resource <code>R.string.station2home</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno">  5 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"holiday"</span>>休日<span class="tag">&lt;/string></span>
-<span class="lineno">  6 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"back"</span>>戻る<span class="tag">&lt;/string></span>
-<span class="lineno">  7 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"home2station"</span>>家 → 駅<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno">  8 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"station2home"</span></span>>家 ← 駅<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  9 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"selectSpot"</span>>スポット選択<span class="tag">&lt;/string></span>
-<span class="lineno"> 10 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"editSpot"</span>>スポット編集<span class="tag">&lt;/string></span>
-<span class="lineno"> 11 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"from_to"</span>>～<span class="tag">&lt;/string></span></pre>
-
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:9</span>: <span class="message">The resource <code>R.string.selectSpot</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno">  6 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"back"</span>>戻る<span class="tag">&lt;/string></span>
-<span class="lineno">  7 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"home2station"</span>>家 → 駅<span class="tag">&lt;/string></span>
-<span class="lineno">  8 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"station2home"</span>>家 ← 駅<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno">  9 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"selectSpot"</span></span>>スポット選択<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 10 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"editSpot"</span>>スポット編集<span class="tag">&lt;/string></span>
-<span class="lineno"> 11 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"from_to"</span>>～<span class="tag">&lt;/string></span>
-<span class="lineno"> 12 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"direction_lr"</span>>→<span class="tag">&lt;/string></span></pre>
-
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:11</span>: <span class="message">The resource <code>R.string.from_to</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno">  8 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"station2home"</span>>家 ← 駅<span class="tag">&lt;/string></span>
-<span class="lineno">  9 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"selectSpot"</span>>スポット選択<span class="tag">&lt;/string></span>
-<span class="lineno"> 10 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"editSpot"</span>>スポット編集<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno"> 11 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"from_to"</span></span>>～<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 12 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"direction_lr"</span>>→<span class="tag">&lt;/string></span>
-<span class="lineno"> 13 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"direction_rl"</span>>←<span class="tag">&lt;/string></span>
-<span class="lineno"> 14 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"registered"</span>>登録済み<span class="tag">&lt;/string></span></pre>
-
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:12</span>: <span class="message">The resource <code>R.string.direction_lr</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno">  9 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"selectSpot"</span>>スポット選択<span class="tag">&lt;/string></span>
-<span class="lineno"> 10 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"editSpot"</span>>スポット編集<span class="tag">&lt;/string></span>
-<span class="lineno"> 11 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"from_to"</span>>～<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno"> 12 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"direction_lr"</span></span>>→<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 13 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"direction_rl"</span>>←<span class="tag">&lt;/string></span>
-<span class="lineno"> 14 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"registered"</span>>登録済み<span class="tag">&lt;/string></span>
-<span class="lineno"> 15 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"unregistered"</span>>未登録<span class="tag">&lt;/string></span></pre>
-
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:13</span>: <span class="message">The resource <code>R.string.direction_rl</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno"> 10 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"editSpot"</span>>スポット編集<span class="tag">&lt;/string></span>
-<span class="lineno"> 11 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"from_to"</span>>～<span class="tag">&lt;/string></span>
-<span class="lineno"> 12 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"direction_lr"</span>>→<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno"> 13 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"direction_rl"</span></span>>←<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 14 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"registered"</span>>登録済み<span class="tag">&lt;/string></span>
-<span class="lineno"> 15 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"unregistered"</span>>未登録<span class="tag">&lt;/string></span>
-<span class="lineno"> 16 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"add"</span>>追加<span class="tag">&lt;/string></span></pre>
-
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:16</span>: <span class="message">The resource <code>R.string.add</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno"> 13 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"direction_rl"</span>>←<span class="tag">&lt;/string></span>
-<span class="lineno"> 14 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"registered"</span>>登録済み<span class="tag">&lt;/string></span>
-<span class="lineno"> 15 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"unregistered"</span>>未登録<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno"> 16 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"add"</span></span>>追加<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 17 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"del"</span>>削除<span class="tag">&lt;/string></span>
-<span class="lineno"> 18 </span><span class="tag">&lt;/resources></span>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:10</span>: <span class="message">The resource <code>R.string.add</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  7 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"editSpot"</span>>スポット編集<span class="tag">&lt;/string></span>
+<span class="lineno">  8 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"registered"</span>>登録済み<span class="tag">&lt;/string></span>
+<span class="lineno">  9 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"unregistered"</span>>未登録<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno"> 10 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"add"</span></span>>追加<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 11 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"del"</span>>削除<span class="tag">&lt;/string></span>
+<span class="lineno"> 12 </span><span class="tag">&lt;/resources></span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:17</span>: <span class="message">The resource <code>R.string.del</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno"> 14 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"registered"</span>>登録済み<span class="tag">&lt;/string></span>
-<span class="lineno"> 15 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"unregistered"</span>>未登録<span class="tag">&lt;/string></span>
-<span class="lineno"> 16 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"add"</span>>追加<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno"> 17 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"del"</span></span>>削除<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 18 </span><span class="tag">&lt;/resources></span>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:11</span>: <span class="message">The resource <code>R.string.del</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  8 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"registered"</span>>登録済み<span class="tag">&lt;/string></span>
+<span class="lineno">  9 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"unregistered"</span>>未登録<span class="tag">&lt;/string></span>
+<span class="lineno"> 10 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"add"</span>>追加<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno"> 11 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"del"</span></span>>削除<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 12 </span><span class="tag">&lt;/resources></span>
 </pre>
 
 </div>
