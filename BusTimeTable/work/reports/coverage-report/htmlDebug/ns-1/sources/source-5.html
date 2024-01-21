@@ -472,7 +472,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;
 &nbsp;@Composable
 <b class="nc">&nbsp;fun ConfigScreen(navController: NavController?, timeTable: TimeTable) {</b>
-<b class="nc">&nbsp;    val registeredlistState = rememberLazyListState(initialFirstVisibleItemIndex = 0)</b>
+<b class="nc">&nbsp;    val registeredListState = rememberLazyListState(initialFirstVisibleItemIndex = 0)</b>
 <b class="nc">&nbsp;    val unregisteredListState = rememberLazyListState(initialFirstVisibleItemIndex = 0)</b>
 <b class="nc">&nbsp;    val editSpot: MutableState&lt;String&gt; = remember { mutableStateOf(&quot;&quot;)}</b>
 <b class="nc">&nbsp;    Column(</b>
@@ -504,7 +504,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                modifier = Modifier</b>
 <b class="nc">&nbsp;                    .fillMaxSize()</b>
 <b class="nc">&nbsp;                    .weight(weight = 1f, fill = false),</b>
-<b class="nc">&nbsp;                listState = registeredlistState,</b>
+<b class="nc">&nbsp;                listState = registeredListState,</b>
 <b class="nc">&nbsp;                stationList = timeTable.getConfig().getBusStopList(editSpot.value))</b>
 <b class="nc">&nbsp;            Column {</b>
 <b class="nc">&nbsp;                Icon(</b>
@@ -631,7 +631,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-21 08:31</div>
+    <div style="float:right;">generated on 2024-01-21 08:37</div>
 </div>
 </body>
 </html>
