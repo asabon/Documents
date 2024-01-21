@@ -101,7 +101,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;import java.time.ZonedDateTime
 &nbsp;import java.util.Calendar
 &nbsp;
-&nbsp;class TimeTable(assetManager: AssetManager?, config: Config) {
+&nbsp;class TimeTable(private val assetManager: AssetManager?, config: Config) {
 &nbsp;
 &nbsp;    /**
 &nbsp;     * Config クラスのインスタンス
@@ -112,8 +112,27 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;     */
 &nbsp;    private var mTimeTables: MutableList&lt;BusTimeTableData&gt;? = createTimeTables(assetManager)
 &nbsp;
+&nbsp;    /**
+&nbsp;     * バス停のリスト
+&nbsp;     */
+&nbsp;    private var mBusStopList: MutableList&lt;String&gt; = mutableListOf()
+&nbsp;
 &nbsp;    fun getConfig(): Config {
 &nbsp;        return mConfig
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getBusStopList(): MutableList&lt;String&gt; {
+&nbsp;        return mBusStopList
+&nbsp;    }
+&nbsp;
+&nbsp;    fun initialize() {
+&nbsp;        mConfig.load()
+&nbsp;        mTimeTables = createTimeTables(assetManager = assetManager)
+&nbsp;        for (tt in mTimeTables!!) {
+&nbsp;            if (!mBusStopList.contains(tt.name)){
+&nbsp;                mBusStopList.add(tt.name)
+&nbsp;            }
+&nbsp;        }
 &nbsp;    }
 &nbsp;
 &nbsp;    /**
@@ -398,7 +417,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-21 07:56</div>
+    <div style="float:right;">generated on 2024-01-21 08:31</div>
 </div>
 </body>
 </html>
