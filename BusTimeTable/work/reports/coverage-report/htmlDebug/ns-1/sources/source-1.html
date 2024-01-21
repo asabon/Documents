@@ -112,6 +112,10 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;     */
 &nbsp;    private var mTimeTables: MutableList&lt;BusTimeTableData&gt;? = createTimeTables(assetManager)
 &nbsp;
+&nbsp;    fun getConfig(): Config {
+&nbsp;        return mConfig
+&nbsp;    }
+&nbsp;
 &nbsp;    /**
 &nbsp;     * jsonファイルから時刻表リストを生成する
 &nbsp;     */
@@ -183,18 +187,18 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        return result
 &nbsp;    }
 &nbsp;
+&nbsp;    private fun getTimeTableItems(from: String, to:String, dateType: Int): MutableList&lt;TimeTableItem&gt; {
+&nbsp;        val fromList: List&lt;String&gt; = mConfig.getBusStopList(from)
+&nbsp;        val toList: List&lt;String&gt; = mConfig.getBusStopList(to)
+&nbsp;        return getTimeTableItems2(fromList, toList, dateType)
+&nbsp;    }
+&nbsp;
 &nbsp;    fun getTimeTableItems3(direction: Int, dateType: Int): MutableList&lt;TimeTableItem&gt; {
-&nbsp;        val from: List&lt;String&gt;
-&nbsp;        val to: List&lt;String&gt;
-&nbsp;        val spots = mConfig.getSpotList()
-&nbsp;        if (direction == 0) {
-&nbsp;            from = mConfig.getBusStopList(spots[0])
-&nbsp;            to = mConfig.getBusStopList(spots[1])
+&nbsp;        return if (direction == 0) {
+&nbsp;            getTimeTableItems(mConfig.getSpotA(), mConfig.getSpotB(), dateType)
 &nbsp;        } else {
-&nbsp;            from = mConfig.getBusStopList(spots[1])
-&nbsp;            to = mConfig.getBusStopList(spots[0])
+&nbsp;            getTimeTableItems(mConfig.getSpotB(), mConfig.getSpotA(), dateType)
 &nbsp;        }
-&nbsp;        return getTimeTableItems2(from, to, dateType)
 &nbsp;    }
 &nbsp;
 &nbsp;    private fun getTimeTableItems2(from: List&lt;String&gt;, to: List&lt;String&gt;, dateType: Int): MutableList&lt;TimeTableItem&gt; {
@@ -394,7 +398,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-19 12:58</div>
+    <div style="float:right;">generated on 2024-01-21 02:32</div>
 </div>
 </body>
 </html>
