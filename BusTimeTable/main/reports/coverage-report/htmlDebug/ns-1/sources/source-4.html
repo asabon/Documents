@@ -205,7 +205,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;        return spots</b>
 &nbsp;    }
 &nbsp;
-&nbsp;    fun getBusStopList(spotName: String): List&lt;String&gt; {
+&nbsp;    fun getBusStopListInSpot(spotName: String): List&lt;String&gt; {
 <b class="nc">&nbsp;        for (spot in setting.spotInfoList) {</b>
 <b class="nc">&nbsp;            if (spot.name == spotName) {</b>
 <b class="nc">&nbsp;                return spot.busStops</b>
@@ -243,7 +243,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    /**
 &nbsp;     * スポットにバス停を登録する
 &nbsp;     */
-&nbsp;    fun addBusStop(spot: String, busStop: String) {
+&nbsp;    fun addBusStopToSpot(spot: String, busStop: String) {
 <b class="nc">&nbsp;        for (spotInfo in setting.spotInfoList) {</b>
 <b class="nc">&nbsp;            if (spot == spotInfo.name) {</b>
 <b class="nc">&nbsp;                if (!spotInfo.busStops.contains(busStop)) {</b>
@@ -257,7 +257,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    /**
 &nbsp;     * スポットからバス停を削除する
 &nbsp;     */
-&nbsp;    fun removeBusStop(spot: String, busStop: String) {
+&nbsp;    fun removeBusStopFromSpot(spot: String, busStop: String) {
 <b class="nc">&nbsp;        for (spotInfo in setting.spotInfoList) {</b>
 <b class="nc">&nbsp;            if (spot == spotInfo.name) {</b>
 <b class="nc">&nbsp;                spotInfo.busStops.remove(busStop)</b>
@@ -339,7 +339,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-21 23:50</div>
+    <div style="float:right;">generated on 2024-01-23 23:30</div>
 </div>
 </body>
 </html>

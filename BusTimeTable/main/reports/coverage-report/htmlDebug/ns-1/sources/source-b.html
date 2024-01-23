@@ -52,7 +52,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/10)
+    (0/21)
   </span>
 </td>
 <td class="coverageStat">
@@ -60,7 +60,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/52)
+    (0/46)
   </span>
 </td>
 <td class="coverageStat">
@@ -68,7 +68,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/61)
+    (0/69)
   </span>
 </td>
 <td class="coverageStat">
@@ -76,7 +76,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/413)
+    (0/426)
   </span>
 </td>
 </tr>
@@ -91,7 +91,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/10)
+    (0/21)
   </span>
 </td>
 <td class="coverageStat">
@@ -99,7 +99,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/52)
+    (0/46)
   </span>
 </td>
 <td class="coverageStat">
@@ -107,7 +107,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/61)
+    (0/69)
   </span>
 </td>
 <td class="coverageStat">
@@ -115,7 +115,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/413)
+    (0/426)
   </span>
 </td>
 </tr>
@@ -134,7 +134,6 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;import java.time.DayOfWeek
 &nbsp;import java.time.ZoneId
 &nbsp;import java.time.ZonedDateTime
-&nbsp;import java.util.Calendar
 &nbsp;
 <b class="nc">&nbsp;class TimeTable(private val assetManager: AssetManager?, config: Config) {</b>
 &nbsp;
@@ -160,9 +159,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;     */
 &nbsp;    fun initialize(clearData: Boolean) {
 <b class="nc">&nbsp;        if (clearData) {</b>
-<b class="nc">&nbsp;            mConfig.clear()</b>
+<b class="nc">&nbsp;            clearConfig()</b>
 &nbsp;        }
-<b class="nc">&nbsp;        mConfig.load()</b>
+<b class="nc">&nbsp;        loadConfig()</b>
 <b class="nc">&nbsp;        mTimeTableList = createTimeTables(assetManager = assetManager)</b>
 <b class="nc">&nbsp;        for (tt in mTimeTableList!!) {</b>
 <b class="nc">&nbsp;            if (!mBusStopList.contains(tt.name)){</b>
@@ -171,15 +170,62 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        }
 &nbsp;    }
 &nbsp;
-&nbsp;    fun getConfig(): Config {
-<b class="nc">&nbsp;        return mConfig</b>
+&nbsp;    fun getSpotList(): List&lt;String&gt; {
+<b class="nc">&nbsp;        return mConfig.getSpotList()</b>
 &nbsp;    }
-&nbsp;
 &nbsp;    /**
 &nbsp;     * バス停の一覧を取得する
 &nbsp;     */
 &nbsp;    fun getBusStopList(): MutableList&lt;String&gt; {
 <b class="nc">&nbsp;        return mBusStopList</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getBusStopListInSpot(spotName: String): List&lt;String&gt; {
+<b class="nc">&nbsp;        return mConfig.getBusStopListInSpot(spotName)</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getSpotA(): String {
+<b class="nc">&nbsp;        return mConfig.getSpotA()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    fun setSpotA(name: String) {
+<b class="nc">&nbsp;        mConfig.setSpotA(name)</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getSpotB(): String {
+<b class="nc">&nbsp;        return mConfig.getSpotB()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    fun setSpotB(name: String) {
+<b class="nc">&nbsp;        mConfig.setSpotB(name)</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getDirection(): Int {
+<b class="nc">&nbsp;        return mConfig.getDirection()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    fun setDirection(direction: Int) {
+<b class="nc">&nbsp;        mConfig.setDirection(direction)</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    fun addBusStopToSpot(spotName: String, busStopName: String) {
+<b class="nc">&nbsp;        mConfig.addBusStopToSpot(spotName, busStopName)</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    fun removeBusStopFromSpot(spotName: String, busStopName: String) {
+<b class="nc">&nbsp;        mConfig.removeBusStopFromSpot(spotName, busStopName)</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    fun saveConfig() {
+<b class="nc">&nbsp;        mConfig.save()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private fun clearConfig() {
+<b class="nc">&nbsp;        mConfig.clear()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private fun loadConfig() {
+<b class="nc">&nbsp;        mConfig.load()</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    /**
@@ -208,22 +254,6 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;            }
 &nbsp;        }
 <b class="nc">&nbsp;        return list</b>
-&nbsp;    }
-&nbsp;
-&nbsp;    /**
-&nbsp;     * 起動時の方向インデックスを返す
-&nbsp;     *
-&nbsp;     * 起動時の時刻を取得し方向を判定する。
-&nbsp;     *  家→駅 : 6:00 - 12:00 の場合
-&nbsp;     *  駅→家 : それ以外
-&nbsp;     *  とする。
-&nbsp;     */
-&nbsp;    fun getDefaultDirection(): Int {
-<b class="nc">&nbsp;        val calendar: Calendar = Calendar.getInstance()</b>
-<b class="nc">&nbsp;        return when (calendar.get(Calendar.HOUR_OF_DAY)) {</b>
-<b class="nc">&nbsp;            in 6..12 -&gt; 0</b>
-<b class="nc">&nbsp;            else -&gt; 1</b>
-&nbsp;        }
 &nbsp;    }
 &nbsp;
 &nbsp;    /**
@@ -256,8 +286,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    }
 &nbsp;
 &nbsp;    fun getTimeTableItems(from: String, to:String, dateType: Int): MutableList&lt;TimeTableItem&gt; {
-<b class="nc">&nbsp;        val fromList: List&lt;String&gt; = mConfig.getBusStopList(from)</b>
-<b class="nc">&nbsp;        val toList: List&lt;String&gt; = mConfig.getBusStopList(to)</b>
+<b class="nc">&nbsp;        val fromList: List&lt;String&gt; = mConfig.getBusStopListInSpot(from)</b>
+<b class="nc">&nbsp;        val toList: List&lt;String&gt; = mConfig.getBusStopListInSpot(to)</b>
 <b class="nc">&nbsp;        return getTimeTableItems2(fromList, toList, dateType)</b>
 &nbsp;    }
 &nbsp;
@@ -466,7 +496,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-21 23:50</div>
+    <div style="float:right;">generated on 2024-01-23 23:30</div>
 </div>
 </body>
 </html>
