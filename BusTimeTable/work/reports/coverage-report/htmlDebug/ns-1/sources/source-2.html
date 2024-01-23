@@ -364,6 +364,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;import com.google.android.gms.ads.AdSize
 &nbsp;import com.google.android.gms.ads.AdView
 &nbsp;
+&nbsp;/**
+&nbsp; * AdMob を使ったバナー広告
+&nbsp; */
 &nbsp;@Composable
 <b class="nc">&nbsp;fun AdMobView() {</b>
 <b class="nc">&nbsp;    AndroidView(</b>
@@ -380,8 +383,15 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    )
 <b class="nc">&nbsp;}</b>
 &nbsp;
+&nbsp;/**
+&nbsp; * スポットを選択するドロップダウンメニュー
+&nbsp; *
+&nbsp; * @param timeTable TimeTable インスタンス
+&nbsp; * @param initialValue 初期値
+&nbsp; * @param onClick コールバック関数
+&nbsp; */
 &nbsp;@Composable
-<b class="nc">&nbsp;fun SpotSelector(config: Config, initialValue: String, onClick: (String)-&gt;Unit = {}) {</b>
+<b class="nc">&nbsp;fun SpotSelector(timeTable: TimeTable, initialValue: String, onClick: (String)-&gt;Unit = {}) {</b>
 <b class="nc">&nbsp;    var expanded by remember { mutableStateOf(false) }</b>
 <b class="nc">&nbsp;    val selectedOptionText : MutableState&lt;String&gt; = remember { mutableStateOf(initialValue) }</b>
 <b class="nc">&nbsp;    Box(</b>
@@ -409,7 +419,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;            expanded = expanded,</b>
 <b class="nc">&nbsp;            onDismissRequest = { expanded = false }</b>
 <b class="nc">&nbsp;        ) {</b>
-<b class="nc">&nbsp;            config.getSpotList().forEach() {</b>
+<b class="nc">&nbsp;            timeTable.getSpotList().forEach() {</b>
 <b class="nc">&nbsp;                DropdownMenuItem(</b>
 <b class="nc">&nbsp;                    text = {</b>
 <b class="nc">&nbsp;                        Text(</b>
@@ -450,7 +460,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-21 23:42</div>
+    <div style="float:right;">generated on 2024-01-23 23:22</div>
 </div>
 </body>
 </html>

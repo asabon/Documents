@@ -142,7 +142,6 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;import java.time.DayOfWeek
 &nbsp;import java.time.ZoneId
 &nbsp;import java.time.ZonedDateTime
-&nbsp;import java.util.Calendar
 &nbsp;
 &nbsp;class TimeTable(private val assetManager: AssetManager?, config: Config) {
 &nbsp;
@@ -168,9 +167,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;     */
 &nbsp;    fun initialize(clearData: Boolean) {
 &nbsp;        if (clearData) {
-&nbsp;            mConfig.clear()
+&nbsp;            clearConfig()
 &nbsp;        }
-&nbsp;        mConfig.load()
+&nbsp;        loadConfig()
 &nbsp;        mTimeTableList = createTimeTables(assetManager = assetManager)
 &nbsp;        for (tt in mTimeTableList!!) {
 &nbsp;            if (!mBusStopList.contains(tt.name)){
@@ -179,15 +178,62 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        }
 &nbsp;    }
 &nbsp;
-&nbsp;    fun getConfig(): Config {
-&nbsp;        return mConfig
+&nbsp;    fun getSpotList(): List&lt;String&gt; {
+&nbsp;        return mConfig.getSpotList()
 &nbsp;    }
-&nbsp;
 &nbsp;    /**
 &nbsp;     * バス停の一覧を取得する
 &nbsp;     */
 &nbsp;    fun getBusStopList(): MutableList&lt;String&gt; {
 &nbsp;        return mBusStopList
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getBusStopListInSpot(spotName: String): List&lt;String&gt; {
+&nbsp;        return mConfig.getBusStopListInSpot(spotName)
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getSpotA(): String {
+&nbsp;        return mConfig.getSpotA()
+&nbsp;    }
+&nbsp;
+&nbsp;    fun setSpotA(name: String) {
+&nbsp;        mConfig.setSpotA(name)
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getSpotB(): String {
+&nbsp;        return mConfig.getSpotB()
+&nbsp;    }
+&nbsp;
+&nbsp;    fun setSpotB(name: String) {
+&nbsp;        mConfig.setSpotB(name)
+&nbsp;    }
+&nbsp;
+&nbsp;    fun getDirection(): Int {
+&nbsp;        return mConfig.getDirection()
+&nbsp;    }
+&nbsp;
+&nbsp;    fun setDirection(direction: Int) {
+&nbsp;        mConfig.setDirection(direction)
+&nbsp;    }
+&nbsp;
+&nbsp;    fun addBusStopToSpot(spotName: String, busStopName: String) {
+&nbsp;        mConfig.addBusStopToSpot(spotName, busStopName)
+&nbsp;    }
+&nbsp;
+&nbsp;    fun removeBusStopFromSpot(spotName: String, busStopName: String) {
+&nbsp;        mConfig.removeBusStopFromSpot(spotName, busStopName)
+&nbsp;    }
+&nbsp;
+&nbsp;    fun saveConfig() {
+&nbsp;        mConfig.save()
+&nbsp;    }
+&nbsp;
+&nbsp;    private fun clearConfig() {
+&nbsp;        mConfig.clear()
+&nbsp;    }
+&nbsp;
+&nbsp;    private fun loadConfig() {
+&nbsp;        mConfig.load()
 &nbsp;    }
 &nbsp;
 &nbsp;    /**
@@ -216,22 +262,6 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;            }
 &nbsp;        }
 &nbsp;        return list
-&nbsp;    }
-&nbsp;
-&nbsp;    /**
-&nbsp;     * 起動時の方向インデックスを返す
-&nbsp;     *
-&nbsp;     * 起動時の時刻を取得し方向を判定する。
-&nbsp;     *  家→駅 : 6:00 - 12:00 の場合
-&nbsp;     *  駅→家 : それ以外
-&nbsp;     *  とする。
-&nbsp;     */
-&nbsp;    fun getDefaultDirection(): Int {
-&nbsp;        val calendar: Calendar = Calendar.getInstance()
-&nbsp;        return when (calendar.get(Calendar.HOUR_OF_DAY)) {
-&nbsp;            in 6..12 -&gt; 0
-&nbsp;            else -&gt; 1
-&nbsp;        }
 &nbsp;    }
 &nbsp;
 &nbsp;    /**
@@ -264,8 +294,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    }
 &nbsp;
 &nbsp;    fun getTimeTableItems(from: String, to:String, dateType: Int): MutableList&lt;TimeTableItem&gt; {
-&nbsp;        val fromList: List&lt;String&gt; = mConfig.getBusStopList(from)
-&nbsp;        val toList: List&lt;String&gt; = mConfig.getBusStopList(to)
+&nbsp;        val fromList: List&lt;String&gt; = mConfig.getBusStopListInSpot(from)
+&nbsp;        val toList: List&lt;String&gt; = mConfig.getBusStopListInSpot(to)
 &nbsp;        return getTimeTableItems2(fromList, toList, dateType)
 &nbsp;    }
 &nbsp;
@@ -474,7 +504,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-21 23:42</div>
+    <div style="float:right;">generated on 2024-01-23 23:22</div>
 </div>
 </body>
 </html>
