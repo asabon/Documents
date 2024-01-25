@@ -216,12 +216,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;            /* assetManager から読み出す */
 &nbsp;            jsonFiles = assetManager.list(&quot;kanachu&quot;)!!
 &nbsp;            for (jsonFile in jsonFiles) {
-&nbsp;                val data = readTimeTableJson(assetManager, &quot;kanachu/$jsonFile&quot;)
-&nbsp;                if (checkTimeTable(data)) {
-&nbsp;                    list.add(data)
-&nbsp;                } else {
-&nbsp;                    println(&quot;[ERROR] $jsonFile time table is incorrect.&quot;)
-&nbsp;                }
+&nbsp;                list.add(readTimeTableJson(assetManager, &quot;kanachu/$jsonFile&quot;))
 &nbsp;            }
 &nbsp;        }
 &nbsp;        return list
@@ -441,54 +436,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        mapper.readValue(jsonString)
 &nbsp;    } catch(e: Exception) {
 &nbsp;        println(e)
-&nbsp;        BusTimeTableData(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;), listOf&lt;String&gt;(&quot;&quot;) )
+&nbsp;        BusTimeTableData(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, listOf(&quot;&quot;), listOf(&quot;&quot;), listOf(&quot;&quot;), listOf(&quot;&quot;) )
 &nbsp;    }
-&nbsp;}
-&nbsp;
-&nbsp;fun checkTimeTable(busTimeTable: BusTimeTableData): Boolean {
-&nbsp;
-&nbsp;    var tempHour = 0
-&nbsp;    var tempMinute = 0
-&nbsp;    for (tempItem in busTimeTable.weekday) {
-&nbsp;        if (tempHour == getHour(tempItem).toInt()) {
-&nbsp;            if (tempMinute &gt; getMinute(tempItem).toInt()) {
-&nbsp;                return false
-&nbsp;            }
-&nbsp;        } else if (tempHour &gt; getHour(tempItem).toInt()) {
-&nbsp;            return false
-&nbsp;        }
-&nbsp;        tempHour = getHour(tempItem).toInt()
-&nbsp;        tempMinute = getMinute(tempItem).toInt()
-&nbsp;    }
-&nbsp;
-&nbsp;    tempHour = 0
-&nbsp;    tempMinute = 0
-&nbsp;    for (tempItem in busTimeTable.saturday) {
-&nbsp;        if (tempHour == getHour(tempItem).toInt()) {
-&nbsp;            if (tempMinute &gt; getMinute(tempItem).toInt()) {
-&nbsp;                return false
-&nbsp;            }
-&nbsp;        } else if (tempHour &gt; getHour(tempItem).toInt()) {
-&nbsp;            return false
-&nbsp;        }
-&nbsp;        tempHour = getHour(tempItem).toInt()
-&nbsp;        tempMinute = getMinute(tempItem).toInt()
-&nbsp;    }
-&nbsp;
-&nbsp;    tempHour = 0
-&nbsp;    tempMinute = 0
-&nbsp;    for (tempItem in busTimeTable.holiday) {
-&nbsp;        if (tempHour == getHour(tempItem).toInt()) {
-&nbsp;            if (tempMinute &gt; getMinute(tempItem).toInt()) {
-&nbsp;                return false
-&nbsp;            }
-&nbsp;        } else if (tempHour &gt; getHour(tempItem).toInt()) {
-&nbsp;            return false
-&nbsp;        }
-&nbsp;        tempHour = getHour(tempItem).toInt()
-&nbsp;        tempMinute = getMinute(tempItem).toInt()
-&nbsp;    }
-&nbsp;    return true
 &nbsp;}
 </code>
 </pre>
@@ -513,7 +462,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-01-24 11:13</div>
+    <div style="float:right;">generated on 2024-01-25 10:45</div>
 </div>
 </body>
 </html>
