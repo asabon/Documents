@@ -177,16 +177,16 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 8 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 6 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Thu Jan 25 12:16:14 UTC 2024 by AGP (8.1.3)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Wed Jan 31 23:46:54 UTC 2024 by AGP (8.1.3)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (3)</a>
+      <a class="mdl-navigation__link" href="#ObsoleteLintCustomCheck"><i class="material-icons warning-icon">warning</i>Obsolete custom lint check (1)</a>
       <a class="mdl-navigation__link" href="#ObsoleteSdkInt"><i class="material-icons warning-icon">warning</i>Obsolete SDK_INT Version Check (1)</a>
       <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (2)</a>
       <a class="mdl-navigation__link" href="#MonochromeLauncherIcon"><i class="material-icons warning-icon">warning</i>Monochrome icon is not defined (2)</a>
@@ -202,11 +202,11 @@ document.getElementById(id).style.display = 'none';
   </div>
               <div class="mdl-card__supporting-text">
 <table class="overview">
-<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
+<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Lint">Lint</a>
 </td></tr>
 <tr>
-<td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#ObsoleteLintCustomCheck">ObsoleteLintCustomCheck</a>: Obsolete custom lint check</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
@@ -220,9 +220,9 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#MonochromeLauncherIcon">MonochromeLauncherIcon</a>: Monochrome icon is not defined</td></tr>
-<tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (79)</a>
+<tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (68)</a>
 </td></tr>
-<tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (42)</a>
+<tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (40)</a>
 </td></tr>
 </table>
 <br/>              </div>
@@ -231,71 +231,69 @@ document.getElementById(id).style.display = 'none';
 Dismiss</button>            </div>
             </div>
           </section>
-<a name="Correctness"></a>
-<a name="GradleDependency"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="GradleDependencyCard" style="display: block;">
+<a name="Lint"></a>
+<a name="ObsoleteLintCustomCheck"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="ObsoleteLintCustomCheckCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Obsolete Gradle Dependency</h2>
+    <h2 class="mdl-card__title-text">Obsolete custom lint check</h2>
   </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:64</span>: <span class="message">Upgrade <code>androidx.compose.foundation</code> for keyboard and mouse support</span><br /><pre class="errorlines">
-<span class="lineno"> 61 </span>    implementation("androidx.compose.ui:ui-graphics")
-<span class="lineno"> 62 </span>    implementation("androidx.compose.ui:ui-tooling-preview")
-<span class="lineno"> 63 </span>    implementation("androidx.compose.material3:material3")
-<span class="caretline"><span class="lineno"> 64 </span>    implementation("<span class="warning">androidx.compose.foundation:foundation:1.5.4</span>")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 65 </span>    implementation("androidx.compose.foundation:foundation-layout:1.5.4")
-<span class="lineno"> 66 </span>    implementation("androidx.compose.foundation:foundation-layout-android:1.5.4")
-<span class="lineno"> 67 </span>    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0")
-</pre>
-
-<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:65</span>: <span class="message">A newer version of androidx.compose.foundation:foundation-layout than 1.5.4 is available: 1.6.0</span><br /><pre class="errorlines">
-<span class="lineno"> 62 </span>    implementation("androidx.compose.ui:ui-tooling-preview")
-<span class="lineno"> 63 </span>    implementation("androidx.compose.material3:material3")
-<span class="lineno"> 64 </span>    implementation("androidx.compose.foundation:foundation:1.5.4")
-<span class="caretline"><span class="lineno"> 65 </span>    implementation("<span class="warning">androidx.compose.foundation:foundation-layout:1.5.4</span>")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 66 </span>    implementation("androidx.compose.foundation:foundation-layout-android:1.5.4")
-<span class="lineno"> 67 </span>    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0")
-<span class="lineno"> 68 </span>    implementation("com.google.android.gms:play-services-ads:22.6.0")
-</pre>
-
-<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:66</span>: <span class="message">A newer version of androidx.compose.foundation:foundation-layout-android than 1.5.4 is available: 1.6.0</span><br /><pre class="errorlines">
-<span class="lineno"> 63 </span>    implementation("androidx.compose.material3:material3")
-<span class="lineno"> 64 </span>    implementation("androidx.compose.foundation:foundation:1.5.4")
-<span class="lineno"> 65 </span>    implementation("androidx.compose.foundation:foundation-layout:1.5.4")
-<span class="caretline"><span class="lineno"> 66 </span>    implementation("<span class="warning">androidx.compose.foundation:foundation-layout-android:1.5.4</span>")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 67 </span>    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0")
-<span class="lineno"> 68 </span>    implementation("com.google.android.gms:play-services-ads:22.6.0")
-<span class="lineno"> 69 </span>    implementation("androidx.appcompat:appcompat:1.6.1")
-</pre>
-
+<span class="location"><a href="../../../../../../.gradle/caches/transforms-3/a647cbc3d835cf39df7d25d5bcf75f45/transformed/runtime-release/jars/lint.jar">../../../../../../.gradle/caches/transforms-3/a647cbc3d835cf39df7d25d5bcf75f45/transformed/runtime-release/jars/lint.jar</a></span>: <span class="message">Library lint checks reference invalid APIs; these checks <b>will be skipped</b>!<br/>
+<br/>
+Lint found an issue registry (<code>androidx.compose.runtime.lint.RuntimeIssueRegistry</code>)<br/>
+which contains some references to invalid API:<br/>
+org.jetbrains.kotlin.analysis.api.session.KtAnalysisSessionProvider: org.jetbrains.kotlin.analysis.api.lifetime.KtLifetimeTokenFactory getTokenFactory()<br/>
+(Referenced from androidx/compose/runtime/lint/AutoboxingStateCreationDetector.class)<br/>
+<br/>
+Therefore, this lint check library is <b>not</b> included<br/>
+in analysis. This affects the following lint checks:<br/>
+<code>AutoboxingStateValueProperty</code><br/>
+<code>AutoboxingStateCreation</code><br/>
+<code>CoroutineCreationDuringComposition</code><br/>
+<code>FlowOperatorInvokedInComposition</code><br/>
+<code>ComposableLambdaParameterNaming</code><br/>
+<code>ComposableLambdaParameterPosition</code><br/>
+<code>ComposableNaming</code><br/>
+<code>StateFlowValueCalledInComposition</code><br/>
+<code>CompositionLocalNaming</code><br/>
+<code>MutableCollectionMutableState</code><br/>
+<code>ProduceStateDoesNotAssignValue</code><br/>
+<code>RememberReturnType</code><br/>
+<code>OpaqueUnitKey</code><br/>
+<code>UnrememberedMutableState</code><br/>
+<br/>
+To use this lint check, upgrade to a more recent version<br/>
+of the library.</span><br />
 </div>
-<div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
-This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<div class="metadata"><div class="explanation" id="explanationObsoleteLintCustomCheck" style="display: none;">
+Lint can be extended with "custom checks": additional checks implemented by developers and libraries to for example enforce specific API usages required by a library or a company coding style guideline.<br/>
+<br/>
+The Lint APIs are not yet stable, so these checks may either cause a performance degradation, or stop working, or provide wrong results.<br/>
+<br/>
+This warning flags custom lint checks that are found to be using obsolete APIs and will need to be updated to run in the current lint environment.<br/>
+<br/>
+It may also flag issues found to be using a <b>newer</b> version of the API, meaning that you need to use a newer version of lint (or Android Studio or Gradle plugin etc) to work with these checks.<br/>To suppress this error, use the issue id "ObsoleteLintCustomCheck" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
 <div class="chips">
 <span class="mdl-chip">
-    <span class="mdl-chip__text">GradleDependency</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Correctness</span>
+    <span class="mdl-chip__text">ObsoleteLintCustomCheck</span>
 </span>
 <span class="mdl-chip">
     <span class="mdl-chip__text">Warning</span>
 </span>
 <span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 4/10</span>
+    <span class="mdl-chip__text">Priority 10/10</span>
 </span>
 </div>
               </div>
               <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationObsoleteLintCustomCheckLink" onclick="reveal('explanationObsoleteLintCustomCheck');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="ObsoleteLintCustomCheckCardLink" onclick="hideid('ObsoleteLintCustomCheckCard');">
 Dismiss</button>            </div>
             </div>
           </section>
@@ -464,32 +462,6 @@ whether a particular check is included in analysis when configuring builds.
 (Note that the list does not include the hundreds of built-in checks into lint,
 only additional ones.)
 <div id="IncludedIssues" style="display: none;"><br/><br/><div class="issue">
-<div class="id">AutoboxingStateCreation<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Calling <code>mutableStateOf&lt;T>()</code> when <code>T</code> is either backed by a primitive type on the JVM or is a value class results in a state implementation that requires all state values to be boxed. This usually causes an additional allocation for each state write, and adds some additional work to auto-unbox values when reading the value of the state. Instead, prefer to use a specialized primitive state implementation for <code>Int</code>, <code>Long</code>, <code>Float</code>, and <code>Double</code> when the state does not need to track null values and does not override the default <code>SnapshotMutationPolicy</code>.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">AutoboxingStateValueProperty<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Avoid using the generic value accessor when using a State objects with a specialized types. Usages of the generic value property result in an unnecessary autoboxing operation whenever the state's value is read or written to. Use the specialized value accessor or property delegation to avoid unnecessary allocations.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">BadConfigurationProvider<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
@@ -531,32 +503,6 @@ Identifier: androidx.navigation.compose<br/>
 </div>
 </div>
 <div class="issue">
-<div class="id">ComposableModifierFactory<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Modifier factory functions that need to be aware of the composition should use androidx.compose.ui.composed {} in their implementation instead of being marked as @Composable. This allows Modifiers to be referenced in top level variables and constructed outside of the composition.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.ui<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">ComposableNaming<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-@Composable functions without a return type should use similar naming to classes, starting with an uppercase letter and ending with a noun. @Composable functions with a return type should be treated as normal Kotlin functions, starting with a lowercase letter.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">ComposableNavGraphInComposeScope<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
@@ -569,38 +515,12 @@ Identifier: androidx.navigation.compose<br/>
 </div>
 </div>
 <div class="issue">
-<div class="id">CompositionLocalNaming<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-CompositionLocal properties should be prefixed with <code>Local</code>. This helps make it clear at their use site that these values are local to the current composition. Typically the full name will be <code>Local</code> + the type of the CompositionLocal, for example val LocalFoo = compositionLocalOf { Foo() }.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">ConflictingOnColor<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
 In the Material color system background colors have a corresponding 'on' color which is used for the content color inside a component. For example, a button colored <code>primary</code> will have <code>onPrimary</code> text. Because of this, it is important that there is only one possible <code>onColor</code> for a given color value, otherwise there is no way to know which 'on' color should be used inside a component. To fix this either use the same 'on' color for identical background colors, or use a different background color for each 'on' color.<br/><div class="vendor">
 Vendor: Jetpack Compose<br/>
 Identifier: androidx.compose.material<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">CoroutineCreationDuringComposition<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Creating a coroutine with <code>async</code> or <code>launch</code> during composition is often incorrect - this means that a coroutine will be created even if the composition fails / is rolled back, and it also means that multiple coroutines could end up mutating the same state, causing inconsistent results. Instead, use <code>LaunchedEffect</code> and create coroutines inside the suspending block. The block will only run after a successful composition, and will cancel existing coroutines when <code>key</code> changes, allowing correct cleanup.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
 </div>
 <br/>
@@ -693,19 +613,6 @@ Experimental annotations defined in Java source should use default (<code>CLASS<
 Vendor: Android Open Source Project<br/>
 Identifier: androidx.annotation.experimental<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=459778">https://issuetracker.google.com/issues/new?component=459778</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">FlowOperatorInvokedInComposition<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Calling a Flow operator function within composition will result in a new Flow being created every recomposition, which will reset collectAsState() and cause other related problems. Instead Flow operators should be called inside <code>remember</code>, or a side effect such as LaunchedEffect.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
 </div>
 <br/>
 <br/></div>
@@ -940,19 +847,6 @@ Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">
 </div>
 </div>
 <div class="issue">
-<div class="id">MutableCollectionMutableState<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Writes to mutable collections inside a MutableState will not cause a recomposition - only writes to the MutableState itself will. In most cases you should either use a read-only collection (such as List or Map) and assign a new instance to the MutableState when your data changes, or you can use an snapshot-backed collection such as SnapshotStateList or SnapshotStateMap which will correctly cause a recomposition when their contents are modified.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">NoCollectCallFound<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
@@ -975,45 +869,6 @@ This check ensures that LiveData values are not null when explicitly            
 Vendor: Android Open Source Project<br/>
 Identifier: androidx.lifecycle<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=413132">https://issuetracker.google.com/issues/new?component=413132</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">OpaqueUnitKey<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Certain Compose functions including <code>remember</code>, <code>LaunchedEffect</code>, and <code>DisposableEffect</code> declare (and sometimes require) one or more key parameters. When a key parameter changes, it is a signal that the previous invocation is now invalid. In certain cases, it may be required to pass <code>Unit</code> as a key to one of these functions, indicating that the invocation never becomes invalid. Using <code>Unit</code> as a key should be done infrequently, and should always be done explicitly by passing the <code>Unit</code> literal. This inspection checks for invocations where <code>Unit</code> is being passed as a key argument in any form other than the <code>Unit</code> literal. This is usually done by mistake, and can harm readability. If a Unit expression is being passed as a key, it is always equivalent to move the expression before the function invocation and pass the <code>Unit</code> literal instead.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">ProduceStateDoesNotAssignValue<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-produceState returns an observable State using values assigned inside the producer lambda. If the lambda never assigns (i.e <code>value = foo</code>), then the State will never change. Make sure to assign a value when the source you are producing values from changes / emits a new value. For sample usage see the produceState documentation.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">RememberReturnType<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-A call to <code>remember</code> that returns <code>Unit</code> is always an error. This typically happens when using <code>remember</code> to mutate variables on an object. <code>remember</code> is executed during the composition, which means that if the composition fails or is happening on a separate thread, the mutated variables may not reflect the true state of the composition. Instead, use <code>SideEffect</code> to make deferred changes once the composition succeeds, or mutate <code>MutableState</code> backed variables directly, as these will handle composition failure for you.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
 </div>
 <br/>
 <br/></div>
@@ -1101,19 +956,6 @@ Feedback: <a href="https://issuetracker.google.com/issues/new?component=192731">
 </div>
 </div>
 <div class="issue">
-<div class="id">StateFlowValueCalledInComposition<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Calling StateFlow.value within composition will not observe changes to the StateFlow, so changes might not be reflected within the composition. Instead you should use stateFlow.collectAsState() to observe changes to the StateFlow, and recompose when it changes.<br/><div class="vendor">
-Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">SuspiciousCompositionLocalModifierRead<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
@@ -1179,12 +1021,12 @@ Identifier: androidx.navigation.compose<br/>
 </div>
 </div>
 <div class="issue">
-<div class="id">UnrememberedMutableState<div class="issueSeparator"></div>
+<div class="id">UnrememberedMutableInteractionSource<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
-State objects created during composition need to be `remember`ed, otherwise they will be recreated during recomposition, and lose their state. Either hoist the state to an object that is not created during composition, or wrap the state in a call to <code>remember</code>.<br/><div class="vendor">
+MutableInteractionSource instances created during composition need to be `remember`ed, otherwise they will be recreated during recomposition, and lose their state. Either hoist the MutableInteractionSource to an object that is not created during composition, or wrap the MutableInteractionSource in a call to <code>remember</code>.<br/><div class="vendor">
 Vendor: Jetpack Compose<br/>
-Identifier: androidx.compose.runtime<br/>
+Identifier: androidx.compose.foundation<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
 </div>
 <br/>
@@ -1274,6 +1116,19 @@ The repeatOnLifecycle APIs should be used with the viewLifecycleOwner           
 Vendor: Android Open Source Project<br/>
 Identifier: androidx.fragment<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=460964">https://issuetracker.google.com/issues/new?component=460964</a><br/>
+</div>
+<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
+<div class="id">UnusedBoxWithConstraintsScope<div class="issueSeparator"></div>
+</div>
+<div class="metadata"><div class="explanation">
+The <code>content</code> lambda in BoxWithConstraints has a scope which will include the incoming constraints. If this scope is ignored, then the cost of subcomposition is being wasted and this BoxWithConstraints should be replaced with a Box.<br/><div class="vendor">
+Vendor: Jetpack Compose<br/>
+Identifier: androidx.compose.foundation<br/>
+Feedback: <a href="https://issuetracker.google.com/issues/new?component=612128">https://issuetracker.google.com/issues/new?component=612128</a><br/>
 </div>
 <br/>
 <br/></div>
@@ -1591,24 +1446,6 @@ According to the Android Design Guide,<br/>
 <br/>
 This check is not very sophisticated (it just looks for buttons with the label "Back"), so it is disabled by default to not trigger on common scenarios like pairs of Back/Next buttons to paginate through screens.<br/><div class="moreinfo">More info: <a href="https://material.io/design/">https://material.io/design/</a>
 </div><br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">ComposableLambdaParameterNaming<div class="issueSeparator"></div>
-</div>
-<div class="metadata">Disabled By: Default<br/>
-<div class="explanation">
-Composable functions with only one composable lambda parameter should use the name <code>content</code> for the parameter.<br/><br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">ComposableLambdaParameterPosition<div class="issueSeparator"></div>
-</div>
-<div class="metadata">Disabled By: Default<br/>
-<div class="explanation">
-Composable functions with only one composable lambda parameter should place the parameter at the end of the parameter list, so it can be used as a trailing lambda.<br/><br/>
 <br/></div>
 </div>
 </div>
