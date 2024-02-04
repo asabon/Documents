@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-  <title>app Coverage Report > MainActivity</title>
+  <title>app Coverage Report > CouponItem</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,7 +22,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     <a href="../index.html">net.asabon.couponmanager</a>
 </div>
 
-<h1>Coverage Summary for Class: MainActivity (net.asabon.couponmanager)</h1>
+<h1>Coverage Summary for Class: CouponItem (net.asabon.couponmanager)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -49,7 +49,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 </th>
 </tr>
 <tr>
-  <td class="name">MainActivity</td>
+  <td class="name">CouponItem</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -63,7 +63,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/2)
+    (0/1)
   </span>
 </td>
     <td class="coverageStat"/>
@@ -72,7 +72,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/4)
+    (0/6)
   </span>
 </td>
 <td class="coverageStat">
@@ -80,7 +80,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     0%
   </span>
   <span class="absValue">
-    (0/17)
+    (0/27)
   </span>
 </td>
 </tr>
@@ -94,59 +94,63 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <pre>
 <code class="sourceCode" id="sourceCode">&nbsp;package net.asabon.couponmanager
 &nbsp;
-&nbsp;import android.os.Bundle
-&nbsp;import androidx.activity.ComponentActivity
-&nbsp;import androidx.activity.compose.setContent
-&nbsp;import androidx.compose.foundation.layout.fillMaxSize
-&nbsp;import androidx.compose.material3.MaterialTheme
-&nbsp;import androidx.compose.material3.Surface
+&nbsp;import androidx.compose.foundation.layout.Column
+&nbsp;import androidx.compose.foundation.layout.Row
+&nbsp;import androidx.compose.material3.Text
 &nbsp;import androidx.compose.runtime.Composable
+&nbsp;import androidx.compose.ui.Alignment
 &nbsp;import androidx.compose.ui.Modifier
 &nbsp;import androidx.compose.ui.tooling.preview.Preview
-&nbsp;import androidx.navigation.compose.NavHost
-&nbsp;import androidx.navigation.compose.composable
-&nbsp;import androidx.navigation.compose.rememberNavController
-&nbsp;import com.google.android.gms.ads.MobileAds
+&nbsp;import androidx.compose.ui.unit.sp
 &nbsp;import net.asabon.couponmanager.ui.theme.CouponManagerTheme
 &nbsp;
-<b class="nc">&nbsp;class MainActivity : ComponentActivity() {</b>
-&nbsp;    override fun onCreate(savedInstanceState: Bundle?) {
-<b class="nc">&nbsp;        super.onCreate(savedInstanceState)</b>
-<b class="nc">&nbsp;        MobileAds.initialize(this) {}</b>
-<b class="nc">&nbsp;        setContent {</b>
-&nbsp;            CouponManagerTheme {
-&nbsp;                // A surface container using the &#39;background&#39; color from the theme
-&nbsp;                Surface(
-&nbsp;                    modifier = Modifier.fillMaxSize(),
-&nbsp;                    color = MaterialTheme.colorScheme.background
-&nbsp;                ) {
-&nbsp;                    MyApplication()
-&nbsp;                }
-&nbsp;            }
-&nbsp;        }
-&nbsp;    }
-&nbsp;}
+<b class="nc">&nbsp;data class CouponItem(</b>
+<b class="nc">&nbsp;    val name: String,</b>
+<b class="nc">&nbsp;    val note: String,</b>
+<b class="nc">&nbsp;    val amount: Int,</b>
+<b class="nc">&nbsp;    val unit: String,</b>
+<b class="nc">&nbsp;    val expirationDate: String,</b>
+&nbsp;)
 &nbsp;
 &nbsp;@Composable
-&nbsp;fun MyApplication() {
-&nbsp;    CouponManagerTheme {
-&nbsp;        val navController = rememberNavController()
-&nbsp;        NavHost(navController = navController, startDestination = &quot;main&quot;) {
-&nbsp;            composable(&quot;main&quot;) {
-&nbsp;                MainScreen(navController)
-&nbsp;            }
-&nbsp;            composable(&quot;config&quot;) {
-&nbsp;                ConfigScreen(navController)
-&nbsp;            }
+&nbsp;fun CouponItemView(item: CouponItem) {
+&nbsp;    Row {
+&nbsp;        Column {
+&nbsp;            Text(
+&nbsp;                fontSize = 16.sp,
+&nbsp;                text = item.name
+&nbsp;            )
+&nbsp;            Text(
+&nbsp;                fontSize = 10.sp,
+&nbsp;                text = item.note
+&nbsp;            )
+&nbsp;        }
+&nbsp;        Column {
+&nbsp;            Text(
+&nbsp;                modifier = Modifier.align(Alignment.End),
+&nbsp;                fontSize = 16.sp,
+&nbsp;                text = item.amount.toString() + &quot; &quot; + item.unit
+&nbsp;            )
+&nbsp;            Text(
+&nbsp;                fontSize = 10.sp,
+&nbsp;                text = item.expirationDate
+&nbsp;            )
 &nbsp;        }
 &nbsp;    }
 &nbsp;}
 &nbsp;
 &nbsp;@Preview(showBackground = true)
 &nbsp;@Composable
-&nbsp;fun CouponManagerPreview() {
+&nbsp;fun CouponItemPreview() {
 &nbsp;    CouponManagerTheme {
-&nbsp;        MyApplication()
+&nbsp;        CouponItemView(
+&nbsp;            CouponItem(
+&nbsp;                name = &quot;マクドナルドクーポン&quot;,
+&nbsp;                note = &quot;何にでも引き換え&quot;,
+&nbsp;                amount = 10,
+&nbsp;                unit = &quot;枚&quot;,
+&nbsp;                expirationDate = &quot;2024/03/31&quot;)
+&nbsp;        )
 &nbsp;    }
 &nbsp;}
 </code>
@@ -172,7 +176,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-04 04:00</div>
+    <div style="float:right;">generated on 2024-02-04 07:25</div>
 </div>
 </body>
 </html>
