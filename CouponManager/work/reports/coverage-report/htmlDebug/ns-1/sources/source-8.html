@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-  <title>app Coverage Report > ConfigScreenKt</title>
+  <title>app Coverage Report > MainScreenKt</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,7 +22,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
     <a href="../index.html">net.asabon.couponmanager</a>
 </div>
 
-<h1>Coverage Summary for Class: ConfigScreenKt (net.asabon.couponmanager)</h1>
+<h1>Coverage Summary for Class: MainScreenKt (net.asabon.couponmanager)</h1>
 
 <table class="coverageStats">
 
@@ -46,7 +46,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 </th>
 </tr>
 <tr>
-  <td class="name">ConfigScreenKt</td>
+  <td class="name">MainScreenKt</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -81,7 +81,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 </td>
 </tr>
   <tr>
-    <td class="name">ConfigScreenKt$ConfigScreen$1$1</td>
+    <td class="name">MainScreenKt$MainScreen$1$1</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -116,11 +116,11 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 </td>
   </tr>
   <tr>
-    <td class="name">ConfigScreenKt$ConfigScreen$2</td>
+    <td class="name">MainScreenKt$MainScreen$2</td>
     <td class="coverageStat"/>
   </tr>
   <tr>
-    <td class="name">ConfigScreenKt$ConfigScreenPreview$1</td>
+    <td class="name">MainScreenKt$MainScreenPreview$1</td>
     <td class="coverageStat"/>
   </tr>
 <tr>
@@ -178,20 +178,20 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;import net.asabon.couponmanager.ui.theme.CouponManagerTheme
 &nbsp;
 &nbsp;@Composable
-<b class="nc">&nbsp;fun ConfigScreen(navController: NavController?) {</b>
+<b class="nc">&nbsp;fun MainScreen(navController: NavController?) {</b>
 <b class="nc">&nbsp;    Column(</b>
 <b class="nc">&nbsp;        modifier = Modifier.fillMaxWidth()</b>
 &nbsp;    ) {
-<b class="nc">&nbsp;        Text(</b>
-<b class="nc">&nbsp;            text = &quot;This is ConfigScreen.&quot;</b>
+<b class="nc">&nbsp;        Text (</b>
+<b class="nc">&nbsp;            text = &quot;This is MainScreen.&quot;</b>
 &nbsp;        )
 <b class="nc">&nbsp;        Button(</b>
 &nbsp;            onClick = {
-<b class="nc">&nbsp;                navController?.navigate(&quot;main&quot;)</b>
+<b class="nc">&nbsp;                navController?.navigate(&quot;config&quot;)</b>
 &nbsp;            }
 &nbsp;        ) {
 &nbsp;            Text(
-&nbsp;                text = &quot;Back&quot;
+&nbsp;                text = &quot;Go to config&quot;
 &nbsp;            )
 &nbsp;        }
 <b class="nc">&nbsp;        AdMobBanner(&quot;&quot;)</b>
@@ -200,9 +200,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;
 &nbsp;@Preview(showBackground = true)
 &nbsp;@Composable
-<b class="nc">&nbsp;fun ConfigScreenPreview() {</b>
+<b class="nc">&nbsp;fun MainScreenPreview() {</b>
 <b class="nc">&nbsp;    CouponManagerTheme {</b>
-&nbsp;        ConfigScreen(null)
+&nbsp;        MainScreen(null)
 &nbsp;    }
 <b class="nc">&nbsp;}</b>
 </code>
