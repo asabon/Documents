@@ -96,6 +96,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;
 &nbsp;import androidx.compose.foundation.layout.Column
 &nbsp;import androidx.compose.foundation.layout.Row
+&nbsp;import androidx.compose.foundation.layout.fillMaxWidth
 &nbsp;import androidx.compose.material3.Text
 &nbsp;import androidx.compose.runtime.Composable
 &nbsp;import androidx.compose.ui.Alignment
@@ -114,25 +115,30 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;
 &nbsp;@Composable
 &nbsp;fun CouponItemView(item: CouponItem) {
-&nbsp;    Row {
+&nbsp;    Row(
+&nbsp;        modifier = Modifier.fillMaxWidth()
+&nbsp;    ) {
 &nbsp;        Column {
 &nbsp;            Text(
-&nbsp;                fontSize = 16.sp,
+&nbsp;                fontSize = 20.sp,
 &nbsp;                text = item.name
 &nbsp;            )
 &nbsp;            Text(
-&nbsp;                fontSize = 10.sp,
+&nbsp;                fontSize = 16.sp,
 &nbsp;                text = item.note
 &nbsp;            )
 &nbsp;        }
-&nbsp;        Column {
+&nbsp;        Column(
+&nbsp;            modifier = Modifier.fillMaxWidth()
+&nbsp;        ) {
 &nbsp;            Text(
 &nbsp;                modifier = Modifier.align(Alignment.End),
-&nbsp;                fontSize = 16.sp,
+&nbsp;                fontSize = 18.sp,
 &nbsp;                text = item.amount.toString() + &quot; &quot; + item.unit
 &nbsp;            )
 &nbsp;            Text(
-&nbsp;                fontSize = 10.sp,
+&nbsp;                modifier = Modifier.align(Alignment.End),
+&nbsp;                fontSize = 14.sp,
 &nbsp;                text = item.expirationDate
 &nbsp;            )
 &nbsp;        }
@@ -176,7 +182,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-04 07:20</div>
+    <div style="float:right;">generated on 2024-02-05 21:48</div>
 </div>
 </body>
 </html>
