@@ -116,30 +116,33 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;@Composable
 &nbsp;fun CouponItemView(item: CouponItem) {
 &nbsp;    Row(
-&nbsp;        modifier = Modifier.fillMaxWidth()
+&nbsp;        modifier = Modifier
+&nbsp;            .fillMaxWidth(),
 &nbsp;    ) {
 &nbsp;        Column {
 &nbsp;            Text(
 &nbsp;                fontSize = 20.sp,
-&nbsp;                text = item.name
+&nbsp;                text = item.name,
 &nbsp;            )
 &nbsp;            Text(
 &nbsp;                fontSize = 16.sp,
-&nbsp;                text = item.note
+&nbsp;                text = item.note,
 &nbsp;            )
 &nbsp;        }
 &nbsp;        Column(
-&nbsp;            modifier = Modifier.fillMaxWidth()
+&nbsp;            modifier = Modifier
+&nbsp;                .fillMaxWidth(),
 &nbsp;        ) {
 &nbsp;            Text(
-&nbsp;                modifier = Modifier.align(Alignment.End),
+&nbsp;                modifier = Modifier
+&nbsp;                    .align(Alignment.End),
 &nbsp;                fontSize = 18.sp,
-&nbsp;                text = item.amount.toString() + &quot; &quot; + item.unit
+&nbsp;                text = item.amount.toString() + &quot; &quot; + item.unit,
 &nbsp;            )
 &nbsp;            Text(
 &nbsp;                modifier = Modifier.align(Alignment.End),
 &nbsp;                fontSize = 14.sp,
-&nbsp;                text = item.expirationDate
+&nbsp;                text = item.expirationDate,
 &nbsp;            )
 &nbsp;        }
 &nbsp;    }
@@ -155,7 +158,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;                note = &quot;何にでも引き換え&quot;,
 &nbsp;                amount = 10,
 &nbsp;                unit = &quot;枚&quot;,
-&nbsp;                expirationDate = &quot;2024/03/31&quot;)
+&nbsp;                expirationDate = &quot;2024/03/31&quot;,
+&nbsp;            ),
 &nbsp;        )
 &nbsp;    }
 &nbsp;}
@@ -182,7 +186,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-06 11:02</div>
+    <div style="float:right;">generated on 2024-02-06 23:34</div>
 </div>
 </body>
 </html>
