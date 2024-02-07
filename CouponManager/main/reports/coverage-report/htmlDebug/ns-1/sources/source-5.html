@@ -1,0 +1,230 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>app Coverage Report > CouponItemKt</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope: app<span class="separator">|</span>    <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">net.asabon.couponmanager</a>
+</div>
+
+<h1>Coverage Summary for Class: CouponItemKt (net.asabon.couponmanager)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+<th class="coverageStat 
+">
+  Instruction, %
+</th>
+</tr>
+<tr>
+  <td class="name">CouponItemKt</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/22)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/30)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/284)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">CouponItemKt$CouponItemPreview$1</td>
+    <td class="coverageStat"/>
+  </tr>
+  <tr>
+    <td class="name">CouponItemKt$CouponItemView$2</td>
+    <td class="coverageStat"/>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/22)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/30)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/284)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package net.asabon.couponmanager
+&nbsp;
+&nbsp;import androidx.compose.foundation.layout.Column
+&nbsp;import androidx.compose.foundation.layout.Row
+&nbsp;import androidx.compose.foundation.layout.fillMaxWidth
+&nbsp;import androidx.compose.material3.Text
+&nbsp;import androidx.compose.runtime.Composable
+&nbsp;import androidx.compose.ui.Alignment
+&nbsp;import androidx.compose.ui.Modifier
+&nbsp;import androidx.compose.ui.tooling.preview.Preview
+&nbsp;import androidx.compose.ui.unit.sp
+&nbsp;import net.asabon.couponmanager.ui.theme.CouponManagerTheme
+&nbsp;
+&nbsp;data class CouponItem(
+&nbsp;    val name: String,
+&nbsp;    val note: String,
+&nbsp;    val amount: Int,
+&nbsp;    val unit: String,
+&nbsp;    val expirationDate: String,
+&nbsp;)
+&nbsp;
+&nbsp;@Composable
+<b class="nc">&nbsp;fun CouponItemView(item: CouponItem) {</b>
+<b class="nc">&nbsp;    Row(</b>
+<b class="nc">&nbsp;        modifier = Modifier</b>
+<b class="nc">&nbsp;            .fillMaxWidth(),</b>
+&nbsp;    ) {
+<b class="nc">&nbsp;        Column {</b>
+<b class="nc">&nbsp;            Text(</b>
+<b class="nc">&nbsp;                fontSize = 20.sp,</b>
+<b class="nc">&nbsp;                text = item.name,</b>
+&nbsp;            )
+<b class="nc">&nbsp;            Text(</b>
+<b class="nc">&nbsp;                fontSize = 16.sp,</b>
+<b class="nc">&nbsp;                text = item.note,</b>
+&nbsp;            )
+<b class="nc">&nbsp;        }</b>
+<b class="nc">&nbsp;        Column(</b>
+<b class="nc">&nbsp;            modifier = Modifier</b>
+<b class="nc">&nbsp;                .fillMaxWidth(),</b>
+&nbsp;        ) {
+<b class="nc">&nbsp;            Text(</b>
+<b class="nc">&nbsp;                modifier = Modifier</b>
+<b class="nc">&nbsp;                    .align(Alignment.End),</b>
+<b class="nc">&nbsp;                fontSize = 18.sp,</b>
+<b class="nc">&nbsp;                text = item.amount.toString() + &quot; &quot; + item.unit,</b>
+&nbsp;            )
+<b class="nc">&nbsp;            Text(</b>
+<b class="nc">&nbsp;                modifier = Modifier.align(Alignment.End),</b>
+<b class="nc">&nbsp;                fontSize = 14.sp,</b>
+<b class="nc">&nbsp;                text = item.expirationDate,</b>
+&nbsp;            )
+<b class="nc">&nbsp;        }</b>
+<b class="nc">&nbsp;    }</b>
+<b class="nc">&nbsp;}</b>
+&nbsp;
+&nbsp;@Preview(showBackground = true)
+&nbsp;@Composable
+<b class="nc">&nbsp;fun CouponItemPreview() {</b>
+<b class="nc">&nbsp;    CouponManagerTheme {</b>
+&nbsp;        CouponItemView(
+&nbsp;            CouponItem(
+&nbsp;                name = &quot;マクドナルドクーポン&quot;,
+&nbsp;                note = &quot;何にでも引き換え&quot;,
+&nbsp;                amount = 10,
+&nbsp;                unit = &quot;枚&quot;,
+&nbsp;                expirationDate = &quot;2024/03/31&quot;,
+&nbsp;            ),
+&nbsp;        )
+&nbsp;    }
+<b class="nc">&nbsp;}</b>
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-02-07 23:06</div>
+</div>
+</body>
+</html>
