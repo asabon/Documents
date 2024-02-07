@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="8.0">
+    <file name="src/main/java/net/asabon/couponmanager/CouponItemList.kt">
+        <error line="10" column="33" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-declaration-site" />
+    </file>
 </checkstyle>
