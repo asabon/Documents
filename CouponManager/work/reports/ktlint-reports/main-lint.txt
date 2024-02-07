@@ -1,0 +1,6 @@
+src/main/java/net/asabon/couponmanager/CouponManager.kt:12:44: Missing trailing comma before ")" (trailing-comma-on-declaration-site)
+src/main/java/net/asabon/couponmanager/EditItemScreen.kt:29:58: Missing trailing comma before ")" (trailing-comma-on-call-site)
+
+Summary error count (descending) by rule:
+  trailing-comma-on-call-site: 1
+  trailing-comma-on-declaration-site: 1
