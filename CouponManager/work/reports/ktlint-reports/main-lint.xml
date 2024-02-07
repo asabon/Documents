@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="8.0">
+    <file name="src/main/java/net/asabon/couponmanager/MainScreen.kt">
+        <error line="76" column="28" severity="error" message="Missing spacing after &quot;when&quot;" source="keyword-spacing" />
+        <error line="88" column="55" severity="error" message="Missing spacing around &quot;-&gt;&quot;" source="op-spacing" />
+        <error line="101" column="79" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
+        <error line="103" column="14" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
+        <error line="113" column="79" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
+        <error line="115" column="14" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
+        <error line="125" column="79" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
+        <error line="127" column="14" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
+    </file>
 </checkstyle>
