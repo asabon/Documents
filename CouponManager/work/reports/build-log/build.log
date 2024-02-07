@@ -36,9 +36,12 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:processDebugResources
 > Task :app:checkDebugDuplicateClasses
 > Task :app:desugarDebugFileDependencies
-
 > Task :app:compileDebugKotlin
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/ConfigScreen.kt:16:49 Parameter 'couponManager' is never used
+w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditItemScreen.kt:16:20 Parameter 'navController' is never used
+w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditItemScreen.kt:16:51 Parameter 'couponManager' is never used
+w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditRoutineScreen.kt:16:23 Parameter 'navController' is never used
+w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditRoutineScreen.kt:16:54 Parameter 'couponManager' is never used
 
 > Task :app:mergeExtDexDebug
 > Task :app:compileDebugJavaWithJavac NO-SOURCE
@@ -47,9 +50,9 @@ w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/as
 > Task :app:dexBuilderDebug
 > Task :app:mergeProjectDexDebug
 > Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugJavaResource
 > Task :app:mergeDebugNativeLibs NO-SOURCE
 > Task :app:stripDebugDebugSymbols NO-SOURCE
-> Task :app:mergeDebugJavaResource
 > Task :app:validateSigningDebug
 > Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
@@ -57,5 +60,5 @@ w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/as
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 2m 43s
+BUILD SUCCESSFUL in 2m 37s
 32 actionable tasks: 32 executed
