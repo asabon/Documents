@@ -1,0 +1,74 @@
+
+Welcome to Gradle 8.0!
+
+For more details see https://docs.gradle.org/8.0/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+> Configure project :app
+ksp-1.9.22-1.0.17 is too new for kotlin-1.9.20. Please upgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too new for kotlin-1.9.20. Please upgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too new for kotlin-1.9.20. Please upgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too new for kotlin-1.9.20. Please upgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too new for kotlin-1.9.20. Please upgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too new for kotlin-1.9.20. Please upgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too new for kotlin-1.9.20. Please upgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too new for kotlin-1.9.20. Please upgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too new for kotlin-1.9.20. Please upgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too new for kotlin-1.9.20. Please upgrade kotlin-gradle-plugin to 1.9.22.
+Checking the license for package Android SDK Platform-Tools in /usr/local/lib/android/sdk/licenses
+License for package Android SDK Platform-Tools accepted.
+Preparing "Install Android SDK Platform-Tools v.34.0.5".
+"Install Android SDK Platform-Tools v.34.0.5" ready.
+Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-tools
+"Install Android SDK Platform-Tools v.34.0.5" complete.
+"Install Android SDK Platform-Tools v.34.0.5" finished.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:generateDebugResValues
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:processDebugResources
+> Task :app:checkDebugDuplicateClasses
+> Task :app:desugarDebugFileDependencies
+
+> Task :app:compileDebugKotlin
+w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/ConfigScreen.kt:16:49 Parameter 'couponManager' is never used
+
+> Task :app:mergeExtDexDebug
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:processDebugJavaRes
+> Task :app:mergeLibDexDebug
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:mergeDebugJavaResource
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+
+BUILD SUCCESSFUL in 2m 36s
+32 actionable tasks: 32 executed
