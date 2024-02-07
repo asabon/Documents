@@ -1,3 +1,5 @@
+Downloading https://services.gradle.org/distributions/gradle-8.0-bin.zip
+...........10%............20%............30%............40%............50%............60%...........70%............80%............90%............100%
 
 Welcome to Gradle 8.0!
 
@@ -15,8 +17,8 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:preDebugBuild UP-TO-DATE
 > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
 > Task :app:checkKotlinGradlePluginConfigurationErrors
-> Task :app:generateDebugResValues
 > Task :app:checkDebugAarMetadata
+> Task :app:generateDebugResValues
 > Task :app:mapDebugSourceSetPaths
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
@@ -26,9 +28,9 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:mergeDebugResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
-> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
+> Task :app:processDebugManifestForPackage
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
@@ -36,6 +38,8 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:processDebugResources
 > Task :app:checkDebugDuplicateClasses
 > Task :app:desugarDebugFileDependencies
+> Task :app:compileDebugKotlin
+> Task :app:mergeExtDexDebug
 
 > Task :app:compileDebugKotlin
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/ConfigScreen.kt:14:49 Parameter 'couponManager' is never used
@@ -44,7 +48,6 @@ w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/as
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditRoutineScreen.kt:14:23 Parameter 'navController' is never used
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditRoutineScreen.kt:14:54 Parameter 'couponManager' is never used
 
-> Task :app:mergeExtDexDebug
 > Task :app:compileDebugJavaWithJavac NO-SOURCE
 > Task :app:processDebugJavaRes
 > Task :app:mergeLibDexDebug
@@ -61,5 +64,5 @@ w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/as
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 2m 31s
+BUILD SUCCESSFUL in 5m 13s
 32 actionable tasks: 32 executed
