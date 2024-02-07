@@ -639,7 +639,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                    fill = false,</b>
 &nbsp;                ),
 <b class="nc">&nbsp;            listState = listState,</b>
-<b class="nc">&nbsp;            itemList = when(listType) {</b>
+<b class="nc">&nbsp;            itemList = when (listType) {</b>
 <b class="nc">&nbsp;                0 -&gt; couponManager.getItemList().toMutableStateList()</b>
 <b class="nc">&nbsp;                1 -&gt; couponManager.getItemList().toMutableStateList()</b>
 <b class="nc">&nbsp;                2 -&gt; couponManager.getItemList().toMutableStateList()</b>
@@ -651,7 +651,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;}
 &nbsp;
 &nbsp;@Composable
-<b class="nc">&nbsp;fun ListTypeSelector(selectedType: Int, onClick: (Int)-&gt;Unit = {}) {</b>
+<b class="nc">&nbsp;fun ListTypeSelector(selectedType: Int, onClick: (Int) -&gt; Unit = {}) {</b>
 <b class="nc">&nbsp;    TabRow(</b>
 <b class="nc">&nbsp;        selectedTabIndex = selectedType,</b>
 <b class="nc">&nbsp;        modifier = Modifier.fillMaxWidth(),</b>
@@ -664,9 +664,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;            text = {</b>
 <b class="nc">&nbsp;                Text(</b>
 <b class="nc">&nbsp;                    text = stringResource(id = R.string.valid_list),</b>
-<b class="nc">&nbsp;                    color = if (selectedType == 0) Color.Black else Color.Gray</b>
+<b class="nc">&nbsp;                    color = if (selectedType == 0) Color.Black else Color.Gray,</b>
 <b class="nc">&nbsp;                )</b>
-&nbsp;            }
+&nbsp;            },
 &nbsp;        )
 <b class="nc">&nbsp;        Tab(</b>
 <b class="nc">&nbsp;            selected = selectedType == 1,</b>
@@ -676,9 +676,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;            text = {</b>
 <b class="nc">&nbsp;                Text(</b>
 <b class="nc">&nbsp;                    text = stringResource(id = R.string.invalid_list),</b>
-<b class="nc">&nbsp;                    color = if (selectedType == 1) Color.Black else Color.Gray</b>
+<b class="nc">&nbsp;                    color = if (selectedType == 1) Color.Black else Color.Gray,</b>
 <b class="nc">&nbsp;                )</b>
-&nbsp;            }
+&nbsp;            },
 &nbsp;        )
 <b class="nc">&nbsp;        Tab(</b>
 <b class="nc">&nbsp;            selected = selectedType == 2,</b>
@@ -688,9 +688,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;            text = {</b>
 <b class="nc">&nbsp;                Text(</b>
 <b class="nc">&nbsp;                    text = stringResource(id = R.string.routine_list),</b>
-<b class="nc">&nbsp;                    color = if (selectedType == 2) Color.Black else Color.Gray</b>
+<b class="nc">&nbsp;                    color = if (selectedType == 2) Color.Black else Color.Gray,</b>
 <b class="nc">&nbsp;                )</b>
-&nbsp;            }
+&nbsp;            },
 <b class="nc">&nbsp;        )</b>
 &nbsp;    }
 <b class="nc">&nbsp;}</b>
@@ -742,7 +742,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-07 11:12</div>
+    <div style="float:right;">generated on 2024-02-07 11:21</div>
 </div>
 </body>
 </html>
