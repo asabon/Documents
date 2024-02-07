@@ -1,3 +1,5 @@
+Downloading https://services.gradle.org/distributions/gradle-8.0-bin.zip
+...........10%............20%............30%............40%............50%............60%...........70%............80%............90%............100%
 
 Welcome to Gradle 8.0!
 
@@ -20,15 +22,15 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:mapDebugSourceSetPaths
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
+> Task :app:mergeDebugResources
 > Task :app:parseDebugLocalResources
 > Task :app:createDebugCompatibleScreenManifests
-> Task :app:mergeDebugResources
 > Task :app:extractDeepLinksDebug
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
-> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
+> Task :app:processDebugManifestForPackage
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
@@ -38,8 +40,8 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:desugarDebugFileDependencies
 > Task :app:compileDebugKotlin
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/ConfigScreen.kt:16:49 Parameter 'couponManager' is never used
-w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditItemScreen.kt:16:20 Parameter 'navController' is never used
-w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditItemScreen.kt:16:51 Parameter 'couponManager' is never used
+w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditItemScreen.kt:18:20 Parameter 'navController' is never used
+w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditItemScreen.kt:18:51 Parameter 'couponManager' is never used
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditRoutineScreen.kt:16:23 Parameter 'navController' is never used
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditRoutineScreen.kt:16:54 Parameter 'couponManager' is never used
 
@@ -50,9 +52,9 @@ w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/as
 > Task :app:dexBuilderDebug
 > Task :app:mergeProjectDexDebug
 > Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugJavaResource
 > Task :app:mergeDebugNativeLibs NO-SOURCE
 > Task :app:stripDebugDebugSymbols NO-SOURCE
-> Task :app:mergeDebugJavaResource
 > Task :app:validateSigningDebug
 > Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
@@ -60,5 +62,5 @@ w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/as
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 2m 28s
+BUILD SUCCESSFUL in 3m 31s
 32 actionable tasks: 32 executed
