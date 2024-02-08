@@ -1,0 +1,984 @@
+<?xml version="1.0" ?>
+<report name="Intellij Coverage Report">
+<package name="net/asabon/couponmanager">
+<class name="net/asabon/couponmanager/AdMobViewKt" sourcefilename="AdMobView.kt">
+<method name="AdMobBanner" desc="(Ljava/lang/String;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="92" covered="0"/>
+<counter type="BRANCH" missed="14" covered="0"/>
+<counter type="LINE" missed="6" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="92" covered="0"/>
+<counter type="BRANCH" missed="14" covered="0"/>
+<counter type="LINE" missed="6" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/AdMobViewKt$AdMobBanner$1$1" sourcefilename="AdMobView.kt">
+<method name="invoke" desc="(Landroid/content/Context;)Landroid/view/View;">
+<counter type="INSTRUCTION" missed="39" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="8" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="39" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="8" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/ComposableSingletons$ConfigScreenKt" sourcefilename="ConfigScreen.kt">
+<method name="&lt;clinit&gt;" desc="()V">
+<counter type="INSTRUCTION" missed="6" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="6" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/ComposableSingletons$ConfigScreenKt$lambda-1$1" sourcefilename="ConfigScreen.kt">
+<method name="invoke" desc="(Landroidx/compose/foundation/layout/RowScope;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="43" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="3" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="43" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="3" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/ComposableSingletons$CouponItemKt" sourcefilename="CouponItem.kt">
+<method name="&lt;clinit&gt;" desc="()V">
+<counter type="INSTRUCTION" missed="6" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="6" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/ComposableSingletons$CouponItemKt$lambda-1$1" sourcefilename="CouponItem.kt">
+<method name="invoke" desc="(Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="37" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="8" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="37" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="8" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/ConfigScreenKt" sourcefilename="ConfigScreen.kt">
+<method name="ConfigScreen" desc="(Landroidx/navigation/NavController;Lnet/asabon/couponmanager/CouponManager;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="97" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="14" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="97" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="14" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/ConfigScreenKt$ConfigScreen$1$1" sourcefilename="ConfigScreen.kt">
+<method name="invoke" desc="()V">
+<counter type="INSTRUCTION" missed="13" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="2" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="13" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="2" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/CouponItem" sourcefilename="CouponItem.kt">
+<method name="&lt;init&gt;" desc="(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V">
+<counter type="INSTRUCTION" missed="0" covered="27"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="6"/>
+</method>
+<counter type="INSTRUCTION" missed="0" covered="27"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="6"/>
+<counter type="METHOD" missed="0" covered="1"/>
+</class>
+<class name="net/asabon/couponmanager/CouponItemKt" sourcefilename="CouponItem.kt">
+<method name="CouponItemPreview" desc="(Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="45" covered="0"/>
+<counter type="BRANCH" missed="10" covered="0"/>
+<counter type="LINE" missed="3" covered="0"/>
+</method>
+<method name="CouponItemView" desc="(Lnet/asabon/couponmanager/CouponItem;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="239" covered="0"/>
+<counter type="BRANCH" missed="12" covered="0"/>
+<counter type="LINE" missed="27" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="284" covered="0"/>
+<counter type="BRANCH" missed="22" covered="0"/>
+<counter type="LINE" missed="30" covered="0"/>
+<counter type="METHOD" missed="2" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/CouponItemList" sourcefilename="CouponItemList.kt">
+<method name="load" desc="()V">
+<counter type="INSTRUCTION" missed="88" covered="0"/>
+<counter type="BRANCH" missed="4" covered="0"/>
+<counter type="LINE" missed="9" covered="0"/>
+</method>
+<method name="clear" desc="()V">
+<counter type="INSTRUCTION" missed="19" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="5" covered="0"/>
+</method>
+<method name="getList" desc="()Ljava/util/List;">
+<counter type="INSTRUCTION" missed="0" covered="2"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="1"/>
+</method>
+<method name="&lt;init&gt;" desc="(Ljava/lang/String;Landroid/content/Context;)V">
+<counter type="INSTRUCTION" missed="0" covered="14"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="4"/>
+</method>
+<method name="save" desc="()V">
+<counter type="INSTRUCTION" missed="20" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="5" covered="0"/>
+</method>
+<method name="loadFromJsonString" desc="(Ljava/lang/String;)V">
+<counter type="INSTRUCTION" missed="11" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="3" covered="0"/>
+</method>
+<method name="setList" desc="(Ljava/util/List;)V">
+<counter type="INSTRUCTION" missed="0" covered="5"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="1"/>
+</method>
+<counter type="INSTRUCTION" missed="138" covered="21"/>
+<counter type="BRANCH" missed="4" covered="0"/>
+<counter type="LINE" missed="22" covered="6"/>
+<counter type="METHOD" missed="4" covered="3"/>
+</class>
+<class name="net/asabon/couponmanager/CouponManager" sourcefilename="CouponManager.kt">
+<method name="load" desc="()V">
+<counter type="INSTRUCTION" missed="14" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="4" covered="0"/>
+</method>
+<method name="&lt;init&gt;" desc="(Landroid/content/Context;Landroid/content/res/AssetManager;)V">
+<counter type="INSTRUCTION" missed="27" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="6" covered="0"/>
+</method>
+<method name="clear" desc="()V">
+<counter type="INSTRUCTION" missed="6" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="2" covered="0"/>
+</method>
+<method name="readSampleData" desc="(Landroid/content/res/AssetManager;)V">
+<counter type="INSTRUCTION" missed="146" covered="0"/>
+<counter type="BRANCH" missed="4" covered="0"/>
+<counter type="LINE" missed="6" covered="0"/>
+</method>
+<method name="getInvalidItemList" desc="()Ljava/util/List;">
+<counter type="INSTRUCTION" missed="3" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<method name="save" desc="()V">
+<counter type="INSTRUCTION" missed="6" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="2" covered="0"/>
+</method>
+<method name="getValidItemList" desc="()Ljava/util/List;">
+<counter type="INSTRUCTION" missed="3" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<method name="useSample" desc="(Z)V">
+<counter type="INSTRUCTION" missed="3" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="208" covered="0"/>
+<counter type="BRANCH" missed="6" covered="0"/>
+<counter type="LINE" missed="23" covered="0"/>
+<counter type="METHOD" missed="8" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/EditItemScreenKt" sourcefilename="EditItemScreen.kt">
+<method name="EditItemScreen" desc="(Landroidx/navigation/NavController;Lnet/asabon/couponmanager/CouponManager;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="333" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="39" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="333" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="39" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/EditRoutineScreenKt" sourcefilename="EditRoutineScreen.kt">
+<method name="EditRoutineScreen" desc="(Landroidx/navigation/NavController;Lnet/asabon/couponmanager/CouponManager;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="103" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="14" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="103" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="14" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivity" sourcefilename="MainActivity.kt">
+<method name="onCreate" desc="(Landroid/os/Bundle;)V">
+<counter type="INSTRUCTION" missed="40" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="7" covered="0"/>
+</method>
+<method name="&lt;init&gt;" desc="()V">
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="42" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="8" covered="0"/>
+<counter type="METHOD" missed="2" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivity$onCreate$2" sourcefilename="MainActivity.kt">
+<method name="invoke" desc="(Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="37" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="2" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="37" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="2" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivity$onCreate$2$1" sourcefilename="MainActivity.kt">
+<method name="invoke" desc="(Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="51" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="5" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="51" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="5" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivity$onCreate$2$1$1" sourcefilename="MainActivity.kt">
+<method name="invoke" desc="(Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="26" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="3" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="26" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="3" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivityKt" sourcefilename="MainActivity.kt">
+<method name="MyApplication" desc="(Lnet/asabon/couponmanager/CouponManager;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="45" covered="0"/>
+<counter type="BRANCH" missed="6" covered="0"/>
+<counter type="LINE" missed="2" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="45" covered="0"/>
+<counter type="BRANCH" missed="6" covered="0"/>
+<counter type="LINE" missed="2" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivityKt$MyApplication$1" sourcefilename="MainActivity.kt">
+<method name="invoke" desc="(Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="48" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="3" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="48" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="3" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivityKt$MyApplication$1$1" sourcefilename="MainActivity.kt">
+<method name="invoke" desc="(Landroidx/navigation/NavGraphBuilder;)V">
+<counter type="INSTRUCTION" missed="92" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="4" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="92" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="4" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivityKt$MyApplication$1$1$1" sourcefilename="MainActivity.kt">
+<method name="invoke" desc="(Landroidx/compose/animation/AnimatedContentScope;Landroidx/navigation/NavBackStackEntry;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="12" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="12" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivityKt$MyApplication$1$1$2" sourcefilename="MainActivity.kt">
+<method name="invoke" desc="(Landroidx/compose/animation/AnimatedContentScope;Landroidx/navigation/NavBackStackEntry;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="12" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="12" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivityKt$MyApplication$1$1$3" sourcefilename="MainActivity.kt">
+<method name="invoke" desc="(Landroidx/compose/animation/AnimatedContentScope;Landroidx/navigation/NavBackStackEntry;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="12" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="12" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainActivityKt$MyApplication$1$1$4" sourcefilename="MainActivity.kt">
+<method name="invoke" desc="(Landroidx/compose/animation/AnimatedContentScope;Landroidx/navigation/NavBackStackEntry;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="12" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="12" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt" sourcefilename="MainScreen.kt">
+<method name="MainScreen" desc="(Landroidx/navigation/NavController;Lnet/asabon/couponmanager/CouponManager;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="249" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="36" covered="0"/>
+</method>
+<method name="ListTypeSelector" desc="(ILkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V">
+<counter type="INSTRUCTION" missed="127" covered="0"/>
+<counter type="BRANCH" missed="24" covered="0"/>
+<counter type="LINE" missed="6" covered="0"/>
+</method>
+<method name="CouponItemListView" desc="(Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/lazy/LazyListState;Ljava/util/List;Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="57" covered="0"/>
+<counter type="BRANCH" missed="6" covered="0"/>
+<counter type="LINE" missed="4" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="433" covered="0"/>
+<counter type="BRANCH" missed="38" covered="0"/>
+<counter type="LINE" missed="46" covered="0"/>
+<counter type="METHOD" missed="3" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$CouponItemListView$1" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="(Landroidx/compose/foundation/lazy/LazyListScope;)V">
+<counter type="INSTRUCTION" missed="5" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="5" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$ListTypeSelector$1" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="(I)V">
+<counter type="INSTRUCTION" missed="1" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="1" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$ListTypeSelector$2" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="(Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="189" covered="0"/>
+<counter type="BRANCH" missed="14" covered="0"/>
+<counter type="LINE" missed="13" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="189" covered="0"/>
+<counter type="BRANCH" missed="14" covered="0"/>
+<counter type="LINE" missed="13" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$ListTypeSelector$2$1$1" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="()V">
+<counter type="INSTRUCTION" missed="7" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="7" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$ListTypeSelector$2$2" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="(Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="54" covered="0"/>
+<counter type="BRANCH" missed="10" covered="0"/>
+<counter type="LINE" missed="4" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="54" covered="0"/>
+<counter type="BRANCH" missed="10" covered="0"/>
+<counter type="LINE" missed="4" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$ListTypeSelector$2$3$1" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="()V">
+<counter type="INSTRUCTION" missed="7" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="7" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$ListTypeSelector$2$4" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="(Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="54" covered="0"/>
+<counter type="BRANCH" missed="10" covered="0"/>
+<counter type="LINE" missed="4" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="54" covered="0"/>
+<counter type="BRANCH" missed="10" covered="0"/>
+<counter type="LINE" missed="4" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$ListTypeSelector$2$5$1" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="()V">
+<counter type="INSTRUCTION" missed="7" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="7" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$ListTypeSelector$2$6" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="(Landroidx/compose/runtime/Composer;I)V">
+<counter type="INSTRUCTION" missed="54" covered="0"/>
+<counter type="BRANCH" missed="10" covered="0"/>
+<counter type="LINE" missed="4" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="54" covered="0"/>
+<counter type="BRANCH" missed="10" covered="0"/>
+<counter type="LINE" missed="4" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$MainScreen$1$1$1" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="()V">
+<counter type="INSTRUCTION" missed="13" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="13" covered="0"/>
+<counter type="BRANCH" missed="2" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/MainScreenKt$MainScreen$1$2$1" sourcefilename="MainScreen.kt">
+<method name="invoke" desc="(I)V">
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<sourcefile name="ConfigScreen.kt">
+<line nr="14" mi="14" ci="0" mb="2" cb="0"/>
+<line nr="15" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="16" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="18" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="19" mi="21" ci="0" mb="0" cb="0"/>
+<line nr="21" mi="19" ci="0" mb="0" cb="0"/>
+<line nr="23" mi="11" ci="0" mb="2" cb="0"/>
+<line nr="24" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="27" mi="6" ci="0" mb="0" cb="0"/>
+<line nr="28" mi="20" ci="0" mb="8" cb="0"/>
+<line nr="29" mi="21" ci="0" mb="0" cb="0"/>
+<line nr="30" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="32" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="33" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="34" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="35" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="36" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="37" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="40" mi="6" ci="0" mb="0" cb="0"/>
+<line nr="41" mi="1" ci="0" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="159" covered="0"/>
+<counter type="BRANCH" missed="12" covered="0"/>
+<counter type="LINE" missed="20" covered="0"/>
+</sourcefile>
+<sourcefile name="AdMobView.kt">
+<line nr="12" mi="38" ci="0" mb="10" cb="0"/>
+<line nr="13" mi="5" ci="0" mb="2" cb="0"/>
+<line nr="14" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="15" mi="19" ci="0" mb="0" cb="0"/>
+<line nr="16" mi="13" ci="0" mb="0" cb="0"/>
+<line nr="17" mi="14" ci="0" mb="0" cb="0"/>
+<line nr="18" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="19" mi="5" ci="0" mb="2" cb="0"/>
+<line nr="21" mi="5" ci="0" mb="0" cb="0"/>
+<line nr="23" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="25" mi="6" ci="0" mb="0" cb="0"/>
+<line nr="26" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="27" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="30" mi="15" ci="0" mb="2" cb="0"/>
+<counter type="INSTRUCTION" missed="131" covered="0"/>
+<counter type="BRANCH" missed="16" covered="0"/>
+<counter type="LINE" missed="14" covered="0"/>
+</sourcefile>
+<sourcefile name="EditRoutineScreen.kt">
+<line nr="14" mi="21" ci="0" mb="6" cb="0"/>
+<line nr="15" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="16" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="18" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="19" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="21" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="22" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="23" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="24" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="25" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="26" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="29" mi="6" ci="0" mb="0" cb="0"/>
+<line nr="30" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="31" mi="16" ci="0" mb="2" cb="0"/>
+<counter type="INSTRUCTION" missed="103" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="14" covered="0"/>
+</sourcefile>
+<sourcefile name="CouponManager.kt">
+<line nr="6" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="8" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="11" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="12" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="13" mi="8" ci="0" mb="0" cb="0"/>
+<line nr="14" mi="8" ci="0" mb="0" cb="0"/>
+<line nr="17" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="24" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="31" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="38" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="39" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="46" mi="3" ci="0" mb="2" cb="0"/>
+<line nr="47" mi="5" ci="0" mb="0" cb="0"/>
+<line nr="49" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="50" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="58" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="59" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="66" mi="16" ci="0" mb="0" cb="0"/>
+<line nr="67" mi="53" ci="0" mb="2" cb="0"/>
+<line nr="68" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="70" mi="16" ci="0" mb="0" cb="0"/>
+<line nr="71" mi="53" ci="0" mb="2" cb="0"/>
+<line nr="72" mi="4" ci="0" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="208" covered="0"/>
+<counter type="BRANCH" missed="6" covered="0"/>
+<counter type="LINE" missed="23" covered="0"/>
+</sourcefile>
+<sourcefile name="CouponItemList.kt">
+<line nr="8" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="9" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="10" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="12" mi="0" ci="6" mb="0" cb="0"/>
+<line nr="15" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="19" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="23" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="24" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="25" mi="11" ci="0" mb="0" cb="0"/>
+<line nr="26" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="27" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="32" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="33" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="34" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="35" mi="3" ci="0" mb="2" cb="0"/>
+<line nr="36" mi="59" ci="0" mb="2" cb="0"/>
+<line nr="37" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="38" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="40" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="41" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="46" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="47" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="48" mi="6" ci="0" mb="0" cb="0"/>
+<line nr="52" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="53" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="54" mi="13" ci="0" mb="0" cb="0"/>
+<line nr="55" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="56" mi="3" ci="0" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="138" covered="21"/>
+<counter type="BRANCH" missed="4" covered="0"/>
+<counter type="LINE" missed="22" covered="6"/>
+</sourcefile>
+<sourcefile name="MainActivity.kt">
+<line nr="17" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="19" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="20" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="21" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="22" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="23" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="24" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="25" mi="14" ci="0" mb="0" cb="0"/>
+<line nr="26" mi="35" ci="0" mb="8" cb="0"/>
+<line nr="28" mi="20" ci="0" mb="8" cb="0"/>
+<line nr="29" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="30" mi="10" ci="0" mb="0" cb="0"/>
+<line nr="31" mi="12" ci="0" mb="0" cb="0"/>
+<line nr="32" mi="20" ci="0" mb="8" cb="0"/>
+<line nr="33" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="34" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="35" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="36" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="42" mi="17" ci="0" mb="2" cb="0"/>
+<line nr="43" mi="28" ci="0" mb="4" cb="0"/>
+<line nr="44" mi="21" ci="0" mb="6" cb="0"/>
+<line nr="45" mi="25" ci="0" mb="2" cb="0"/>
+<line nr="46" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="47" mi="12" ci="0" mb="2" cb="0"/>
+<line nr="49" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="50" mi="12" ci="0" mb="2" cb="0"/>
+<line nr="52" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="53" mi="12" ci="0" mb="2" cb="0"/>
+<line nr="55" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="56" mi="12" ci="0" mb="2" cb="0"/>
+<line nr="58" mi="2" ci="0" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="389" covered="0"/>
+<counter type="BRANCH" missed="46" covered="0"/>
+<counter type="LINE" missed="31" covered="0"/>
+</sourcefile>
+<sourcefile name="MainScreen.kt">
+<line nr="36" mi="19" ci="0" mb="2" cb="0"/>
+<line nr="37" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="38" mi="33" ci="0" mb="0" cb="0"/>
+<line nr="39" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="40" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="42" mi="11" ci="0" mb="0" cb="0"/>
+<line nr="43" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="44" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="45" mi="5" ci="0" mb="0" cb="0"/>
+<line nr="47" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="48" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="49" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="50" mi="8" ci="0" mb="0" cb="0"/>
+<line nr="52" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="53" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="54" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="55" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="56" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="57" mi="6" ci="0" mb="0" cb="0"/>
+<line nr="58" mi="13" ci="0" mb="0" cb="0"/>
+<line nr="59" mi="13" ci="0" mb="2" cb="0"/>
+<line nr="62" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="63" mi="30" ci="0" mb="0" cb="0"/>
+<line nr="64" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="66" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="67" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="68" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="69" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="70" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="71" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="73" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="74" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="75" mi="9" ci="0" mb="2" cb="0"/>
+<line nr="76" mi="9" ci="0" mb="2" cb="0"/>
+<line nr="77" mi="9" ci="0" mb="2" cb="0"/>
+<line nr="78" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="81" mi="6" ci="0" mb="0" cb="0"/>
+<line nr="82" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="86" mi="78" ci="0" mb="20" cb="0"/>
+<line nr="87" mi="5" ci="0" mb="2" cb="0"/>
+<line nr="88" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="89" mi="11" ci="0" mb="0" cb="0"/>
+<line nr="90" mi="16" ci="0" mb="0" cb="0"/>
+<line nr="91" mi="16" ci="0" mb="6" cb="0"/>
+<line nr="92" mi="18" ci="0" mb="2" cb="0"/>
+<line nr="93" mi="21" ci="0" mb="0" cb="0"/>
+<line nr="94" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="96" mi="16" ci="0" mb="0" cb="0"/>
+<line nr="97" mi="20" ci="0" mb="8" cb="0"/>
+<line nr="98" mi="5" ci="0" mb="0" cb="0"/>
+<line nr="99" mi="27" ci="0" mb="2" cb="0"/>
+<line nr="100" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="103" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="104" mi="18" ci="0" mb="2" cb="0"/>
+<line nr="105" mi="21" ci="0" mb="0" cb="0"/>
+<line nr="106" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="108" mi="16" ci="0" mb="0" cb="0"/>
+<line nr="109" mi="20" ci="0" mb="8" cb="0"/>
+<line nr="110" mi="5" ci="0" mb="0" cb="0"/>
+<line nr="111" mi="27" ci="0" mb="2" cb="0"/>
+<line nr="112" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="115" mi="5" ci="0" mb="2" cb="0"/>
+<line nr="116" mi="18" ci="0" mb="2" cb="0"/>
+<line nr="117" mi="21" ci="0" mb="0" cb="0"/>
+<line nr="118" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="120" mi="16" ci="0" mb="0" cb="0"/>
+<line nr="121" mi="20" ci="0" mb="8" cb="0"/>
+<line nr="122" mi="5" ci="0" mb="0" cb="0"/>
+<line nr="123" mi="27" ci="0" mb="2" cb="0"/>
+<line nr="124" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="126" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="128" mi="17" ci="0" mb="2" cb="0"/>
+<line nr="131" mi="16" ci="0" mb="2" cb="0"/>
+<line nr="132" mi="33" ci="0" mb="4" cb="0"/>
+<line nr="133" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="134" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="136" mi="5" ci="0" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="828" covered="0"/>
+<counter type="BRANCH" missed="84" covered="0"/>
+<counter type="LINE" missed="78" covered="0"/>
+</sourcefile>
+<sourcefile name="EditItemScreen.kt">
+<line nr="16" mi="21" ci="0" mb="6" cb="0"/>
+<line nr="17" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="18" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="20" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="21" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="23" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="24" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="26" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="27" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="29" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="30" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="31" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="33" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="34" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="36" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="37" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="38" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="40" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="41" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="43" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="44" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="45" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="47" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="48" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="50" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="51" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="52" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="54" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="55" mi="23" ci="0" mb="0" cb="0"/>
+<line nr="57" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="58" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="59" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="60" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="61" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="62" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="63" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="66" mi="6" ci="0" mb="0" cb="0"/>
+<line nr="67" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="68" mi="16" ci="0" mb="2" cb="0"/>
+<counter type="INSTRUCTION" missed="333" covered="0"/>
+<counter type="BRANCH" missed="8" covered="0"/>
+<counter type="LINE" missed="39" covered="0"/>
+</sourcefile>
+<sourcefile name="CouponItem.kt">
+<line nr="14" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="15" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="16" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="17" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="18" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="19" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="23" mi="38" ci="0" mb="10" cb="0"/>
+<line nr="24" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="25" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="26" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="28" mi="12" ci="0" mb="0" cb="0"/>
+<line nr="29" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="30" mi="21" ci="0" mb="0" cb="0"/>
+<line nr="31" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="33" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="34" mi="21" ci="0" mb="0" cb="0"/>
+<line nr="35" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="37" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="38" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="39" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="40" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="42" mi="3" ci="0" mb="0" cb="0"/>
+<line nr="43" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="44" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="45" mi="21" ci="0" mb="0" cb="0"/>
+<line nr="46" mi="13" ci="0" mb="0" cb="0"/>
+<line nr="48" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="49" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="50" mi="21" ci="0" mb="0" cb="0"/>
+<line nr="51" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="53" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="54" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="55" mi="15" ci="0" mb="2" cb="0"/>
+<line nr="59" mi="26" ci="0" mb="6" cb="0"/>
+<line nr="60" mi="11" ci="0" mb="2" cb="0"/>
+<line nr="61" mi="20" ci="0" mb="8" cb="0"/>
+<line nr="62" mi="5" ci="0" mb="0" cb="0"/>
+<line nr="63" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="64" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="65" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="66" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="67" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="69" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="71" mi="14" ci="0" mb="2" cb="0"/>
+<counter type="INSTRUCTION" missed="327" covered="27"/>
+<counter type="BRANCH" missed="30" covered="0"/>
+<counter type="LINE" missed="39" covered="6"/>
+</sourcefile>
+<counter type="INSTRUCTION" missed="2616" covered="48"/>
+<counter type="BRANCH" missed="214" covered="0"/>
+<counter type="LINE" missed="280" covered="12"/>
+<counter type="METHOD" missed="50" covered="4"/>
+<counter type="CLASS" missed="35" covered="2"/>
+</package>
+<package name="net/asabon/couponmanager/ui/theme">
+<class name="net/asabon/couponmanager/ui/theme/ColorKt" sourcefilename="Color.kt">
+<method name="getPink40" desc="()J">
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<method name="getPurple40" desc="()J">
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<method name="getPurple80" desc="()J">
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<method name="getPurpleGrey40" desc="()J">
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<method name="getPink80" desc="()J">
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<method name="getPurpleGrey80" desc="()J">
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="24" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="6" covered="0"/>
+<counter type="METHOD" missed="6" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/ui/theme/ThemeKt" sourcefilename="Theme.kt">
+<method name="&lt;clinit&gt;" desc="()V">
+<counter type="INSTRUCTION" missed="66" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="8" covered="0"/>
+</method>
+<method name="CouponManagerTheme" desc="(ZZLkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V">
+<counter type="INSTRUCTION" missed="247" covered="0"/>
+<counter type="BRANCH" missed="50" covered="0"/>
+<counter type="LINE" missed="17" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="313" covered="0"/>
+<counter type="BRANCH" missed="50" covered="0"/>
+<counter type="LINE" missed="25" covered="0"/>
+<counter type="METHOD" missed="2" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/ui/theme/ThemeKt$CouponManagerTheme$1" sourcefilename="Theme.kt">
+<method name="invoke" desc="()V">
+<counter type="INSTRUCTION" missed="22" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="3" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="22" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="3" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="net/asabon/couponmanager/ui/theme/TypeKt" sourcefilename="Type.kt">
+<method name="getTypography" desc="()Landroidx/compose/material3/Typography;">
+<counter type="INSTRUCTION" missed="21" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<method name="&lt;clinit&gt;" desc="()V">
+<counter type="INSTRUCTION" missed="45" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="6" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="66" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="7" covered="0"/>
+<counter type="METHOD" missed="2" covered="0"/>
+</class>
+<sourcefile name="Type.kt">
+<line nr="10" mi="21" ci="0" mb="0" cb="0"/>
+<line nr="11" mi="24" ci="0" mb="0" cb="0"/>
+<line nr="12" mi="5" ci="0" mb="0" cb="0"/>
+<line nr="13" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="14" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="15" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="16" mi="4" ci="0" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="66" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="7" covered="0"/>
+</sourcefile>
+<sourcefile name="Color.kt">
+<line nr="5" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="6" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="7" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="9" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="10" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="11" mi="4" ci="0" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="24" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="6" covered="0"/>
+</sourcefile>
+<sourcefile name="Theme.kt">
+<line nr="18" mi="30" ci="0" mb="0" cb="0"/>
+<line nr="19" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="20" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="21" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="24" mi="30" ci="0" mb="0" cb="0"/>
+<line nr="25" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="26" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="27" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="42" mi="12" ci="0" mb="2" cb="0"/>
+<line nr="44" mi="34" ci="0" mb="6" cb="0"/>
+<line nr="46" mi="96" ci="0" mb="28" cb="0"/>
+<line nr="47" mi="6" ci="0" mb="0" cb="0"/>
+<line nr="48" mi="5" ci="0" mb="4" cb="0"/>
+<line nr="49" mi="12" ci="0" mb="0" cb="0"/>
+<line nr="50" mi="8" ci="0" mb="2" cb="0"/>
+<line nr="53" mi="4" ci="0" mb="2" cb="0"/>
+<line nr="54" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="56" mi="18" ci="0" mb="0" cb="0"/>
+<line nr="57" mi="3" ci="0" mb="2" cb="0"/>
+<line nr="58" mi="12" ci="0" mb="0" cb="0"/>
+<line nr="59" mi="9" ci="0" mb="0" cb="0"/>
+<line nr="60" mi="6" ci="0" mb="0" cb="0"/>
+<line nr="61" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="65" mi="5" ci="0" mb="2" cb="0"/>
+<line nr="66" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="67" mi="1" ci="0" mb="0" cb="0"/>
+<line nr="68" mi="10" ci="0" mb="0" cb="0"/>
+<line nr="70" mi="18" ci="0" mb="2" cb="0"/>
+<counter type="INSTRUCTION" missed="335" covered="0"/>
+<counter type="BRANCH" missed="50" covered="0"/>
+<counter type="LINE" missed="28" covered="0"/>
+</sourcefile>
+<counter type="INSTRUCTION" missed="425" covered="0"/>
+<counter type="BRANCH" missed="50" covered="0"/>
+<counter type="LINE" missed="41" covered="0"/>
+<counter type="METHOD" missed="11" covered="0"/>
+<counter type="CLASS" missed="4" covered="0"/>
+</package>
+<counter type="INSTRUCTION" missed="3041" covered="48"/>
+<counter type="BRANCH" missed="264" covered="0"/>
+<counter type="LINE" missed="321" covered="12"/>
+<counter type="METHOD" missed="61" covered="4"/>
+<counter type="CLASS" missed="39" covered="2"/>
+</report>

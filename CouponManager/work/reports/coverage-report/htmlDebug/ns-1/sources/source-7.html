@@ -1,0 +1,202 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>app Coverage Report > CouponManager</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope: app<span class="separator">|</span>    <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">net.asabon.couponmanager</a>
+</div>
+
+<h1>Coverage Summary for Class: CouponManager (net.asabon.couponmanager)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+<th class="coverageStat 
+">
+  Instruction, %
+</th>
+</tr>
+<tr>
+  <td class="name">CouponManager</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/23)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/208)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package net.asabon.couponmanager
+&nbsp;
+&nbsp;import android.content.Context
+&nbsp;import android.content.res.AssetManager
+&nbsp;
+<b class="nc">&nbsp;class CouponManager(</b>
+&nbsp;    context: Context,
+<b class="nc">&nbsp;    private val assetManager: AssetManager,</b>
+&nbsp;) {
+&nbsp;    private var useSample = false
+<b class="nc">&nbsp;    private val validDataFileName = &quot;validData.json&quot;</b>
+<b class="nc">&nbsp;    private val invalidDataFileName = &quot;invalidData.json&quot;</b>
+<b class="nc">&nbsp;    private var validItemList = CouponItemList(validDataFileName, context)</b>
+<b class="nc">&nbsp;    private var invalidItemList = CouponItemList(invalidDataFileName, context)</b>
+&nbsp;
+&nbsp;    fun useSample(flag: Boolean) {
+<b class="nc">&nbsp;        useSample = flag</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * 有効なクーポンリストを取得する
+&nbsp;     */
+&nbsp;    fun getValidItemList(): MutableList&lt;CouponItem&gt; {
+<b class="nc">&nbsp;        return validItemList.getList()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * 無効（期限切れ）のクーポンリストを取得する
+&nbsp;     */
+&nbsp;    fun getInvalidItemList(): MutableList&lt;CouponItem&gt; {
+<b class="nc">&nbsp;        return invalidItemList.getList()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * データを全消去する
+&nbsp;     */
+&nbsp;    fun clear() {
+<b class="nc">&nbsp;        validItemList.clear()</b>
+<b class="nc">&nbsp;        invalidItemList.clear()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * データをロードする
+&nbsp;     */
+&nbsp;    fun load() {
+<b class="nc">&nbsp;        if (useSample) {</b>
+<b class="nc">&nbsp;            readSampleData(assetManager)</b>
+&nbsp;        } else {
+<b class="nc">&nbsp;            validItemList.load()</b>
+<b class="nc">&nbsp;            invalidItemList.load()</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * データをセーブする
+&nbsp;     */
+&nbsp;    fun save() {
+<b class="nc">&nbsp;        validItemList.save()</b>
+<b class="nc">&nbsp;        invalidItemList.save()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * デバッグ用のサンプルデータを生成する
+&nbsp;     */
+&nbsp;    private fun readSampleData(assetManager: AssetManager) {
+<b class="nc">&nbsp;        val validDataStream = assetManager.open(&quot;sample/$validDataFileName&quot;)</b>
+<b class="nc">&nbsp;        val validDataJsonString = validDataStream.bufferedReader().use { it.readText() }</b>
+<b class="nc">&nbsp;        validItemList.loadFromJsonString(validDataJsonString)</b>
+&nbsp;
+<b class="nc">&nbsp;        val invalidDataStream = assetManager.open(&quot;sample/$invalidDataFileName&quot;)</b>
+<b class="nc">&nbsp;        val invalidDataJsonString = invalidDataStream.bufferedReader().use { it.readText() }</b>
+<b class="nc">&nbsp;        invalidItemList.loadFromJsonString(invalidDataJsonString)</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-02-08 04:02</div>
+</div>
+</body>
+</html>
