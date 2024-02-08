@@ -15,8 +15,8 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:preDebugBuild UP-TO-DATE
 > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
 > Task :app:checkKotlinGradlePluginConfigurationErrors
-> Task :app:checkDebugAarMetadata
 > Task :app:generateDebugResValues
+> Task :app:checkDebugAarMetadata
 > Task :app:mapDebugSourceSetPaths
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
@@ -37,22 +37,24 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:checkDebugDuplicateClasses
 > Task :app:desugarDebugFileDependencies
 > Task :app:compileDebugKotlin
+> Task :app:mergeExtDexDebug
+
+> Task :app:compileDebugKotlin
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/ConfigScreen.kt:14:49 Parameter 'couponManager' is never used
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditItemScreen.kt:16:20 Parameter 'navController' is never used
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditItemScreen.kt:16:51 Parameter 'couponManager' is never used
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditRoutineScreen.kt:14:23 Parameter 'navController' is never used
 w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditRoutineScreen.kt:14:54 Parameter 'couponManager' is never used
 
-> Task :app:mergeExtDexDebug
 > Task :app:compileDebugJavaWithJavac NO-SOURCE
 > Task :app:processDebugJavaRes
 > Task :app:mergeLibDexDebug
 > Task :app:dexBuilderDebug
 > Task :app:mergeProjectDexDebug
 > Task :app:mergeDebugJniLibFolders
-> Task :app:mergeDebugJavaResource
 > Task :app:mergeDebugNativeLibs NO-SOURCE
 > Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:mergeDebugJavaResource
 > Task :app:validateSigningDebug
 > Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
@@ -60,5 +62,5 @@ w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/as
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 3m 19s
+BUILD SUCCESSFUL in 3m 55s
 32 actionable tasks: 32 executed
