@@ -12,53 +12,88 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 "Install Android SDK Platform-Tools v.34.0.5" complete.
 "Install Android SDK Platform-Tools v.34.0.5" finished.
 > Task :app:preBuild UP-TO-DATE
-> Task :app:preDebugBuild UP-TO-DATE
-> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:preDevelopDebugBuild UP-TO-DATE
+> Task :app:mergeDevelopDebugNativeDebugMetadata NO-SOURCE
 > Task :app:checkKotlinGradlePluginConfigurationErrors
-> Task :app:checkDebugAarMetadata
-> Task :app:generateDebugResValues
-> Task :app:mapDebugSourceSetPaths
-> Task :app:generateDebugResources
-> Task :app:packageDebugResources
-> Task :app:parseDebugLocalResources
-> Task :app:createDebugCompatibleScreenManifests
-> Task :app:extractDeepLinksDebug
-> Task :app:mergeDebugResources
-> Task :app:processDebugMainManifest
-> Task :app:processDebugManifest
-> Task :app:processDebugManifestForPackage
-> Task :app:javaPreCompileDebug
-> Task :app:mergeDebugShaders
-> Task :app:compileDebugShaders NO-SOURCE
-> Task :app:generateDebugAssets UP-TO-DATE
-> Task :app:mergeDebugAssets
-> Task :app:compressDebugAssets
-> Task :app:processDebugResources
-> Task :app:checkDebugDuplicateClasses
-> Task :app:desugarDebugFileDependencies
-> Task :app:compileDebugKotlin
-w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/ConfigScreen.kt:14:49 Parameter 'couponManager' is never used
-w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditItemScreen.kt:16:20 Parameter 'navController' is never used
-w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditItemScreen.kt:16:51 Parameter 'couponManager' is never used
-w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditRoutineScreen.kt:14:23 Parameter 'navController' is never used
-w: file:///home/runner/work/CouponManager/CouponManager/app/src/main/java/net/asabon/couponmanager/EditRoutineScreen.kt:14:54 Parameter 'couponManager' is never used
-
-> Task :app:mergeExtDexDebug
-> Task :app:compileDebugJavaWithJavac NO-SOURCE
-> Task :app:processDebugJavaRes
-> Task :app:mergeLibDexDebug
-> Task :app:dexBuilderDebug
-> Task :app:mergeProjectDexDebug
-> Task :app:mergeDebugJniLibFolders
-> Task :app:mergeDebugNativeLibs NO-SOURCE
-> Task :app:stripDebugDebugSymbols NO-SOURCE
-> Task :app:mergeDebugJavaResource
-> Task :app:validateSigningDebug
-> Task :app:writeDebugAppMetadata
-> Task :app:writeDebugSigningConfigVersions
-> Task :app:packageDebug
-> Task :app:createDebugApkListingFileRedirect
+> Task :app:checkDevelopDebugAarMetadata
+> Task :app:generateDevelopDebugResValues
+> Task :app:mapDevelopDebugSourceSetPaths
+> Task :app:generateDevelopDebugResources
+> Task :app:packageDevelopDebugResources
+> Task :app:mergeDevelopDebugResources
+> Task :app:createDevelopDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDevelopDebug
+> Task :app:parseDevelopDebugLocalResources
+> Task :app:processDevelopDebugMainManifest
+> Task :app:processDevelopDebugManifest
+> Task :app:javaPreCompileDevelopDebug
+> Task :app:processDevelopDebugManifestForPackage
+> Task :app:mergeDevelopDebugShaders
+> Task :app:compileDevelopDebugShaders NO-SOURCE
+> Task :app:generateDevelopDebugAssets UP-TO-DATE
+> Task :app:mergeDevelopDebugAssets
+> Task :app:compressDevelopDebugAssets
+> Task :app:processDevelopDebugResources
+> Task :app:checkDevelopDebugDuplicateClasses
+> Task :app:desugarDevelopDebugFileDependencies
+> Task :app:compileDevelopDebugKotlin
+> Task :app:mergeExtDexDevelopDebug
+> Task :app:compileDevelopDebugJavaWithJavac NO-SOURCE
+> Task :app:processDevelopDebugJavaRes
+> Task :app:mergeLibDexDevelopDebug
+> Task :app:dexBuilderDevelopDebug
+> Task :app:mergeProjectDexDevelopDebug
+> Task :app:mergeDevelopDebugJavaResource
+> Task :app:mergeDevelopDebugJniLibFolders
+> Task :app:mergeDevelopDebugNativeLibs NO-SOURCE
+> Task :app:stripDevelopDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDevelopDebug
+> Task :app:writeDevelopDebugAppMetadata
+> Task :app:writeDevelopDebugSigningConfigVersions
+> Task :app:preProductionDebugBuild UP-TO-DATE
+> Task :app:mergeProductionDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkProductionDebugAarMetadata
+> Task :app:generateProductionDebugResValues
+> Task :app:mapProductionDebugSourceSetPaths
+> Task :app:generateProductionDebugResources
+> Task :app:packageDevelopDebug
+> Task :app:createDevelopDebugApkListingFileRedirect
+> Task :app:assembleDevelopDebug
+> Task :app:packageProductionDebugResources
+> Task :app:parseProductionDebugLocalResources
+> Task :app:createProductionDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksProductionDebug
+> Task :app:mergeProductionDebugResources
+> Task :app:processProductionDebugMainManifest
+> Task :app:processProductionDebugManifest
+> Task :app:processProductionDebugManifestForPackage
+> Task :app:javaPreCompileProductionDebug
+> Task :app:mergeProductionDebugShaders
+> Task :app:compileProductionDebugShaders NO-SOURCE
+> Task :app:generateProductionDebugAssets UP-TO-DATE
+> Task :app:mergeProductionDebugAssets
+> Task :app:compressProductionDebugAssets
+> Task :app:checkProductionDebugDuplicateClasses
+> Task :app:desugarProductionDebugFileDependencies
+> Task :app:processProductionDebugResources
+> Task :app:mergeExtDexProductionDebug
+> Task :app:mergeLibDexProductionDebug
+> Task :app:mergeProductionDebugJniLibFolders
+> Task :app:mergeProductionDebugNativeLibs NO-SOURCE
+> Task :app:stripProductionDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningProductionDebug
+> Task :app:writeProductionDebugAppMetadata
+> Task :app:writeProductionDebugSigningConfigVersions
+> Task :app:compileProductionDebugKotlin
+> Task :app:compileProductionDebugJavaWithJavac NO-SOURCE
+> Task :app:processProductionDebugJavaRes
+> Task :app:dexBuilderProductionDebug
+> Task :app:mergeProjectDexProductionDebug
+> Task :app:mergeProductionDebugJavaResource
+> Task :app:packageProductionDebug
+> Task :app:createProductionDebugApkListingFileRedirect
+> Task :app:assembleProductionDebug
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 2m 50s
-32 actionable tasks: 32 executed
+BUILD SUCCESSFUL in 3m 27s
+63 actionable tasks: 63 executed
