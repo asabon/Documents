@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="net.asabon.bustimetable.TestTimeTable" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-02-11T04:10:01" hostname="fv-az882-299" time="0.061">
+<testsuite name="net.asabon.bustimetable.TestTimeTable" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-02-11T04:17:00" hostname="fv-az465-742" time="0.055">
   <properties/>
-  <testcase name="isSmall_minute_isTrue" classname="net.asabon.bustimetable.TestTimeTable" time="0.011"/>
-  <testcase name="isSmall_hour_isFalse" classname="net.asabon.bustimetable.TestTimeTable" time="0.001"/>
-  <testcase name="isSmall_minute_isFalse" classname="net.asabon.bustimetable.TestTimeTable" time="0.0"/>
-  <testcase name="mergeList_BaseIsNull" classname="net.asabon.bustimetable.TestTimeTable" time="0.0"/>
-  <testcase name="getHour_test" classname="net.asabon.bustimetable.TestTimeTable" time="0.044"/>
+  <testcase name="isSmall_minute_isTrue" classname="net.asabon.bustimetable.TestTimeTable" time="0.01"/>
+  <testcase name="isSmall_hour_isFalse" classname="net.asabon.bustimetable.TestTimeTable" time="0.002"/>
+  <testcase name="isSmall_minute_isFalse" classname="net.asabon.bustimetable.TestTimeTable" time="0.001"/>
+  <testcase name="mergeList_BaseIsNull" classname="net.asabon.bustimetable.TestTimeTable" time="0.001"/>
+  <testcase name="getHour_test" classname="net.asabon.bustimetable.TestTimeTable" time="0.036"/>
   <testcase name="getMinute_test" classname="net.asabon.bustimetable.TestTimeTable" time="0.001"/>
   <testcase name="isSmall_hour_isTrue" classname="net.asabon.bustimetable.TestTimeTable" time="0.001"/>
   <system-out><![CDATA[]]></system-out>

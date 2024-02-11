@@ -26,8 +26,8 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:parseDevelopDebugLocalResources
 > Task :app:processDevelopDebugMainManifest
 > Task :app:processDevelopDebugManifest
-> Task :app:javaPreCompileDevelopDebug
 > Task :app:processDevelopDebugManifestForPackage
+> Task :app:javaPreCompileDevelopDebug
 > Task :app:mergeDevelopDebugShaders
 > Task :app:compileDevelopDebugShaders NO-SOURCE
 > Task :app:generateDevelopDebugAssets UP-TO-DATE
@@ -43,8 +43,8 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:mergeLibDexDevelopDebug
 > Task :app:dexBuilderDevelopDebug
 > Task :app:mergeProjectDexDevelopDebug
-> Task :app:mergeDevelopDebugJavaResource
 > Task :app:mergeDevelopDebugJniLibFolders
+> Task :app:mergeDevelopDebugJavaResource
 > Task :app:mergeDevelopDebugNativeLibs NO-SOURCE
 > Task :app:stripDevelopDebugDebugSymbols NO-SOURCE
 > Task :app:validateSigningDevelopDebug
@@ -66,8 +66,8 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:mergeProductionDebugResources
 > Task :app:processProductionDebugMainManifest
 > Task :app:processProductionDebugManifest
-> Task :app:processProductionDebugManifestForPackage
 > Task :app:javaPreCompileProductionDebug
+> Task :app:processProductionDebugManifestForPackage
 > Task :app:mergeProductionDebugShaders
 > Task :app:compileProductionDebugShaders NO-SOURCE
 > Task :app:generateProductionDebugAssets UP-TO-DATE
@@ -95,5 +95,5 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:assembleProductionDebug
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 3m 27s
+BUILD SUCCESSFUL in 3m 18s
 63 actionable tasks: 63 executed
