@@ -841,25 +841,25 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;@Composable
 <b class="nc">&nbsp;fun MainScreen(navController: NavController?, timeTable: TimeTable) {</b>
 <b class="nc">&nbsp;    var direction by remember { mutableIntStateOf(timeTable.getDirection()) }</b>
-<b class="nc">&nbsp;    var spotA by remember { mutableStateOf(timeTable.getSpotA())}</b>
-<b class="nc">&nbsp;    var spotB by remember { mutableStateOf(timeTable.getSpotB())}</b>
+<b class="nc">&nbsp;    var spotA by remember { mutableStateOf(timeTable.getSpotA()) }</b>
+<b class="nc">&nbsp;    var spotB by remember { mutableStateOf(timeTable.getSpotB()) }</b>
 <b class="nc">&nbsp;    var dateType by remember { mutableIntStateOf(timeTable.getDefaultDateType()) }</b>
 <b class="nc">&nbsp;    var tempList = timeTable.getTimeTableItems3(direction, dateType)</b>
 <b class="nc">&nbsp;    val listState = rememberLazyListState(initialFirstVisibleItemIndex = getIndex(tempList))</b>
 <b class="nc">&nbsp;    val composableScope = rememberCoroutineScope()</b>
 <b class="nc">&nbsp;    Column(</b>
 <b class="nc">&nbsp;        modifier = Modifier.fillMaxSize(),</b>
-<b class="nc">&nbsp;        verticalArrangement = Arrangement.Top</b>
+<b class="nc">&nbsp;        verticalArrangement = Arrangement.Top,</b>
 &nbsp;    ) {
 <b class="nc">&nbsp;        Row(</b>
 <b class="nc">&nbsp;            modifier = Modifier.fillMaxWidth(),</b>
 <b class="nc">&nbsp;            horizontalArrangement = Arrangement.Center,</b>
-<b class="nc">&nbsp;            verticalAlignment = Alignment.CenterVertically</b>
+<b class="nc">&nbsp;            verticalAlignment = Alignment.CenterVertically,</b>
 &nbsp;        ) {
 <b class="nc">&nbsp;            SelectDirection(</b>
 <b class="nc">&nbsp;                timeTable = timeTable,</b>
-<b class="nc">&nbsp;                direction = direction)</b>
-&nbsp;            {
+<b class="nc">&nbsp;                direction = direction,</b>
+&nbsp;            ) {
 <b class="nc">&nbsp;                when (it) {</b>
 <b class="nc">&nbsp;                    0 -&gt; {</b>
 <b class="nc">&nbsp;                        direction = timeTable.getDirection()</b>
@@ -883,7 +883,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;            Spacer(</b>
 <b class="nc">&nbsp;                modifier = Modifier</b>
 <b class="nc">&nbsp;                    .fillMaxWidth()</b>
-<b class="nc">&nbsp;                    .weight(weight = 1f, fill = false)</b>
+<b class="nc">&nbsp;                    .weight(weight = 1f, fill = false),</b>
 &nbsp;            )
 <b class="nc">&nbsp;            Icon(</b>
 <b class="nc">&nbsp;                painter = rememberVectorPainter(image = Icons.Default.Settings),</b>
@@ -893,7 +893,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                    .size(40.dp)</b>
 <b class="nc">&nbsp;                    .clickable {</b>
 <b class="nc">&nbsp;                        navController?.navigate(&quot;config&quot;)</b>
-&nbsp;                    }
+&nbsp;                    },
 &nbsp;            )
 <b class="nc">&nbsp;        }</b>
 <b class="nc">&nbsp;        SelectDateType(dateType) {</b>
@@ -917,19 +917,19 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                .fillMaxSize()</b>
 <b class="nc">&nbsp;                .weight(weight = 1f, fill = false),</b>
 <b class="nc">&nbsp;            listState = listState,</b>
-<b class="nc">&nbsp;            itemList = tempList</b>
+<b class="nc">&nbsp;            itemList = tempList,</b>
 &nbsp;        )
 <b class="nc">&nbsp;        AdMobView(stringResource(id = R.string.admob_ad_unit_id_main))</b>
 <b class="nc">&nbsp;    }</b>
 &nbsp;}
 &nbsp;
 &nbsp;@Composable
-<b class="nc">&nbsp;fun SelectDirection(timeTable: TimeTable, direction: Int, onClick: (Int)-&gt;Unit = {}) {</b>
+<b class="nc">&nbsp;fun SelectDirection(timeTable: TimeTable, direction: Int, onClick: (Int) -&gt; Unit = {}) {</b>
 <b class="nc">&nbsp;    val directionIcon = listOf(Icons.Default.ArrowForward, Icons.Default.ArrowBack)</b>
-<b class="nc">&nbsp;    Row{</b>
+<b class="nc">&nbsp;    Row {</b>
 <b class="nc">&nbsp;        SpotSelector(</b>
 <b class="nc">&nbsp;            timeTable = timeTable,</b>
-<b class="nc">&nbsp;            initialValue = timeTable.getSpotA()</b>
+<b class="nc">&nbsp;            initialValue = timeTable.getSpotA(),</b>
 &nbsp;        ) {
 <b class="nc">&nbsp;            timeTable.setSpotA(it)</b>
 <b class="nc">&nbsp;            timeTable.saveConfig()</b>
@@ -949,11 +949,11 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;                    }
 <b class="nc">&nbsp;                    timeTable.saveConfig()</b>
 <b class="nc">&nbsp;                    onClick(0)</b>
-&nbsp;                }
+&nbsp;                },
 &nbsp;        )
 <b class="nc">&nbsp;        SpotSelector(</b>
 <b class="nc">&nbsp;            timeTable = timeTable,</b>
-<b class="nc">&nbsp;            initialValue = timeTable.getSpotB()</b>
+<b class="nc">&nbsp;            initialValue = timeTable.getSpotB(),</b>
 &nbsp;        ) {
 <b class="nc">&nbsp;            timeTable.setSpotB(it)</b>
 <b class="nc">&nbsp;            timeTable.saveConfig()</b>
@@ -963,7 +963,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;}
 &nbsp;
 &nbsp;@Composable
-<b class="nc">&nbsp;fun SelectDateType(dateType: Int, onClick: (Int)-&gt;Unit = {}) {</b>
+<b class="nc">&nbsp;fun SelectDateType(dateType: Int, onClick: (Int) -&gt; Unit = {}) {</b>
 <b class="nc">&nbsp;    TabRow(</b>
 <b class="nc">&nbsp;        selectedTabIndex = dateType,</b>
 <b class="nc">&nbsp;        modifier = Modifier.fillMaxWidth(),</b>
@@ -976,9 +976,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;            text = {</b>
 <b class="nc">&nbsp;                Text(</b>
 <b class="nc">&nbsp;                    text = stringResource(R.string.weekday),</b>
-<b class="nc">&nbsp;                    color = if (dateType == 0) Color.Black else Color.Gray</b>
+<b class="nc">&nbsp;                    color = if (dateType == 0) Color.Black else Color.Gray,</b>
 <b class="nc">&nbsp;                )</b>
-&nbsp;            }
+&nbsp;            },
 &nbsp;        )
 <b class="nc">&nbsp;        Tab(</b>
 <b class="nc">&nbsp;            selected = dateType == 1,</b>
@@ -988,9 +988,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;            text = {</b>
 <b class="nc">&nbsp;                Text(</b>
 <b class="nc">&nbsp;                    text = stringResource(R.string.saturday),</b>
-<b class="nc">&nbsp;                    color = if (dateType == 1) Color.Blue else Color.Gray</b>
+<b class="nc">&nbsp;                    color = if (dateType == 1) Color.Blue else Color.Gray,</b>
 <b class="nc">&nbsp;                )</b>
-&nbsp;            }
+&nbsp;            },
 &nbsp;        )
 <b class="nc">&nbsp;        Tab(</b>
 <b class="nc">&nbsp;            selected = dateType == 2,</b>
@@ -1000,9 +1000,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;            text = {</b>
 <b class="nc">&nbsp;                Text(</b>
 <b class="nc">&nbsp;                    text = stringResource(R.string.holiday),</b>
-<b class="nc">&nbsp;                    color = if (dateType == 2) Color.Red else Color.Gray</b>
+<b class="nc">&nbsp;                    color = if (dateType == 2) Color.Red else Color.Gray,</b>
 <b class="nc">&nbsp;                )</b>
-&nbsp;            }
+&nbsp;            },
 <b class="nc">&nbsp;        )</b>
 &nbsp;    }
 <b class="nc">&nbsp;}</b>
@@ -1011,10 +1011,11 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;fun TimeTableView(modifier: Modifier, listState: LazyListState, itemList: List&lt;TimeTableItem&gt;) {</b>
 <b class="nc">&nbsp;    LazyColumn(</b>
 <b class="nc">&nbsp;        state = listState,</b>
-<b class="nc">&nbsp;        modifier = modifier</b>
+<b class="nc">&nbsp;        modifier = modifier,</b>
 &nbsp;    ) {
 <b class="nc">&nbsp;        items(itemList) {</b>
-&nbsp;                item -&gt; TimeTableItemView(item)
+&nbsp;                item -&gt;
+&nbsp;            TimeTableItemView(item)
 &nbsp;        }
 &nbsp;    }
 &nbsp;}
@@ -1023,29 +1024,29 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;fun TimeTableItemView(item: TimeTableItem) {</b>
 <b class="nc">&nbsp;    Row(</b>
 <b class="nc">&nbsp;        modifier = Modifier</b>
-<b class="nc">&nbsp;            .fillMaxWidth()</b>
-&nbsp;    ){
+<b class="nc">&nbsp;            .fillMaxWidth(),</b>
+&nbsp;    ) {
 <b class="nc">&nbsp;        Text(</b>
 <b class="nc">&nbsp;            modifier = Modifier</b>
 <b class="nc">&nbsp;                .align(Alignment.CenterVertically),</b>
 <b class="nc">&nbsp;            fontSize = 30.sp,</b>
-<b class="nc">&nbsp;            text = item.system + &quot; &quot;</b>
+<b class="nc">&nbsp;            text = item.system + &quot; &quot;,</b>
 &nbsp;        )
 <b class="nc">&nbsp;        Column {</b>
 <b class="nc">&nbsp;            Text(</b>
 <b class="nc">&nbsp;                fontSize = 20.sp,</b>
-<b class="nc">&nbsp;                text = item.from</b>
+<b class="nc">&nbsp;                text = item.from,</b>
 &nbsp;            )
 <b class="nc">&nbsp;            Text(</b>
 <b class="nc">&nbsp;                fontSize = 12.sp,</b>
-<b class="nc">&nbsp;                text = item.position + &quot; &quot; + stringResource(id = R.string.direction_forward) + &quot; &quot; + item.to</b>
+<b class="nc">&nbsp;                text = item.position + &quot; &quot; + stringResource(id = R.string.direction_forward) + &quot; &quot; + item.to,</b>
 &nbsp;            )
 <b class="nc">&nbsp;        }</b>
 <b class="nc">&nbsp;        Text(</b>
 <b class="nc">&nbsp;            modifier = Modifier.fillMaxWidth(),</b>
 <b class="nc">&nbsp;            fontSize = 35.sp,</b>
 <b class="nc">&nbsp;            textAlign = TextAlign.Right,</b>
-<b class="nc">&nbsp;            text = item.hour + &quot;:&quot; + item.minute</b>
+<b class="nc">&nbsp;            text = item.hour + &quot;:&quot; + item.minute,</b>
 &nbsp;        )
 <b class="nc">&nbsp;    }</b>
 <b class="nc">&nbsp;}</b>
@@ -1083,7 +1084,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-11 04:23</div>
+    <div style="float:right;">generated on 2024-02-11 06:56</div>
 </div>
 </body>
 </html>

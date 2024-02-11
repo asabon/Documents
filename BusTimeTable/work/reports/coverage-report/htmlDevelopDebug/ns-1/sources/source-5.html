@@ -566,23 +566,23 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;    val registeredListState = rememberLazyListState(initialFirstVisibleItemIndex = 0)</b>
 <b class="nc">&nbsp;    val unregisteredListState = rememberLazyListState(initialFirstVisibleItemIndex = 0)</b>
 <b class="nc">&nbsp;    val editSpot: MutableState&lt;String&gt; = remember { mutableStateOf(timeTable.getSpotList()[0]) }</b>
-<b class="nc">&nbsp;    val selectedRegisteredBusStop: MutableState&lt;String&gt; = remember {mutableStateOf(&quot;&quot;)}</b>
-<b class="nc">&nbsp;    val selectedUnregisteredBusStop: MutableState&lt;String&gt; = remember {mutableStateOf(&quot;&quot;)}</b>
+<b class="nc">&nbsp;    val selectedRegisteredBusStop: MutableState&lt;String&gt; = remember { mutableStateOf(&quot;&quot;) }</b>
+<b class="nc">&nbsp;    val selectedUnregisteredBusStop: MutableState&lt;String&gt; = remember { mutableStateOf(&quot;&quot;) }</b>
 <b class="nc">&nbsp;    var busStopListOfEditSpot: SnapshotStateList&lt;String&gt;</b>
 &nbsp;
 <b class="nc">&nbsp;    Column(</b>
 <b class="nc">&nbsp;        modifier = Modifier</b>
-<b class="nc">&nbsp;            .fillMaxSize()</b>
+<b class="nc">&nbsp;            .fillMaxSize(),</b>
 &nbsp;    ) {
 <b class="nc">&nbsp;        Text(text = stringResource(id = R.string.editSpot))</b>
 <b class="nc">&nbsp;        Row(</b>
 <b class="nc">&nbsp;            modifier = Modifier</b>
 <b class="nc">&nbsp;                .fillMaxWidth(),</b>
-<b class="nc">&nbsp;            horizontalArrangement = Arrangement.SpaceAround</b>
+<b class="nc">&nbsp;            horizontalArrangement = Arrangement.SpaceAround,</b>
 &nbsp;        ) {
 <b class="nc">&nbsp;            SpotSelector(</b>
 <b class="nc">&nbsp;                timeTable = timeTable,</b>
-<b class="nc">&nbsp;                initialValue = editSpot.value</b>
+<b class="nc">&nbsp;                initialValue = editSpot.value,</b>
 &nbsp;            ) {
 <b class="nc">&nbsp;                editSpot.value = it</b>
 <b class="nc">&nbsp;                busStopListOfEditSpot = timeTable.getBusStopListInSpot(it).toMutableStateList()</b>
@@ -605,7 +605,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;        Row(</b>
 <b class="nc">&nbsp;            modifier = Modifier</b>
 <b class="nc">&nbsp;                .fillMaxWidth(),</b>
-<b class="nc">&nbsp;            horizontalArrangement = Arrangement.SpaceAround</b>
+<b class="nc">&nbsp;            horizontalArrangement = Arrangement.SpaceAround,</b>
 &nbsp;        ) {
 <b class="nc">&nbsp;            Text(text = stringResource(id = R.string.registered))</b>
 <b class="nc">&nbsp;            Text(text = stringResource(id = R.string.unregistered))</b>
@@ -613,7 +613,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;        Row(</b>
 <b class="nc">&nbsp;            modifier = Modifier</b>
 <b class="nc">&nbsp;                .fillMaxSize()</b>
-<b class="nc">&nbsp;                .weight(weight = 1f, fill = false)</b>
+<b class="nc">&nbsp;                .weight(weight = 1f, fill = false),</b>
 &nbsp;        ) {
 <b class="nc">&nbsp;            busStopListOfEditSpot = timeTable.getBusStopListInSpot(editSpot.value).toMutableStateList()</b>
 <b class="nc">&nbsp;            BusStopListView(</b>
@@ -622,7 +622,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                    .weight(weight = 1f, fill = false),</b>
 <b class="nc">&nbsp;                listState = registeredListState,</b>
 <b class="nc">&nbsp;                busStopList = busStopListOfEditSpot.toMutableStateList(),</b>
-<b class="nc">&nbsp;                selectedBusStop = selectedRegisteredBusStop.value</b>
+<b class="nc">&nbsp;                selectedBusStop = selectedRegisteredBusStop.value,</b>
 <b class="nc">&nbsp;            ) {</b>
 <b class="nc">&nbsp;                selectedRegisteredBusStop.value = it</b>
 &nbsp;            }
@@ -637,12 +637,12 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                            if (selectedUnregisteredBusStop.value != &quot;&quot;) {</b>
 <b class="nc">&nbsp;                                timeTable.addBusStopToSpot(</b>
 <b class="nc">&nbsp;                                    editSpot.value,</b>
-<b class="nc">&nbsp;                                    selectedUnregisteredBusStop.value</b>
+<b class="nc">&nbsp;                                    selectedUnregisteredBusStop.value,</b>
 &nbsp;                                )
 <b class="nc">&nbsp;                                busStopListOfEditSpot.add(selectedUnregisteredBusStop.value)</b>
 &nbsp;                            }
 <b class="nc">&nbsp;                            selectedUnregisteredBusStop.value = &quot;&quot;</b>
-&nbsp;                        }
+&nbsp;                        },
 &nbsp;                )
 <b class="nc">&nbsp;                Icon(</b>
 <b class="nc">&nbsp;                    painter = rememberVectorPainter(image = Icons.Default.ArrowForward),</b>
@@ -653,11 +653,11 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                        .clickable {</b>
 <b class="nc">&nbsp;                            timeTable.removeBusStopFromSpot(</b>
 <b class="nc">&nbsp;                                editSpot.value,</b>
-<b class="nc">&nbsp;                                selectedRegisteredBusStop.value</b>
+<b class="nc">&nbsp;                                selectedRegisteredBusStop.value,</b>
 &nbsp;                            )
 <b class="nc">&nbsp;                            busStopListOfEditSpot.remove(selectedRegisteredBusStop.value)</b>
 <b class="nc">&nbsp;                            selectedRegisteredBusStop.value = &quot;&quot;</b>
-&nbsp;                        }
+&nbsp;                        },
 &nbsp;                )
 <b class="nc">&nbsp;            }</b>
 <b class="nc">&nbsp;            BusStopListView(</b>
@@ -666,8 +666,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                    .weight(weight = 1f, fill = false),</b>
 <b class="nc">&nbsp;                listState = unregisteredListState,</b>
 <b class="nc">&nbsp;                busStopList = timeTable.getBusStopList().toMutableStateList(),</b>
-<b class="nc">&nbsp;                selectedBusStop = selectedUnregisteredBusStop.value</b>
-<b class="nc">&nbsp;            )  {</b>
+<b class="nc">&nbsp;                selectedBusStop = selectedUnregisteredBusStop.value,</b>
+<b class="nc">&nbsp;            ) {</b>
 <b class="nc">&nbsp;                selectedUnregisteredBusStop.value = it</b>
 &nbsp;            }
 <b class="nc">&nbsp;        }</b>
@@ -686,14 +686,14 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    listState: LazyListState,
 &nbsp;    busStopList: List&lt;String&gt;,
 &nbsp;    selectedBusStop: String,
-<b class="nc">&nbsp;    onClick: (String) -&gt; Unit = {}</b>
+<b class="nc">&nbsp;    onClick: (String) -&gt; Unit = {},</b>
 <b class="nc">&nbsp;) {</b>
 <b class="nc">&nbsp;    var selectedIndex by remember { mutableIntStateOf(-1) }</b>
 <b class="nc">&nbsp;    LazyColumn(</b>
 <b class="nc">&nbsp;        state = listState,</b>
-<b class="nc">&nbsp;        modifier = modifier</b>
+<b class="nc">&nbsp;        modifier = modifier,</b>
 &nbsp;    ) {
-<b class="nc">&nbsp;        itemsIndexed(busStopList) {index, item -&gt;</b>
+<b class="nc">&nbsp;        itemsIndexed(busStopList) { index, item -&gt;</b>
 &nbsp;            Text(
 &nbsp;                text = item,
 &nbsp;                modifier = Modifier
@@ -702,24 +702,25 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                        onClick(item)</b>
 &nbsp;                    }
 &nbsp;                    .background(
-&nbsp;                        if (item == selectedBusStop)
+&nbsp;                        color = if (item == selectedBusStop) {
 &nbsp;                            Color.Gray
-&nbsp;                        else
+&nbsp;                        } else {
 &nbsp;                            Color.Transparent
-&nbsp;                    )
+&nbsp;                        },
+&nbsp;                    ),
 &nbsp;            )
 &nbsp;        }
 &nbsp;    }
 &nbsp;}
 &nbsp;
 &nbsp;@Composable
-<b class="nc">&nbsp;fun ControlButton(onClick: (Int)-&gt;Unit = {}) {</b>
+<b class="nc">&nbsp;fun ControlButton(onClick: (Int) -&gt; Unit = {}) {</b>
 <b class="nc">&nbsp;    Row {</b>
 <b class="nc">&nbsp;        Button(</b>
 <b class="nc">&nbsp;            modifier = Modifier.fillMaxWidth(),</b>
 <b class="nc">&nbsp;            onClick = {</b>
 <b class="nc">&nbsp;                onClick(0)</b>
-&nbsp;            }
+&nbsp;            },
 &nbsp;        ) {
 &nbsp;            Text(text = stringResource(id = R.string.back))
 &nbsp;        }
@@ -759,7 +760,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-11 04:23</div>
+    <div style="float:right;">generated on 2024-02-11 06:56</div>
 </div>
 </body>
 </html>

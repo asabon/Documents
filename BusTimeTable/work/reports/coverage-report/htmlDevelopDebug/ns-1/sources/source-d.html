@@ -172,7 +172,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        loadConfig()
 &nbsp;        mTimeTableList = createTimeTables(assetManager = assetManager)
 &nbsp;        for (tt in mTimeTableList!!) {
-&nbsp;            if (!mBusStopList.contains(tt.name)){
+&nbsp;            if (!mBusStopList.contains(tt.name)) {
 &nbsp;                mBusStopList.add(tt.name)
 &nbsp;            }
 &nbsp;        }
@@ -181,6 +181,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    fun getSpotList(): List&lt;String&gt; {
 &nbsp;        return mConfig.getSpotList()
 &nbsp;    }
+&nbsp;
 &nbsp;    /**
 &nbsp;     * バス停の一覧を取得する
 &nbsp;     */
@@ -244,16 +245,18 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        val jsonFiles: Array&lt;String&gt;
 &nbsp;        if (assetManager == null) {
 &nbsp;            // assetManager が null の時はテスト用にサンプルデータを生成する
-&nbsp;            list.add(BusTimeTableData(
-&nbsp;                &quot;from&quot;,
-&nbsp;                &quot;position&quot;,
-&nbsp;                &quot;sys&quot;,
-&nbsp;                &quot;to&quot;,
-&nbsp;                listOf(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;),
-&nbsp;                listOf(&quot;08:10&quot;, &quot;08:15&quot;),
-&nbsp;                listOf(&quot;08:10&quot;, &quot;08:15&quot;),
-&nbsp;                listOf(&quot;08:10&quot;, &quot;08:15&quot;)
-&nbsp;            ))
+&nbsp;            list.add(
+&nbsp;                BusTimeTableData(
+&nbsp;                    date = &quot;from&quot;,
+&nbsp;                    name = &quot;position&quot;,
+&nbsp;                    position = &quot;sys&quot;,
+&nbsp;                    system = &quot;to&quot;,
+&nbsp;                    listOf(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;),
+&nbsp;                    listOf(&quot;08:10&quot;, &quot;08:15&quot;),
+&nbsp;                    listOf(&quot;08:10&quot;, &quot;08:15&quot;),
+&nbsp;                    listOf(&quot;08:10&quot;, &quot;08:15&quot;),
+&nbsp;                )
+&nbsp;            )
 &nbsp;        } else {
 &nbsp;            /* assetManager から読み出す */
 &nbsp;            jsonFiles = assetManager.list(&quot;kanachu&quot;)!!
@@ -276,7 +279,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;            DayOfWeek.TUESDAY,
 &nbsp;            DayOfWeek.WEDNESDAY,
 &nbsp;            DayOfWeek.THURSDAY,
-&nbsp;            DayOfWeek.FRIDAY -&gt; {
+&nbsp;            DayOfWeek.FRIDAY,
+&nbsp;            -&gt; {
 &nbsp;                0
 &nbsp;            }
 &nbsp;
@@ -293,7 +297,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;        return result
 &nbsp;    }
 &nbsp;
-&nbsp;    fun getTimeTableItems(from: String, to:String, dateType: Int): MutableList&lt;TimeTableItem&gt; {
+&nbsp;    fun getTimeTableItems(from: String, to: String, dateType: Int): MutableList&lt;TimeTableItem&gt; {
 &nbsp;        val fromList: List&lt;String&gt; = mConfig.getBusStopListInSpot(from)
 &nbsp;        val toList: List&lt;String&gt; = mConfig.getBusStopListInSpot(to)
 &nbsp;        return getTimeTableItems2(fromList, toList, dateType)
@@ -380,8 +384,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                    busTimeTableData.system,</b>
 <b class="nc">&nbsp;                    busTimeTableData.destinations[0],</b>
 <b class="nc">&nbsp;                    getHour(item),</b>
-<b class="nc">&nbsp;                    getMinute(item)</b>
-&nbsp;                )
+<b class="nc">&nbsp;                    getMinute(item),</b>
+&nbsp;                ),
 &nbsp;            )
 &nbsp;        }
 <b class="nc">&nbsp;        1 -&gt; for (item in busTimeTableData.saturday) {</b>
@@ -392,8 +396,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                    busTimeTableData.system,</b>
 <b class="nc">&nbsp;                    busTimeTableData.destinations[0],</b>
 <b class="nc">&nbsp;                    getHour(item),</b>
-<b class="nc">&nbsp;                    getMinute(item)</b>
-&nbsp;                )
+<b class="nc">&nbsp;                    getMinute(item),</b>
+&nbsp;                ),
 &nbsp;            )
 &nbsp;        }
 <b class="nc">&nbsp;        2 -&gt; for (item in busTimeTableData.holiday) {</b>
@@ -404,8 +408,8 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                    busTimeTableData.system,</b>
 <b class="nc">&nbsp;                    busTimeTableData.destinations[0],</b>
 <b class="nc">&nbsp;                    getHour(item),</b>
-<b class="nc">&nbsp;                    getMinute(item)</b>
-&nbsp;                )
+<b class="nc">&nbsp;                    getMinute(item),</b>
+&nbsp;                ),
 &nbsp;            )
 &nbsp;        }
 &nbsp;    }
@@ -467,7 +471,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    val destinations: List&lt;String&gt;,
 &nbsp;    val weekday: List&lt;String&gt;,
 &nbsp;    val saturday: List&lt;String&gt;,
-&nbsp;    val holiday: List&lt;String&gt;
+&nbsp;    val holiday: List&lt;String&gt;,
 &nbsp;)
 &nbsp;
 &nbsp;fun readTimeTableJson(assetManager: AssetManager, fileName: String): BusTimeTableData {
@@ -476,9 +480,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;        val jsonString = inputStream.bufferedReader().use { it.readText() }</b>
 <b class="nc">&nbsp;        val mapper = jacksonObjectMapper()</b>
 <b class="nc">&nbsp;        mapper.readValue(jsonString)</b>
-<b class="nc">&nbsp;    } catch(e: Exception) {</b>
+<b class="nc">&nbsp;    } catch (e: Exception) {</b>
 <b class="nc">&nbsp;        println(e)</b>
-<b class="nc">&nbsp;        BusTimeTableData(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, listOf(&quot;&quot;), listOf(&quot;&quot;), listOf(&quot;&quot;), listOf(&quot;&quot;) )</b>
+<b class="nc">&nbsp;        BusTimeTableData(&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, listOf(&quot;&quot;), listOf(&quot;&quot;), listOf(&quot;&quot;), listOf(&quot;&quot;))</b>
 &nbsp;    }
 &nbsp;}
 </code>
@@ -504,7 +508,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-11 04:23</div>
+    <div style="float:right;">generated on 2024-02-11 06:56</div>
 </div>
 </body>
 </html>

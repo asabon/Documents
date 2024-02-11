@@ -174,13 +174,13 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;private val DarkColorScheme = darkColorScheme(</b>
 <b class="nc">&nbsp;    primary = Purple80,</b>
 <b class="nc">&nbsp;    secondary = PurpleGrey80,</b>
-<b class="nc">&nbsp;    tertiary = Pink80</b>
+<b class="nc">&nbsp;    tertiary = Pink80,</b>
 &nbsp;)
 &nbsp;
 <b class="nc">&nbsp;private val LightColorScheme = lightColorScheme(</b>
 <b class="nc">&nbsp;    primary = Purple40,</b>
 <b class="nc">&nbsp;    secondary = PurpleGrey40,</b>
-<b class="nc">&nbsp;    tertiary = Pink40</b>
+<b class="nc">&nbsp;    tertiary = Pink40,</b>
 &nbsp;
 &nbsp;    /* Other default colors to override
 &nbsp;    background = Color(0xFFFFFBFE),
@@ -198,7 +198,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;    darkTheme: Boolean = isSystemInDarkTheme(),</b>
 &nbsp;    // Dynamic color is available on Android 12+
 <b class="nc">&nbsp;    dynamicColor: Boolean = true,</b>
-&nbsp;    content: @Composable () -&gt; Unit
+&nbsp;    content: @Composable () -&gt; Unit,
 <b class="nc">&nbsp;) {</b>
 <b class="nc">&nbsp;    val colorScheme = when {</b>
 <b class="nc">&nbsp;        dynamicColor &amp;&amp; Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.S -&gt; {</b>
@@ -221,7 +221,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;    MaterialTheme(</b>
 <b class="nc">&nbsp;        colorScheme = colorScheme,</b>
 <b class="nc">&nbsp;        typography = Typography,</b>
-<b class="nc">&nbsp;        content = content</b>
+<b class="nc">&nbsp;        content = content,</b>
 &nbsp;    )
 <b class="nc">&nbsp;}</b>
 </code>
@@ -247,7 +247,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-11 04:23</div>
+    <div style="float:right;">generated on 2024-02-11 06:56</div>
 </div>
 </body>
 </html>

@@ -376,12 +376,12 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;            val adView = AdView(context).apply {</b>
 <b class="nc">&nbsp;                setAdSize(AdSize.BANNER)</b>
 &nbsp;                // Sample
-&nbsp;                //adUnitId = &quot;ca-app-pub-3940256099942544/6300978111&quot;
+&nbsp;                // adUnitId = &quot;ca-app-pub-3940256099942544/6300978111&quot;
 <b class="nc">&nbsp;                setAdUnitId(adUnitId)</b>
 <b class="nc">&nbsp;                loadAd(AdRequest.Builder().build())</b>
 <b class="nc">&nbsp;            }</b>
 <b class="nc">&nbsp;            adView.rootView</b>
-&nbsp;        }
+&nbsp;        },
 &nbsp;    )
 <b class="nc">&nbsp;}</b>
 &nbsp;
@@ -393,47 +393,47 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp; * @param onClick コールバック関数
 &nbsp; */
 &nbsp;@Composable
-<b class="nc">&nbsp;fun SpotSelector(timeTable: TimeTable, initialValue: String, onClick: (String)-&gt;Unit = {}) {</b>
+<b class="nc">&nbsp;fun SpotSelector(timeTable: TimeTable, initialValue: String, onClick: (String) -&gt; Unit = {}) {</b>
 <b class="nc">&nbsp;    var expanded by remember { mutableStateOf(false) }</b>
-<b class="nc">&nbsp;    val selectedOptionText : MutableState&lt;String&gt; = remember { mutableStateOf(initialValue) }</b>
+<b class="nc">&nbsp;    val selectedOptionText: MutableState&lt;String&gt; = remember { mutableStateOf(initialValue) }</b>
 <b class="nc">&nbsp;    Box(</b>
 <b class="nc">&nbsp;        modifier = Modifier</b>
 <b class="nc">&nbsp;            .size(150.dp, 50.dp)</b>
 <b class="nc">&nbsp;            .border(BorderStroke(1.dp, Color.LightGray), RoundedCornerShape(4.dp))</b>
 <b class="nc">&nbsp;            .clickable {</b>
 <b class="nc">&nbsp;                expanded = !expanded</b>
-&nbsp;            }
+&nbsp;            },
 &nbsp;    ) {
 <b class="nc">&nbsp;        Text(</b>
 <b class="nc">&nbsp;            text = selectedOptionText.value,</b>
 <b class="nc">&nbsp;            modifier = Modifier</b>
 <b class="nc">&nbsp;                .padding(start = 5.dp)</b>
 <b class="nc">&nbsp;                .align(Alignment.Center),</b>
-<b class="nc">&nbsp;            fontSize = 25.sp</b>
+<b class="nc">&nbsp;            fontSize = 25.sp,</b>
 &nbsp;        )
 <b class="nc">&nbsp;        Icon(</b>
 <b class="nc">&nbsp;            Icons.Filled.ArrowDropDown,</b>
 <b class="nc">&nbsp;            &quot;contentDescription&quot;,</b>
 <b class="nc">&nbsp;            modifier = Modifier</b>
-<b class="nc">&nbsp;                .padding(start = 130.dp)</b>
+<b class="nc">&nbsp;                .padding(start = 130.dp),</b>
 &nbsp;        )
 <b class="nc">&nbsp;        DropdownMenu(</b>
 <b class="nc">&nbsp;            expanded = expanded,</b>
-<b class="nc">&nbsp;            onDismissRequest = { expanded = false }</b>
+<b class="nc">&nbsp;            onDismissRequest = { expanded = false },</b>
 <b class="nc">&nbsp;        ) {</b>
 <b class="nc">&nbsp;            timeTable.getSpotList().forEach() {</b>
 <b class="nc">&nbsp;                DropdownMenuItem(</b>
 <b class="nc">&nbsp;                    text = {</b>
 <b class="nc">&nbsp;                        Text(</b>
 <b class="nc">&nbsp;                            text = it,</b>
-<b class="nc">&nbsp;                            fontSize = 16.sp</b>
+<b class="nc">&nbsp;                            fontSize = 16.sp,</b>
 <b class="nc">&nbsp;                        )</b>
 &nbsp;                    },
 <b class="nc">&nbsp;                    onClick = {</b>
 <b class="nc">&nbsp;                        onClick(it)</b>
 <b class="nc">&nbsp;                        selectedOptionText.value = it</b>
 <b class="nc">&nbsp;                        expanded = false</b>
-&nbsp;                    }
+&nbsp;                    },
 &nbsp;                )
 <b class="nc">&nbsp;            }</b>
 &nbsp;        }
@@ -462,7 +462,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-11 04:23</div>
+    <div style="float:right;">generated on 2024-02-11 06:56</div>
 </div>
 </body>
 </html>
