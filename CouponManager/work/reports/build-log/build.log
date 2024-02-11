@@ -15,8 +15,8 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:preDevelopDebugBuild UP-TO-DATE
 > Task :app:mergeDevelopDebugNativeDebugMetadata NO-SOURCE
 > Task :app:checkKotlinGradlePluginConfigurationErrors
-> Task :app:checkDevelopDebugAarMetadata
 > Task :app:generateDevelopDebugResValues
+> Task :app:checkDevelopDebugAarMetadata
 > Task :app:mapDevelopDebugSourceSetPaths
 > Task :app:generateDevelopDebugResources
 > Task :app:packageDevelopDebugResources
@@ -26,8 +26,8 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:parseDevelopDebugLocalResources
 > Task :app:processDevelopDebugMainManifest
 > Task :app:processDevelopDebugManifest
-> Task :app:processDevelopDebugManifestForPackage
 > Task :app:javaPreCompileDevelopDebug
+> Task :app:processDevelopDebugManifestForPackage
 > Task :app:mergeDevelopDebugShaders
 > Task :app:compileDevelopDebugShaders NO-SOURCE
 > Task :app:generateDevelopDebugAssets UP-TO-DATE
@@ -63,11 +63,11 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:parseProductionDebugLocalResources
 > Task :app:createProductionDebugCompatibleScreenManifests
 > Task :app:extractDeepLinksProductionDebug
-> Task :app:mergeProductionDebugResources
 > Task :app:processProductionDebugMainManifest
 > Task :app:processProductionDebugManifest
-> Task :app:javaPreCompileProductionDebug
+> Task :app:mergeProductionDebugResources
 > Task :app:processProductionDebugManifestForPackage
+> Task :app:javaPreCompileProductionDebug
 > Task :app:mergeProductionDebugShaders
 > Task :app:compileProductionDebugShaders NO-SOURCE
 > Task :app:generateProductionDebugAssets UP-TO-DATE
@@ -95,5 +95,5 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:assembleProductionDebug
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 3m 18s
+BUILD SUCCESSFUL in 3m 25s
 63 actionable tasks: 63 executed
