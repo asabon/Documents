@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="8.0">
     <file name="src/test/java/net/asabon/bustimetable/TestTimeTable.kt">
-        <error line="9" column="18" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="16" column="18" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="23" column="18" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="30" column="18" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="53" column="32" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="54" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="55" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="56" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="57" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="60" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="61" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="62" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="63" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="66" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="67" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="68" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="69" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
+        <error line="9" column="18" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="16" column="18" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="23" column="18" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="30" column="18" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="53" column="32" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="54" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="55" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="56" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="57" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="60" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="61" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="62" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="63" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="66" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="67" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="68" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="69" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
     </file>
     <file name="src/test/java/net/asabon/bustimetable/TestUtility.kt">
-        <error line="12" column="20" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
-        <error line="22" column="20" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
-        <error line="31" column="22" severity="error" message="Missing newline before &quot;)&quot;" source="wrapping" />
-        <error line="31" column="23" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
-        <error line="34" column="18" severity="error" message="Missing newline before &quot;)&quot;" source="wrapping" />
-        <error line="34" column="19" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
-        <error line="42" column="22" severity="error" message="Missing newline before &quot;)&quot;" source="wrapping" />
-        <error line="42" column="23" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
-        <error line="45" column="18" severity="error" message="Missing newline before &quot;)&quot;" source="wrapping" />
-        <error line="45" column="19" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
+        <error line="10" column="20" severity="error" message="A multiline expression should start on a new line" source="standard:multiline-expression-wrapping" />
+        <error line="12" column="20" severity="error" message="Missing trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="20" column="20" severity="error" message="A multiline expression should start on a new line" source="standard:multiline-expression-wrapping" />
+        <error line="22" column="20" severity="error" message="Missing trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="29" column="23" severity="error" message="A multiline expression should start on a new line" source="standard:multiline-expression-wrapping" />
+        <error line="31" column="22" severity="error" message="Missing newline before &quot;)&quot;" source="standard:wrapping" />
+        <error line="31" column="23" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="32" column="20" severity="error" message="A multiline expression should start on a new line" source="standard:multiline-expression-wrapping" />
+        <error line="34" column="18" severity="error" message="Missing newline before &quot;)&quot;" source="standard:wrapping" />
+        <error line="34" column="19" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="40" column="23" severity="error" message="A multiline expression should start on a new line" source="standard:multiline-expression-wrapping" />
+        <error line="42" column="22" severity="error" message="Missing newline before &quot;)&quot;" source="standard:wrapping" />
+        <error line="42" column="23" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="43" column="20" severity="error" message="A multiline expression should start on a new line" source="standard:multiline-expression-wrapping" />
+        <error line="45" column="18" severity="error" message="Missing newline before &quot;)&quot;" source="standard:wrapping" />
+        <error line="45" column="19" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
     </file>
 </checkstyle>

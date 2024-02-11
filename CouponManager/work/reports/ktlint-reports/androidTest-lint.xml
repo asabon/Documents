@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="8.0">
     <file name="src/androidTest/java/net/asabon/bustimetable/ExampleInstrumentedTest.kt">
-        <error line="1" column="1" severity="error" message="File must end with a newline (\n)" source="final-newline" />
-        <error line="3" column="1" severity="error" message="Imports must be ordered in lexicographic order without any empty lines in-between with &quot;java&quot;, &quot;javax&quot;, &quot;kotlin&quot; and aliases in the end" source="import-ordering" />
-        <error line="9" column="1" severity="error" message="Wildcard import" source="no-wildcard-imports" />
+        <error line="3" column="1" severity="error" message="Imports must be ordered in lexicographic order without any empty lines in-between with &quot;java&quot;, &quot;javax&quot;, &quot;kotlin&quot; and aliases in the end" source="standard:import-ordering" />
+        <error line="9" column="1" severity="error" message="Wildcard import" source="standard:no-wildcard-imports" />
+        <error line="24" column="1" severity="error" message="File must end with a newline (\n)" source="standard:final-newline" />
     </file>
 </checkstyle>
