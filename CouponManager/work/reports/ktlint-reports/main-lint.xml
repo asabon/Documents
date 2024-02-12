@@ -1,3 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="8.0">
+    <file name="src/main/java/net/asabon/bustimetable/Common.kt">
+        <error line="50" column="10" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="71" column="14" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="78" column="29" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="84" column="41" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="88" column="52" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="90" column="44" severity="error" message="Empty parentheses in function call followed by lambda are unnecessary" source="standard:unnecessary-parentheses-before-trailing-lambda" />
+        <error line="95" column="45" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="102" column="22" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+    </file>
+    <file name="src/main/java/net/asabon/bustimetable/Config.kt">
+        <error line="12" column="44" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-declaration-site" />
+        <error line="17" column="38" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-declaration-site" />
+        <error line="33" column="66" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="34" column="14" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+    </file>
+    <file name="src/main/java/net/asabon/bustimetable/ConfigScreen.kt">
+        <error line="50" column="27" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="56" column="60" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="60" column="46" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="83" column="60" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="91" column="51" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="93" column="68" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="93" column="82" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="93" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="100" column="66" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="115" column="70" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="120" column="26" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="131" column="64" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="135" column="26" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="144" column="68" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="164" column="35" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-declaration-site" />
+        <error line="169" column="28" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="184" column="26" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="185" column="22" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="198" column="14" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+    </file>
+    <file name="src/main/java/net/asabon/bustimetable/MainActivity.kt">
+        <error line="33" column="65" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+    </file>
+    <file name="src/main/java/net/asabon/bustimetable/MainScreen.kt">
+        <error line="54" column="46" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="59" column="59" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="63" column="38" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="88" column="55" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="98" column="22" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="122" column="32" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="134" column="48" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="154" column="18" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="158" column="48" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="171" column="43" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="181" column="75" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="183" column="14" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="193" column="74" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="195" column="14" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="205" column="73" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="207" column="14" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="216" column="28" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="229" column="28" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="235" column="37" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="240" column="33" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="244" column="61" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="244" column="92" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="244" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="244" column="109" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="251" column="49" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+    </file>
+    <file name="src/main/java/net/asabon/bustimetable/TimeTable.kt">
+        <error line="121" column="45" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="122" column="18" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="146" column="29" severity="error" message="Unnecessary trailing comma before &quot;-&gt;&quot;" source="standard:trailing-comma-on-declaration-site" />
+        <error line="178" column="36" severity="error" message="Newline expected after opening parenthesis" source="standard:function-signature" />
+        <error line="178" column="56" severity="error" message="Parameter should start on a newline" source="standard:function-signature" />
+        <error line="178" column="74" severity="error" message="Parameter should start on a newline" source="standard:function-signature" />
+        <error line="178" column="87" severity="error" message="Newline expected before closing parenthesis" source="standard:function-signature" />
+        <error line="178" column="100" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="191" column="22" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="191" column="36" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="191" column="54" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="191" column="69" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="191" column="83" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="191" column="92" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="191" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="191" column="105" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="191" column="118" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="191" column="119" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="205" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="251" column="36" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="252" column="18" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="263" column="36" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="264" column="18" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="275" column="36" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="276" column="18" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="328" column="100" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="338" column="30" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-declaration-site" />
+    </file>
+    <file name="src/main/java/net/asabon/bustimetable/ui/theme/Theme.kt">
+        <error line="21" column="22" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="27" column="22" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="37" column="6" severity="error" message="Initial star should align with start of block comment" source="standard:block-comment-initial-star-alignment" />
+        <error line="45" column="36" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-declaration-site" />
+        <error line="68" column="26" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+    </file>
+    <file name="src/main/java/net/asabon/bustimetable/ui/theme/Type.kt">
+        <error line="16" column="31" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="17" column="6" severity="error" message="Unnecessary trailing comma before &quot;)&quot;" source="standard:trailing-comma-on-call-site" />
+        <error line="33" column="6" severity="error" message="Initial star should align with start of block comment" source="standard:block-comment-initial-star-alignment" />
+    </file>
 </checkstyle>

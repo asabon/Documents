@@ -22,18 +22,18 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:mapDevelopDebugSourceSetPaths
 > Task :app:generateDevelopDebugResources
 > Task :app:packageDevelopDebugResources
-> Task :app:mergeDevelopDebugResources
+> Task :app:parseDevelopDebugLocalResources
 > Task :app:createDevelopDebugCompatibleScreenManifests
 > Task :app:extractDeepLinksDevelopDebug
-> Task :app:parseDevelopDebugLocalResources
+> Task :app:mergeDevelopDebugResources
 > Task :app:processDevelopDebugMainManifest
 > Task :app:processDevelopDebugManifest
-> Task :app:processDevelopDebugManifestForPackage
 > Task :app:javaPreCompileDevelopDebug
 > Task :app:mergeDevelopDebugShaders
 > Task :app:compileDevelopDebugShaders NO-SOURCE
 > Task :app:generateDevelopDebugAssets UP-TO-DATE
 > Task :app:mergeDevelopDebugAssets
+> Task :app:processDevelopDebugManifestForPackage
 > Task :app:compressDevelopDebugAssets
 > Task :app:processDevelopDebugResources
 > Task :app:checkDevelopDebugDuplicateClasses
@@ -46,8 +46,8 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:dexBuilderDevelopDebug
 > Task :app:mergeProjectDexDevelopDebug
 > Task :app:mergeDevelopDebugJniLibFolders
-> Task :app:mergeDevelopDebugNativeLibs NO-SOURCE
 > Task :app:mergeDevelopDebugJavaResource
+> Task :app:mergeDevelopDebugNativeLibs NO-SOURCE
 > Task :app:stripDevelopDebugDebugSymbols NO-SOURCE
 > Task :app:validateSigningDevelopDebug
 > Task :app:writeDevelopDebugAppMetadata
@@ -97,5 +97,5 @@ Installing Android SDK Platform-Tools in /usr/local/lib/android/sdk/platform-too
 > Task :app:assembleProductionDebug
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 4m 20s
+BUILD SUCCESSFUL in 5m 21s
 63 actionable tasks: 63 executed
