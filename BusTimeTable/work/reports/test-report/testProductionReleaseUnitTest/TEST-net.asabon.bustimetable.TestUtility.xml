@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="net.asabon.bustimetable.TestUtility" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-02-12T01:28:31" hostname="fv-az795-886" time="0.321">
+<testsuite name="net.asabon.bustimetable.TestUtility" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-02-12T01:57:20" hostname="fv-az389-987" time="0.254">
   <properties/>
-  <testcase name="isContain_isTrue" classname="net.asabon.bustimetable.TestUtility" time="0.315"/>
+  <testcase name="isContain_isTrue" classname="net.asabon.bustimetable.TestUtility" time="0.25"/>
   <testcase name="isContains_isFalse" classname="net.asabon.bustimetable.TestUtility" time="0.001"/>
   <testcase name="isContains_isTrue" classname="net.asabon.bustimetable.TestUtility" time="0.001"/>
-  <testcase name="isContain_isFalse" classname="net.asabon.bustimetable.TestUtility" time="0.001"/>
+  <testcase name="isContain_isFalse" classname="net.asabon.bustimetable.TestUtility" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
