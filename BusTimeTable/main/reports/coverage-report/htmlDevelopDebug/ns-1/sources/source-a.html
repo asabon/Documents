@@ -103,12 +103,12 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    var spotA: String,
 &nbsp;    var spotB: String,
 &nbsp;    var direction: Int,
-&nbsp;    var spotInfoList: MutableList&lt;SpotInfo&gt;
+&nbsp;    var spotInfoList: MutableList&lt;SpotInfo&gt;,
 &nbsp;)
 &nbsp;
 <b class="nc">&nbsp;data class SpotInfo(</b>
 <b class="nc">&nbsp;    val name: String,</b>
-<b class="nc">&nbsp;    val busStops: MutableList&lt;String&gt;</b>
+<b class="nc">&nbsp;    val busStops: MutableList&lt;String&gt;,</b>
 &nbsp;)
 &nbsp;
 &nbsp;class Config(private val context: Context?) {
@@ -124,8 +124,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;                SpotInfo(name = &quot;家&quot;, busStops = mutableListOf(&quot;町田総合高校前&quot;, &quot;木曽南団地&quot;, &quot;上宿&quot;, &quot;境川団地&quot;)),
 &nbsp;                SpotInfo(name = &quot;駅&quot;, busStops = mutableListOf(&quot;町田バスセンター&quot;)),
 &nbsp;                SpotInfo(name = &quot;学校&quot;, busStops = mutableListOf()),
-&nbsp;                SpotInfo(name = &quot;会社&quot;, busStops = mutableListOf())
-&nbsp;            ))
+&nbsp;                SpotInfo(name = &quot;会社&quot;, busStops = mutableListOf()),
+&nbsp;            ),
+&nbsp;        )
 &nbsp;    }
 &nbsp;
 &nbsp;    fun setDirection(direction: Int) {
@@ -267,7 +268,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;                    setting = initializeSetting()
 &nbsp;                    save()
 &nbsp;                }
-&nbsp;            } catch(e: Exception) {
+&nbsp;            } catch (e: Exception) {
 &nbsp;                clear()
 &nbsp;                println(e)
 &nbsp;            }
@@ -297,7 +298,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-11 06:30</div>
+    <div style="float:right;">generated on 2024-02-12 01:50</div>
 </div>
 </body>
 </html>

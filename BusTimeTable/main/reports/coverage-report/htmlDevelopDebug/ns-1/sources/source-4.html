@@ -145,12 +145,12 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 &nbsp;    var spotA: String,
 &nbsp;    var spotB: String,
 &nbsp;    var direction: Int,
-&nbsp;    var spotInfoList: MutableList&lt;SpotInfo&gt;
+&nbsp;    var spotInfoList: MutableList&lt;SpotInfo&gt;,
 &nbsp;)
 &nbsp;
 &nbsp;data class SpotInfo(
 &nbsp;    val name: String,
-&nbsp;    val busStops: MutableList&lt;String&gt;
+&nbsp;    val busStops: MutableList&lt;String&gt;,
 &nbsp;)
 &nbsp;
 <b class="nc">&nbsp;class Config(private val context: Context?) {</b>
@@ -166,8 +166,9 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                SpotInfo(name = &quot;家&quot;, busStops = mutableListOf(&quot;町田総合高校前&quot;, &quot;木曽南団地&quot;, &quot;上宿&quot;, &quot;境川団地&quot;)),</b>
 <b class="nc">&nbsp;                SpotInfo(name = &quot;駅&quot;, busStops = mutableListOf(&quot;町田バスセンター&quot;)),</b>
 <b class="nc">&nbsp;                SpotInfo(name = &quot;学校&quot;, busStops = mutableListOf()),</b>
-<b class="nc">&nbsp;                SpotInfo(name = &quot;会社&quot;, busStops = mutableListOf())</b>
-&nbsp;            ))
+<b class="nc">&nbsp;                SpotInfo(name = &quot;会社&quot;, busStops = mutableListOf()),</b>
+&nbsp;            ),
+&nbsp;        )
 &nbsp;    }
 &nbsp;
 &nbsp;    fun setDirection(direction: Int) {
@@ -309,7 +310,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 <b class="nc">&nbsp;                    setting = initializeSetting()</b>
 <b class="nc">&nbsp;                    save()</b>
 &nbsp;                }
-<b class="nc">&nbsp;            } catch(e: Exception) {</b>
+<b class="nc">&nbsp;            } catch (e: Exception) {</b>
 <b class="nc">&nbsp;                clear()</b>
 <b class="nc">&nbsp;                println(e)</b>
 &nbsp;            }
@@ -339,7 +340,7 @@ Current scope: app<span class="separator">|</span>    <a href="../../index.html"
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2024-02-11 06:30</div>
+    <div style="float:right;">generated on 2024-02-12 01:50</div>
 </div>
 </body>
 </html>
