@@ -1,8 +1,8 @@
-src/androidTest/java/net/asabon/bustimetable/ExampleInstrumentedTest.kt:1:1: File must end with a newline (\n) (final-newline)
-src/androidTest/java/net/asabon/bustimetable/ExampleInstrumentedTest.kt:3:1: Imports must be ordered in lexicographic order without any empty lines in-between with "java", "javax", "kotlin" and aliases in the end (import-ordering)
-src/androidTest/java/net/asabon/bustimetable/ExampleInstrumentedTest.kt:9:1: Wildcard import (no-wildcard-imports)
+src/androidTest/java/net/asabon/bustimetable/ExampleInstrumentedTest.kt:3:1: Imports must be ordered in lexicographic order without any empty lines in-between (standard:import-ordering)
+src/androidTest/java/net/asabon/bustimetable/ExampleInstrumentedTest.kt:9:1: Wildcard import (standard:no-wildcard-imports)
+src/androidTest/java/net/asabon/bustimetable/ExampleInstrumentedTest.kt:24:1: File must end with a newline (\n) (standard:final-newline)
 
 Summary error count (descending) by rule:
-  final-newline: 1
-  import-ordering: 1
-  no-wildcard-imports: 1
+  standard:final-newline: 1
+  standard:import-ordering: 1
+  standard:no-wildcard-imports: 1

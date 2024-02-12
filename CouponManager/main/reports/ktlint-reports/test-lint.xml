@@ -1,34 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <checkstyle version="8.0">
     <file name="src/test/java/net/asabon/bustimetable/TestTimeTable.kt">
-        <error line="9" column="18" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="16" column="18" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="23" column="18" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="30" column="18" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="53" column="32" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="54" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="55" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="56" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="57" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="60" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="61" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="62" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="63" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="66" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="67" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="68" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
-        <error line="69" column="34" severity="error" message="Unnecessary long whitespace" source="no-multi-spaces" />
+        <error line="9" column="18" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="9" column="21" severity="error" message="Missing newline before &quot;TimeTableItem(from = &quot;A&quot;, position = &quot;1&quot;, system = &quot;0&quot;, to = &quot;B&quot;, hour = &quot;5&quot;, minute = &quot;10&quot;)&quot;" source="standard:property-wrapping" />
+        <error line="9" column="36" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="9" column="48" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="9" column="64" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="9" column="78" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="9" column="88" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="9" column="100" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="9" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="9" column="113" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="10" column="21" severity="error" message="Missing newline before &quot;TimeTableItem(from = &quot;A&quot;, position = &quot;1&quot;, system = &quot;0&quot;, to = &quot;B&quot;, hour = &quot;4&quot;, minute = &quot;10&quot;)&quot;" source="standard:property-wrapping" />
+        <error line="10" column="36" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="10" column="48" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="10" column="64" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="10" column="78" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="10" column="88" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="10" column="100" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="10" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="10" column="113" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="16" column="18" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="16" column="21" severity="error" message="Missing newline before &quot;TimeTableItem(from = &quot;A&quot;, position = &quot;1&quot;, system = &quot;0&quot;, to = &quot;B&quot;, hour = &quot;5&quot;, minute = &quot;10&quot;)&quot;" source="standard:property-wrapping" />
+        <error line="16" column="36" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="16" column="48" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="16" column="64" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="16" column="78" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="16" column="88" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="16" column="100" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="16" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="16" column="113" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="17" column="21" severity="error" message="Missing newline before &quot;TimeTableItem(from = &quot;A&quot;, position = &quot;1&quot;, system = &quot;0&quot;, to = &quot;B&quot;, hour = &quot;5&quot;, minute = &quot;9&quot;)&quot;" source="standard:property-wrapping" />
+        <error line="17" column="36" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="17" column="48" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="17" column="64" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="17" column="78" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="17" column="88" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="17" column="100" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="17" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="17" column="112" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="23" column="18" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="23" column="21" severity="error" message="Missing newline before &quot;TimeTableItem(from = &quot;A&quot;, position = &quot;1&quot;, system = &quot;0&quot;, to = &quot;B&quot;, hour = &quot;5&quot;, minute = &quot;10&quot;)&quot;" source="standard:property-wrapping" />
+        <error line="23" column="36" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="23" column="48" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="23" column="64" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="23" column="78" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="23" column="88" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="23" column="100" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="23" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="23" column="113" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="24" column="21" severity="error" message="Missing newline before &quot;TimeTableItem(from = &quot;A&quot;, position = &quot;1&quot;, system = &quot;0&quot;, to = &quot;B&quot;, hour = &quot;6&quot;, minute = &quot;10&quot;)&quot;" source="standard:property-wrapping" />
+        <error line="24" column="36" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="24" column="48" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="24" column="64" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="24" column="78" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="24" column="88" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="24" column="100" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="24" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="24" column="113" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="30" column="18" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="30" column="21" severity="error" message="Missing newline before &quot;TimeTableItem(from = &quot;A&quot;, position = &quot;1&quot;, system = &quot;0&quot;, to = &quot;B&quot;, hour = &quot;5&quot;, minute = &quot;10&quot;)&quot;" source="standard:property-wrapping" />
+        <error line="30" column="36" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="30" column="48" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="30" column="64" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="30" column="78" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="30" column="88" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="30" column="100" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="30" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="30" column="113" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="31" column="21" severity="error" message="Missing newline before &quot;TimeTableItem(from = &quot;A&quot;, position = &quot;1&quot;, system = &quot;0&quot;, to = &quot;B&quot;, hour = &quot;5&quot;, minute = &quot;11&quot;)&quot;" source="standard:property-wrapping" />
+        <error line="31" column="36" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="31" column="48" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="31" column="64" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="31" column="78" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="31" column="88" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="31" column="100" severity="error" message="Argument should be on a separate line (unless all arguments can fit a single line)" source="standard:argument-list-wrapping" />
+        <error line="31" column="101" severity="error" message="Exceeded max line length (100)" source="standard:max-line-length" />
+        <error line="31" column="113" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="53" column="32" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="54" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="55" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="56" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="57" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="60" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="61" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="62" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="63" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="66" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="67" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="68" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
+        <error line="69" column="34" severity="error" message="Unnecessary long whitespace" source="standard:no-multi-spaces" />
     </file>
     <file name="src/test/java/net/asabon/bustimetable/TestUtility.kt">
-        <error line="12" column="20" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
-        <error line="22" column="20" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
-        <error line="31" column="22" severity="error" message="Missing newline before &quot;)&quot;" source="wrapping" />
-        <error line="31" column="23" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
-        <error line="34" column="18" severity="error" message="Missing newline before &quot;)&quot;" source="wrapping" />
-        <error line="34" column="19" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
-        <error line="42" column="22" severity="error" message="Missing newline before &quot;)&quot;" source="wrapping" />
-        <error line="42" column="23" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
-        <error line="45" column="18" severity="error" message="Missing newline before &quot;)&quot;" source="wrapping" />
-        <error line="45" column="19" severity="error" message="Missing trailing comma before &quot;)&quot;" source="trailing-comma-on-call-site" />
+        <error line="31" column="22" severity="error" message="Missing newline before &quot;)&quot;" source="standard:wrapping" />
+        <error line="31" column="23" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="34" column="18" severity="error" message="Missing newline before &quot;)&quot;" source="standard:wrapping" />
+        <error line="34" column="19" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="42" column="22" severity="error" message="Missing newline before &quot;)&quot;" source="standard:wrapping" />
+        <error line="42" column="23" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
+        <error line="45" column="18" severity="error" message="Missing newline before &quot;)&quot;" source="standard:wrapping" />
+        <error line="45" column="19" severity="error" message="Missing newline before &quot;)&quot;" source="standard:argument-list-wrapping" />
     </file>
 </checkstyle>
