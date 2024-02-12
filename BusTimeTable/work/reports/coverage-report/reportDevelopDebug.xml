@@ -156,17 +156,17 @@
 </class>
 <class name="net/asabon/bustimetable/CommonKt" sourcefilename="Common.kt">
 <method name="SpotSelector" desc="(Lnet/asabon/bustimetable/TimeTable;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V">
-<counter type="INSTRUCTION" missed="271" covered="0"/>
+<counter type="INSTRUCTION" missed="281" covered="0"/>
 <counter type="BRANCH" missed="4" covered="0"/>
 <counter type="LINE" missed="24" covered="0"/>
 </method>
 <method name="AdMobView" desc="(Ljava/lang/String;Landroidx/compose/runtime/Composer;I)V">
-<counter type="INSTRUCTION" missed="92" covered="0"/>
-<counter type="BRANCH" missed="14" covered="0"/>
+<counter type="INSTRUCTION" missed="100" covered="0"/>
+<counter type="BRANCH" missed="16" covered="0"/>
 <counter type="LINE" missed="6" covered="0"/>
 </method>
-<counter type="INSTRUCTION" missed="363" covered="0"/>
-<counter type="BRANCH" missed="18" covered="0"/>
+<counter type="INSTRUCTION" missed="381" covered="0"/>
+<counter type="BRANCH" missed="20" covered="0"/>
 <counter type="LINE" missed="30" covered="0"/>
 <counter type="METHOD" missed="2" covered="0"/>
 </class>
@@ -216,11 +216,11 @@
 </class>
 <class name="net/asabon/bustimetable/CommonKt$SpotSelector$3$2" sourcefilename="Common.kt">
 <method name="invoke" desc="(Landroidx/compose/foundation/layout/ColumnScope;Landroidx/compose/runtime/Composer;I)V">
-<counter type="INSTRUCTION" missed="92" covered="0"/>
+<counter type="INSTRUCTION" missed="87" covered="0"/>
 <counter type="BRANCH" missed="6" covered="0"/>
 <counter type="LINE" missed="5" covered="0"/>
 </method>
-<counter type="INSTRUCTION" missed="92" covered="0"/>
+<counter type="INSTRUCTION" missed="87" covered="0"/>
 <counter type="BRANCH" missed="6" covered="0"/>
 <counter type="LINE" missed="5" covered="0"/>
 <counter type="METHOD" missed="1" covered="0"/>
@@ -352,17 +352,17 @@
 </class>
 <class name="net/asabon/bustimetable/ConfigScreenKt" sourcefilename="ConfigScreen.kt">
 <method name="ConfigScreen" desc="(Landroidx/navigation/NavController;Lnet/asabon/bustimetable/TimeTable;Landroidx/compose/runtime/Composer;I)V">
-<counter type="INSTRUCTION" missed="527" covered="0"/>
+<counter type="INSTRUCTION" missed="541" covered="0"/>
 <counter type="BRANCH" missed="2" covered="0"/>
 <counter type="LINE" missed="67" covered="0"/>
 </method>
 <method name="ControlButton" desc="(Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V">
-<counter type="INSTRUCTION" missed="128" covered="0"/>
-<counter type="BRANCH" missed="16" covered="0"/>
+<counter type="INSTRUCTION" missed="136" covered="0"/>
+<counter type="BRANCH" missed="18" covered="0"/>
 <counter type="LINE" missed="7" covered="0"/>
 </method>
 <method name="BusStopListView" desc="(Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/lazy/LazyListState;Ljava/util/List;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V">
-<counter type="INSTRUCTION" missed="105" covered="0"/>
+<counter type="INSTRUCTION" missed="109" covered="0"/>
 <counter type="BRANCH" missed="8" covered="0"/>
 <counter type="LINE" missed="6" covered="0"/>
 </method>
@@ -371,8 +371,8 @@
 <counter type="BRANCH" missed="10" covered="0"/>
 <counter type="LINE" missed="6" covered="0"/>
 </method>
-<counter type="INSTRUCTION" missed="827" covered="0"/>
-<counter type="BRANCH" missed="36" covered="0"/>
+<counter type="INSTRUCTION" missed="853" covered="0"/>
+<counter type="BRANCH" missed="38" covered="0"/>
 <counter type="LINE" missed="86" covered="0"/>
 <counter type="METHOD" missed="4" covered="0"/>
 </class>
@@ -629,7 +629,7 @@
 <counter type="LINE" missed="17" covered="0"/>
 </method>
 <method name="MainScreen" desc="(Landroidx/navigation/NavController;Lnet/asabon/bustimetable/TimeTable;Landroidx/compose/runtime/Composer;I)V">
-<counter type="INSTRUCTION" missed="391" covered="0"/>
+<counter type="INSTRUCTION" missed="407" covered="0"/>
 <counter type="BRANCH" missed="4" covered="0"/>
 <counter type="LINE" missed="42" covered="0"/>
 </method>
@@ -643,7 +643,7 @@
 <counter type="BRANCH" missed="10" covered="0"/>
 <counter type="LINE" missed="6" covered="0"/>
 </method>
-<counter type="INSTRUCTION" missed="1019" covered="0"/>
+<counter type="INSTRUCTION" missed="1035" covered="0"/>
 <counter type="BRANCH" missed="60" covered="0"/>
 <counter type="LINE" missed="99" covered="0"/>
 <counter type="METHOD" missed="6" covered="0"/>
@@ -727,11 +727,11 @@
 </class>
 <class name="net/asabon/bustimetable/MainScreenKt$SelectDateType$2" sourcefilename="MainScreen.kt">
 <method name="invoke" desc="(Landroidx/compose/runtime/Composer;I)V">
-<counter type="INSTRUCTION" missed="189" covered="0"/>
+<counter type="INSTRUCTION" missed="198" covered="0"/>
 <counter type="BRANCH" missed="14" covered="0"/>
 <counter type="LINE" missed="13" covered="0"/>
 </method>
-<counter type="INSTRUCTION" missed="189" covered="0"/>
+<counter type="INSTRUCTION" missed="198" covered="0"/>
 <counter type="BRANCH" missed="14" covered="0"/>
 <counter type="LINE" missed="13" covered="0"/>
 <counter type="METHOD" missed="1" covered="0"/>
@@ -1230,10 +1230,10 @@
 <sourcefile name="ConfigScreen.kt">
 <line nr="40" mi="14" ci="0" mb="2" cb="0"/>
 <line nr="41" mi="8" ci="0" mb="0" cb="0"/>
-<line nr="42" mi="10" ci="0" mb="0" cb="0"/>
-<line nr="43" mi="24" ci="0" mb="0" cb="0"/>
-<line nr="44" mi="21" ci="0" mb="0" cb="0"/>
-<line nr="45" mi="19" ci="0" mb="0" cb="0"/>
+<line nr="42" mi="18" ci="0" mb="0" cb="0"/>
+<line nr="43" mi="28" ci="0" mb="0" cb="0"/>
+<line nr="44" mi="25" ci="0" mb="0" cb="0"/>
+<line nr="45" mi="15" ci="0" mb="0" cb="0"/>
 <line nr="46" mi="4" ci="0" mb="0" cb="0"/>
 <line nr="48" mi="9" ci="0" mb="0" cb="0"/>
 <line nr="49" mi="2" ci="0" mb="0" cb="0"/>
@@ -1267,7 +1267,7 @@
 <line nr="97" mi="6" ci="0" mb="0" cb="0"/>
 <line nr="98" mi="1" ci="0" mb="0" cb="0"/>
 <line nr="99" mi="5" ci="0" mb="0" cb="0"/>
-<line nr="100" mi="12" ci="0" mb="0" cb="0"/>
+<line nr="100" mi="13" ci="0" mb="0" cb="0"/>
 <line nr="101" mi="22" ci="0" mb="0" cb="0"/>
 <line nr="102" mi="4" ci="0" mb="0" cb="0"/>
 <line nr="104" mi="9" ci="0" mb="0" cb="0"/>
@@ -1303,7 +1303,7 @@
 <line nr="141" mi="6" ci="0" mb="0" cb="0"/>
 <line nr="142" mi="1" ci="0" mb="0" cb="0"/>
 <line nr="143" mi="5" ci="0" mb="0" cb="0"/>
-<line nr="144" mi="12" ci="0" mb="0" cb="0"/>
+<line nr="144" mi="13" ci="0" mb="0" cb="0"/>
 <line nr="145" mi="22" ci="0" mb="0" cb="0"/>
 <line nr="146" mi="4" ci="0" mb="0" cb="0"/>
 <line nr="148" mi="1" ci="0" mb="0" cb="0"/>
@@ -1313,8 +1313,8 @@
 <line nr="154" mi="8" ci="0" mb="0" cb="0"/>
 <line nr="155" mi="1" ci="0" mb="0" cb="0"/>
 <line nr="164" mi="9" ci="0" mb="2" cb="0"/>
-<line nr="165" mi="16" ci="0" mb="2" cb="0"/>
-<line nr="166" mi="33" ci="0" mb="0" cb="0"/>
+<line nr="165" mi="24" ci="0" mb="2" cb="0"/>
+<line nr="166" mi="29" ci="0" mb="0" cb="0"/>
 <line nr="167" mi="39" ci="0" mb="4" cb="0"/>
 <line nr="168" mi="7" ci="0" mb="0" cb="0"/>
 <line nr="169" mi="1" ci="0" mb="0" cb="0"/>
@@ -1324,7 +1324,7 @@
 <line nr="192" mi="57" ci="0" mb="14" cb="0"/>
 <line nr="193" mi="9" ci="0" mb="0" cb="0"/>
 <line nr="194" mi="4" ci="0" mb="0" cb="0"/>
-<line nr="195" mi="29" ci="0" mb="0" cb="0"/>
+<line nr="195" mi="37" ci="0" mb="2" cb="0"/>
 <line nr="196" mi="13" ci="0" mb="0" cb="0"/>
 <line nr="197" mi="7" ci="0" mb="0" cb="0"/>
 <line nr="199" mi="6" ci="0" mb="0" cb="0"/>
@@ -1338,8 +1338,8 @@
 <line nr="211" mi="16" ci="0" mb="2" cb="0"/>
 <line nr="212" mi="27" ci="0" mb="8" cb="0"/>
 <line nr="214" mi="14" ci="0" mb="2" cb="0"/>
-<counter type="INSTRUCTION" missed="1033" covered="0"/>
-<counter type="BRANCH" missed="56" covered="0"/>
+<counter type="INSTRUCTION" missed="1059" covered="0"/>
+<counter type="BRANCH" missed="58" covered="0"/>
 <counter type="LINE" missed="112" covered="0"/>
 </sourcefile>
 <sourcefile name="Utility.kt">
@@ -1386,11 +1386,11 @@
 <counter type="LINE" missed="25" covered="0"/>
 </sourcefile>
 <sourcefile name="MainScreen.kt">
-<line nr="44" mi="16" ci="0" mb="2" cb="0"/>
-<line nr="45" mi="35" ci="0" mb="0" cb="0"/>
-<line nr="46" mi="38" ci="0" mb="0" cb="0"/>
-<line nr="47" mi="38" ci="0" mb="0" cb="0"/>
-<line nr="48" mi="33" ci="0" mb="0" cb="0"/>
+<line nr="44" mi="24" ci="0" mb="2" cb="0"/>
+<line nr="45" mi="39" ci="0" mb="0" cb="0"/>
+<line nr="46" mi="42" ci="0" mb="0" cb="0"/>
+<line nr="47" mi="42" ci="0" mb="0" cb="0"/>
+<line nr="48" mi="29" ci="0" mb="0" cb="0"/>
 <line nr="49" mi="12" ci="0" mb="0" cb="0"/>
 <line nr="50" mi="12" ci="0" mb="0" cb="0"/>
 <line nr="51" mi="10" ci="0" mb="0" cb="0"/>
@@ -1481,7 +1481,7 @@
 <line nr="171" mi="11" ci="0" mb="0" cb="0"/>
 <line nr="172" mi="16" ci="0" mb="0" cb="0"/>
 <line nr="173" mi="16" ci="0" mb="6" cb="0"/>
-<line nr="174" mi="18" ci="0" mb="2" cb="0"/>
+<line nr="174" mi="21" ci="0" mb="2" cb="0"/>
 <line nr="175" mi="21" ci="0" mb="0" cb="0"/>
 <line nr="176" mi="7" ci="0" mb="0" cb="0"/>
 <line nr="178" mi="16" ci="0" mb="0" cb="0"/>
@@ -1490,7 +1490,7 @@
 <line nr="181" mi="28" ci="0" mb="2" cb="0"/>
 <line nr="182" mi="2" ci="0" mb="0" cb="0"/>
 <line nr="185" mi="1" ci="0" mb="0" cb="0"/>
-<line nr="186" mi="18" ci="0" mb="2" cb="0"/>
+<line nr="186" mi="21" ci="0" mb="2" cb="0"/>
 <line nr="187" mi="21" ci="0" mb="0" cb="0"/>
 <line nr="188" mi="7" ci="0" mb="0" cb="0"/>
 <line nr="190" mi="16" ci="0" mb="0" cb="0"/>
@@ -1499,7 +1499,7 @@
 <line nr="193" mi="28" ci="0" mb="2" cb="0"/>
 <line nr="194" mi="2" ci="0" mb="0" cb="0"/>
 <line nr="197" mi="5" ci="0" mb="2" cb="0"/>
-<line nr="198" mi="18" ci="0" mb="2" cb="0"/>
+<line nr="198" mi="21" ci="0" mb="2" cb="0"/>
 <line nr="199" mi="21" ci="0" mb="0" cb="0"/>
 <line nr="200" mi="7" ci="0" mb="0" cb="0"/>
 <line nr="202" mi="16" ci="0" mb="0" cb="0"/>
@@ -1545,7 +1545,7 @@
 <line nr="262" mi="16" ci="0" mb="2" cb="0"/>
 <line nr="263" mi="27" ci="0" mb="8" cb="0"/>
 <line nr="265" mi="14" ci="0" mb="2" cb="0"/>
-<counter type="INSTRUCTION" missed="1692" covered="0"/>
+<counter type="INSTRUCTION" missed="1717" covered="0"/>
 <counter type="BRANCH" missed="126" covered="0"/>
 <counter type="LINE" missed="161" covered="0"/>
 </sourcefile>
@@ -1622,7 +1622,7 @@
 <line nr="37" mi="38" ci="0" mb="10" cb="0"/>
 <line nr="38" mi="5" ci="0" mb="2" cb="0"/>
 <line nr="39" mi="2" ci="0" mb="0" cb="0"/>
-<line nr="40" mi="19" ci="0" mb="0" cb="0"/>
+<line nr="40" mi="27" ci="0" mb="2" cb="0"/>
 <line nr="41" mi="13" ci="0" mb="0" cb="0"/>
 <line nr="42" mi="14" ci="0" mb="0" cb="0"/>
 <line nr="43" mi="3" ci="0" mb="0" cb="0"/>
@@ -1631,14 +1631,14 @@
 <line nr="48" mi="1" ci="0" mb="0" cb="0"/>
 <line nr="49" mi="2" ci="0" mb="0" cb="0"/>
 <line nr="52" mi="15" ci="0" mb="2" cb="0"/>
-<line nr="62" mi="23" ci="0" mb="4" cb="0"/>
-<line nr="63" mi="42" ci="0" mb="0" cb="0"/>
-<line nr="64" mi="18" ci="0" mb="0" cb="0"/>
+<line nr="62" mi="31" ci="0" mb="4" cb="0"/>
+<line nr="63" mi="46" ci="0" mb="0" cb="0"/>
+<line nr="64" mi="14" ci="0" mb="0" cb="0"/>
 <line nr="65" mi="9" ci="0" mb="0" cb="0"/>
 <line nr="66" mi="2" ci="0" mb="0" cb="0"/>
 <line nr="67" mi="11" ci="0" mb="0" cb="0"/>
 <line nr="68" mi="16" ci="0" mb="0" cb="0"/>
-<line nr="69" mi="36" ci="0" mb="0" cb="0"/>
+<line nr="69" mi="37" ci="0" mb="0" cb="0"/>
 <line nr="70" mi="7" ci="0" mb="0" cb="0"/>
 <line nr="73" mi="3" ci="0" mb="0" cb="0"/>
 <line nr="74" mi="3" ci="0" mb="0" cb="0"/>
@@ -1652,12 +1652,12 @@
 <line nr="83" mi="2" ci="0" mb="0" cb="0"/>
 <line nr="84" mi="15" ci="0" mb="0" cb="0"/>
 <line nr="86" mi="2" ci="0" mb="0" cb="0"/>
-<line nr="87" mi="11" ci="0" mb="0" cb="0"/>
+<line nr="87" mi="12" ci="0" mb="0" cb="0"/>
 <line nr="88" mi="25" ci="0" mb="0" cb="0"/>
 <line nr="89" mi="14" ci="0" mb="0" cb="0"/>
 <line nr="90" mi="31" ci="0" mb="6" cb="0"/>
 <line nr="91" mi="1" ci="0" mb="0" cb="0"/>
-<line nr="92" mi="29" ci="0" mb="0" cb="0"/>
+<line nr="92" mi="24" ci="0" mb="0" cb="0"/>
 <line nr="93" mi="20" ci="0" mb="8" cb="0"/>
 <line nr="94" mi="4" ci="0" mb="0" cb="0"/>
 <line nr="95" mi="20" ci="0" mb="0" cb="0"/>
@@ -1668,18 +1668,18 @@
 <line nr="101" mi="5" ci="0" mb="0" cb="0"/>
 <line nr="104" mi="3" ci="0" mb="0" cb="0"/>
 <line nr="106" mi="1" ci="0" mb="0" cb="0"/>
-<counter type="INSTRUCTION" missed="558" covered="0"/>
-<counter type="BRANCH" missed="32" covered="0"/>
+<counter type="INSTRUCTION" missed="571" covered="0"/>
+<counter type="BRANCH" missed="34" covered="0"/>
 <counter type="LINE" missed="51" covered="0"/>
 </sourcefile>
-<counter type="INSTRUCTION" missed="4791" covered="182"/>
-<counter type="BRANCH" missed="362" covered="24"/>
+<counter type="INSTRUCTION" missed="4855" covered="182"/>
+<counter type="BRANCH" missed="366" covered="24"/>
 <counter type="LINE" missed="552" covered="33"/>
 <counter type="METHOD" missed="104" covered="7"/>
 <counter type="CLASS" missed="57" covered="3"/>
 </package>
-<counter type="INSTRUCTION" missed="5216" covered="182"/>
-<counter type="BRANCH" missed="412" covered="24"/>
+<counter type="INSTRUCTION" missed="5280" covered="182"/>
+<counter type="BRANCH" missed="416" covered="24"/>
 <counter type="LINE" missed="593" covered="33"/>
 <counter type="METHOD" missed="115" covered="7"/>
 <counter type="CLASS" missed="61" covered="3"/>
